@@ -1,12 +1,12 @@
 {
   "name": "charna-ui",
-  "version": "0.0.2-beta.1",
+  "version": "0.0.2-beta.2",
   "type": "module",
   "main": "dist/charna-ui.js",
   "exports": {
-    ".": "./dist/charna-ui.es.js"
+    ".": "./dist/charna-ui.js"
   },
-  "types": "types/charna-ui.d.ts",
+  "types": "types/index.d.ts",
   "files": [
     "dist",
     "types"
