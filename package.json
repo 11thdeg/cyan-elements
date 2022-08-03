@@ -1,13 +1,13 @@
 {
   "name": "charna-ui",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
-  "main": "dist/my-element.es.js",
+  "main": "dist/charna-ui.js",
   "exports": {
-    ".": "./dist/my-element.es.js"
+    ".": "./dist/charna-ui.es.js"
   },
-  "types": "types/my-element.d.ts",
+  "types": "types/charna-ui.d.ts",
   "files": [
     "dist",
     "types"
