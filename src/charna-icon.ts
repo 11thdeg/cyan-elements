@@ -9,7 +9,7 @@ export class CharnaIcon extends LitElement {
     noun: string
 
   @property({ type: Boolean })
-    small: boolean = false
+    small = false
 
   static styles = css`
     img {
