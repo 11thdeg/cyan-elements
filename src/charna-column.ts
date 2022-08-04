@@ -1,5 +1,5 @@
 import { html, css, LitElement } from 'lit'
-import { customElement, property } from 'lit/decorators.js'
+import { customElement } from 'lit/decorators.js'
 
 @customElement('charna-column')
 export class CharnaColumn extends LitElement {
@@ -10,6 +10,7 @@ export class CharnaColumn extends LitElement {
       padding: var(--charna-padding);
     }
   `
+
 
   render () {
     return html`<article class="column">
