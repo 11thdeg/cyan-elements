@@ -9,16 +9,37 @@ export class CharnaIcon extends LitElement {
     noun: string
 
   @property({ type: Boolean })
+    xsmall = false
+
+  @property({ type: Boolean })
     small = false
+
+  @property({ type: Boolean })
+    xlarge = false
+
+  @property({ type: Boolean })
+    large = false
 
   static styles = css`
     img {
-      height: 64px;
-      width: 64px;
+      height: 36px;
+      width: 36px;
+    }
+    img.xsmall {
+      height: 16px;
+      width: 16px;
     }
     img.small {
-      height: 42px;
-      width: 42px;
+      height: 24px;
+      width: 24px;
+    }
+    img.xlarge {
+      height: 128px;
+      width: 128px;
+    }
+    img.large {
+      height: 72px;
+      width: 72px;
     }
   `
 
@@ -31,8 +52,8 @@ export class CharnaIcon extends LitElement {
     const nouns = nounsFile as Record<string, string>
     const iconFileName = nouns[this.noun] || nouns.missing
     if (!iconFileName) logError(`Icon '${this.noun}' not found`) // log error if no icon found
-    const iconpath = '../../public/proprietary/icons/light/' + iconFileName
-    const classes = this.small ? 'small' : ''
+    const iconpath = '/proprietary/icons/light/' + iconFileName
+    const classes = this.xsmall ? 'xsmall' : this.small ? 'small' : this.xlarge ? 'xlarge' : this.large ? 'large' : ''
     return html`<img src="${iconpath}" alt="${this.noun}" class="${classes}"/>`
   }
 }
