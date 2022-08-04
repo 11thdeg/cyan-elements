@@ -11,5 +11,12 @@
       "plugin:@typescript-eslint/recommended",
       "plugin:wc/recommended",
       "plugin:lit/recommended"
-    ]
+    ],
+    "rules": {
+      "indent": [
+        "error",
+        2
+      ],
+      "no-extra-semi": "error"
+    }
   }
