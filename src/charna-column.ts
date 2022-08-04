@@ -5,7 +5,7 @@ import { customElement } from 'lit/decorators.js'
 export class CharnaColumn extends LitElement {
   
   static styles = css`
-    :host {
+    :host article {
       margin: var(--charna-margin);
       padding: var(--charna-padding);
     }

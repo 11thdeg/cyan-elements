@@ -18,7 +18,8 @@ export class CharnaAppBar extends LitElement {
       align-items: center;
     }
     ::slotted(h1) {
-      font-size: 10px // var(--charna-font-size-button);
+      font-size: var(--charna-font-size-button);
+      line-height: var(--charna-line-height-button);
     }
   `
   render () {
