@@ -4,4 +4,8 @@
   --charna-padding: 12px;
   --charna-font-size-button: 18px;
   --charna-bar-gap: 24px;
+  --charna-ui-font-family: "Cabin","Roboto",sans-serif;
+  --charna-ui-font-size: 16px;
+  --charna-ui-font-weight: 400;
+  --charna-ui-line-height: 24px;
 }
