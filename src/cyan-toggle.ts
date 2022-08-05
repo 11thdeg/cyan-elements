@@ -71,9 +71,14 @@ export class CyanToggle extends LitElement {
   @property({ type: String })
     label = ''
 
+  onChange () {
+    this.checked = !this.checked
+    this.dispatchEvent(new CustomEvent('change', { detail: this.checked }))
+  }
+
   render () {
     return html`<label><span class="knob-label">${this.label}</span>
-      <input type="checkbox" ?checked="${this.checked}">
+      <input type="checkbox" ?checked="${this.checked}" @change="${this.onChange}">
       <div class="knob"></div>
       <div class="highlight"></div>
     </label>`
