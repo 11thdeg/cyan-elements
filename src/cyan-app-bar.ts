@@ -1,25 +1,25 @@
 import { html, css, LitElement } from 'lit'
 import { customElement } from 'lit/decorators.js'
 
-@customElement('charna-app-bar')
-export class CharnaAppBar extends LitElement {
+@customElement('cyan-app-bar')
+export class CyanAppBar extends LitElement {
   
   static styles = css`
     :host nav{
       display: flex;
       flex-direction: row;
-      gap: var(--charna-bar-gap);
+      gap: var(--cyan-bar-gap);
       margin: 0;
       padding: 0;
-      padding-left: var(--charna-margin);
-      padding-right: var(--charna-margin);
+      padding-left: var(--cyan-margin);
+      padding-right: var(--cyan-margin);
       height: 47px;
       border-bottom: solid 1px #acc;
       align-items: center;
     }
     ::slotted(h1) {
-      font-size: var(--charna-font-size-button);
-      line-height: var(--charna-line-height-button);
+      font-size: var(--cyan-font-size-button);
+      line-height: var(--cyan-line-height-button);
     }
   `
   render () {
@@ -31,6 +31,6 @@ export class CharnaAppBar extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'charna-app-bar': CharnaAppBar
+    'cyan-app-bar': CyanAppBar
   }
 }

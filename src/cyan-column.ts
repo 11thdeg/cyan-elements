@@ -1,13 +1,13 @@
 import { html, css, LitElement } from 'lit'
 import { customElement } from 'lit/decorators.js'
 
-@customElement('charna-column')
-export class CharnaColumn extends LitElement {
+@customElement('cyan-column')
+export class CyanColumn extends LitElement {
   
   static styles = css`
     :host article {
-      margin: var(--charna-margin);
-      padding: var(--charna-padding);
+      margin: var(--cyan-margin);
+      padding: var(--cyan-padding);
     }
   `
 
@@ -21,6 +21,6 @@ export class CharnaColumn extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'charna-column': CharnaColumn
+    'cyan-column': CyanColumn
   }
 }

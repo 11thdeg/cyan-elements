@@ -2,9 +2,9 @@
   "name": "@11thdeg/cyan",
   "version": "0.0.1-alpha.1",
   "type": "module",
-  "main": "dist/charna-ui.js",
+  "main": "dist/cyan-elements.js",
   "exports": {
-    ".": "./dist/charna-ui.js"
+    ".": "./dist/cyan-elements.js"
   },
   "types": "types/index.d.ts",
   "files": [

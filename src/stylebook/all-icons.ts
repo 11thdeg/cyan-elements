@@ -8,7 +8,7 @@ export class StylebookAllIcons extends LitElement {
   static styles = css`
     :host div.icons{
       display: flex;
-      gap: var(--charna-grid-gap);
+      gap: var(--cyan-grid-gap);
     }
     :host div.display{
       text-align: center;
@@ -25,7 +25,7 @@ export class StylebookAllIcons extends LitElement {
     return html`<h2>All Icons with a noun</h2>
       <div class="icons">
         ${iconNames.map(iconName => html`<div class="display">
-            <charna-icon noun="${iconName}"></charna-icon>
+            <cyan-icon noun="${iconName}"></cyan-icon>
             <p>${iconName}</p>
         </div>`)}
     </div>`

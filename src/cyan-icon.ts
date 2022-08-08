@@ -3,8 +3,8 @@ import { customElement, property } from 'lit/decorators.js'
 import nounsFile from './assets/proprietary/icons/nouns.json'
 import { logError } from './utils/loghelpers'
 
-@customElement('charna-icon')
-export class CharnaIcon extends LitElement {
+@customElement('cyan-icon')
+export class CyanIcon extends LitElement {
   @property({ type: String })
     noun: string
 
@@ -60,6 +60,6 @@ export class CharnaIcon extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'charna-icon': CharnaIcon
+    'cyan-icon': CyanIcon
   }
 }

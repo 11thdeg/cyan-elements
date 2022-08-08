@@ -18,10 +18,10 @@ export class CyanToggle extends LitElement {
       padding: 0;
     }
     :host span.knob-label {
-      font-family: var(--charna-ui-font-family);
-      font-size: var(--charna-ui-font-size);
-      font-weight: var(--charna-ui-font-weight);
-      line-height: var(--charna-ui-line-height);
+      font-family: var(--cyan-ui-font-family);
+      font-size: var(--cyan-ui-font-size);
+      font-weight: var(--cyan-ui-font-weight);
+      line-height: var(--cyan-ui-line-height);
       margin: 0;
       padding: 0;
       padding-right: 40px;
