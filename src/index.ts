@@ -1,4 +1,5 @@
 export * from './styles/cyan-color-theme-vars.sass'
+export * from './styles/cyan-typography-vars.sass'
 export * from './cyan-icon'
 export * from './cyan-column'
 export * from './cyan-app-bar'
