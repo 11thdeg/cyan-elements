@@ -9,4 +9,18 @@ Init the project
 git clone https://github.com/11thdeg/cyan-elements.git
 git submodule unit
 git submodule update
+
+npm install
 ```
+To develop, perhaps you want to run the stylebook (with vite)
+```bash
+npm run dev
+```
+
+Or build and deploy
+```bash
+npm run lint
+npm run build
+npm publish
+```
+
