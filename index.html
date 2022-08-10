@@ -31,16 +31,21 @@
         label="Dark mode"
         ></cyan-lightmode-toggle>
     </cyan-app-bar>
-    <cyan-column>
-      <h1>Icon Sizes</h1>
-      <div style="display:flex; flex-direction: row; flex-wrap: wrap;align-items: center;gap: var(--cyan-grid-gap)">
-        <cyan-icon noun="fox" xlarge></cyan-icon>
-        <cyan-icon noun="fox" large></cyan-icon>
-        <cyan-icon noun="fox"></cyan-icon>
-        <cyan-icon noun="fox" small></cyan-icon>
-        <cyan-icon noun="fox" xsmall></cyan-icon>
-      </div>   
-      <stylebook-all-icons></stylebook-all-icons>
-    </cyan-column>
+    <cyan-layout>
+      <cyan-column class="cut">
+        <h1>Hello from a Column!</h1>
+      </cyan-column>
+      <cyan-column>
+        <h1>Icon Sizes</h1>
+        <div style="display:flex; flex-direction: row; flex-wrap: wrap;align-items: center;gap: var(--cyan-grid-gap)">
+          <cyan-icon noun="fox" xlarge></cyan-icon>
+          <cyan-icon noun="fox" large></cyan-icon>
+          <cyan-icon noun="fox"></cyan-icon>
+          <cyan-icon noun="fox" small></cyan-icon>
+          <cyan-icon noun="fox" xsmall></cyan-icon>
+        </div>   
+        <stylebook-all-icons></stylebook-all-icons>
+      </cyan-column>
+    </cyan-layout>
   </body>
 </html>
