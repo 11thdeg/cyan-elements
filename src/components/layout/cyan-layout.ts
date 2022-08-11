@@ -1,6 +1,5 @@
 import { html, css, LitElement } from 'lit'
 import { customElement } from 'lit/decorators.js'
-import { mobileMediaQuery } from '../../styles/breakpoints'
 
 @customElement('cyan-layout')
 export class CyanLayout extends LitElement {
@@ -14,7 +13,7 @@ export class CyanLayout extends LitElement {
       flex-direction: row;
       flex-wrap: wrap;
     }
-    @media ${mobileMediaQuery} {
+    @media (max-width: 599px) {
       :host {
         flex-direction: column;
           flex-wrap: nowrap;

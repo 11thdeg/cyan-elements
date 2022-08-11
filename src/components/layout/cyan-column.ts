@@ -24,7 +24,7 @@ export class CyanColumn extends LitElement {
     :host(.double-cut) {
       width: 445px
     }
-    @media ${mobileMediaQuery} {
+    @media (max-width: 599px) {
       :host, :host(.double), :host(.double-cut), :host(.cut) {
         width: 100%;
       }
