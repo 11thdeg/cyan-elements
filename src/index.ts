@@ -9,3 +9,4 @@ export * from './cyan-lightmode-toggle'
 // Layout components
 export * from './components/layout/cyan-column'
 export * from './components/layout/cyan-layout'
+export * from './components/navigation/cyan-app-rail'

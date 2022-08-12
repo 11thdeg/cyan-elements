@@ -22,11 +22,6 @@ export class CyanNavigationRail extends LitElement {
     :host > a {
       color: var(--cyan-color-navigation-rail-text);
     }
-    @media (max-width: 599px) {
-      :host {
-        display: none;
-      }
-    }
   `
   render () {
     return html`<nav id="navigation-rail" class="navigation-rail">
