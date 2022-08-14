@@ -19,8 +19,8 @@ export class CyanLightmodeToggle extends LitElement {
     this.dark = !this.dark
     this.dispatchEvent(new CustomEvent('change', { detail: this.dark }))
     logDebug('onChange:', this.dark)
-    document.body.classList.toggle('mode--dark')
-    document.body.classList.toggle('mode--light')
+    document.body.classList.toggle('cyan-mode-dark')
+    document.body.classList.toggle('cyan-mode-light')
   }
 
   render () {

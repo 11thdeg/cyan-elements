@@ -5,6 +5,7 @@ export * from './cyan-app-bar'
 export * from './cyan-toggle'
 export * from './cyan-spacer'
 export * from './cyan-lightmode-toggle'
+export * from './components/content/cyan-markdown-section'
 
 // Layout components
 export * from './components/layout/cyan-column'
