@@ -1,11 +1,12 @@
 import { html, css, LitElement } from 'lit'
 import { customElement } from 'lit/decorators.js'
-import { mobileMediaQuery } from '../../styles/breakpoints'
+import { cyanComponentStyle } from '../../styles/cyan-component-style'
 
 @customElement('cyan-column')
 export class CyanColumn extends LitElement {
   
   static styles = css`
+    ${css`${cyanComponentStyle}`}
     :host {
       padding: 0;
       margin: 0;
