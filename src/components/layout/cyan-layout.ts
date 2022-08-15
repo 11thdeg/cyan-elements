@@ -12,6 +12,7 @@ export class CyanLayout extends LitElement {
       gap: var(--cyan-grid-gap);
       flex-direction: row;
       flex-wrap: wrap;
+      background-color: var(--cyan-base-color);
     }
     @media (max-width: 599px) {
       :host {
