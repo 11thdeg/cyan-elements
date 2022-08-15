@@ -1,10 +1,12 @@
 import { html, css, LitElement } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
+import { cyanUIComponentStyles } from './styles/cyan-component-style'
 
 @customElement('cyan-toggle')
 export class CyanToggle extends LitElement {
   
   static styles = css`
+    ${cyanUIComponentStyles}
     :host {
       position: relative;
       display: inline-block;
@@ -18,13 +20,11 @@ export class CyanToggle extends LitElement {
       padding: 0;
     }
     :host span.knob-label {
-      font-family: var(--cyan-ui-font-family);
-      font-size: var(--cyan-ui-font-size);
-      font-weight: var(--cyan-ui-font-weight);
-      line-height: var(--cyan-ui-line-height);
+      display: inline-block;
       margin: 0;
       padding: 0;
       padding-right: 40px;
+      line-height: 23px;
     }  
     :host input {
       position: relative;

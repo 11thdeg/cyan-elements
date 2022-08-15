@@ -9,6 +9,7 @@ export class StylebookView extends LitElement {
     return html`
         <cyan-layout>
           <stylebook-intro></stylebook-intro>
+          <stylebook-iconography></stylebook-iconography>
           <stylebook-markdown></stylebook-markdown>
         </cyan-layout>
         `

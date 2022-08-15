@@ -1,7 +1,7 @@
 import { html, css, LitElement } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import nounsFile from './assets/proprietary/icons/nouns.json'
-import { logDebug, logError } from './utils/loghelpers'
+import { logError } from './utils/loghelpers'
 import { onClassChange } from './utils/onClassChange'
 
 @customElement('cyan-icon')
@@ -53,7 +53,7 @@ export class CyanIcon extends LitElement {
   connectedCallback(): void {
     super.connectedCallback()
     this.lightModeDisconnect = onClassChange(document.body, (el:Element) => {
-      this.lightmode = el.classList.contains('cyan-mode-dark') ? 'dark' : 'light'
+      this.lightmode = el.classList.contains('cyan--mode--dark') ? 'dark' : 'light'
       this.requestUpdate()
       // logDebug('lightmode:', this.lightmode, el.classList)
     })
@@ -65,7 +65,7 @@ export class CyanIcon extends LitElement {
   }
 
   lightModeDisconnect:CallableFunction|null = null
-  lightmode = document.body.classList.contains('cyan-mode-dark') ? 'dark' : 'light'
+  lightmode = document.body.classList.contains('cyan--mode--dark') ? 'dark' : 'light'
 
   render () {
     const nouns = nounsFile as Record<string, string>

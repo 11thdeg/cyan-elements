@@ -1,4 +1,5 @@
 import { css } from 'lit'
+
 export const cyanComponentStyle = css`
   :host {
     font-family: var(--cyan-font-family);
@@ -24,3 +25,11 @@ export const cyanComponentStyle = css`
     color: var(--cyan-text-color);
   }
 `
+export const cyanUIComponentStyles = css`
+  ${cyanComponentStyle}
+  :host {
+    font-family: var(--cyan-ui-font-family);
+    font-size: var(--cyan-ui-font-size);
+    line-height: var(--cyan-ui-line-height);
+    color: var(--cyan-ui-color);
+  }`
