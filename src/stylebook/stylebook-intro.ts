@@ -1,11 +1,10 @@
-import { html, css, LitElement } from 'lit'
+import { html, LitElement } from 'lit'
 import { customElement } from 'lit/decorators.js'
 import { marked } from 'marked'
-import { cyanComponentStyle } from '../styles/cyan-component-style'
+
 
 @customElement('stylebook-intro')
 export class StylebookIntro extends LitElement {
-  static styles = css` ${cyanComponentStyle}`
 
   static markdown = `# Stylebook
   
