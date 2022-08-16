@@ -23,6 +23,12 @@ export class CyanIcon extends LitElement {
   @property({ type: Boolean })
     large = false
 
+  @property({ type: Boolean })
+    light = false
+
+  @property({ type: Boolean })
+    dark = false
+
   static styles = css`
     img {
       height: 36px;
@@ -71,7 +77,7 @@ export class CyanIcon extends LitElement {
     if(!nouns[this.noun]) logError(`Icon '${this.noun}' not found`)
     const classes = this.xsmall ? 'xsmall' : this.small ? 'small' : this.xlarge ? 'xlarge' : this.large ? 'large' : ''
     return html`<img
-      src="/proprietary/icons/${this.lightmode}/${nouns[this.noun]||nouns['missing']}"
+      src="/proprietary/icons/${this.light ? 'light' : this.dark ? 'dark' : this.lightmode}/${nouns[this.noun]||nouns['missing']}"
       alt="${this.noun}"
       class="${classes}"/>`
   }
