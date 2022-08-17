@@ -3,6 +3,7 @@ import { customElement, property } from 'lit/decorators.js'
 import nounsFile from '../assets/proprietary/icons/nouns.json'
 import { logError } from '../utils/loghelpers'
 import { onClassChange } from '../utils/onClassChange'
+import { cyanUIComponentStyles } from '../styles/cyan-component-style'
 
 const nouns = nounsFile as Record<string, string>
 
@@ -30,6 +31,7 @@ export class CyanIcon extends LitElement {
     dark = false
 
   static styles = css`
+    ${cyanUIComponentStyles}
     img {
       height: 36px;
       width: 36px;

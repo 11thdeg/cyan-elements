@@ -45,6 +45,7 @@ const iconlist = computed(() => {
           class="preview TypeCaption"
         >
           <cyan-icon
+            class="hoverable clickable"
             :noun="key"
             :light="forceLight"
             :dark="forceDark"

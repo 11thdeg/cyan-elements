@@ -32,4 +32,10 @@ export const cyanUIComponentStyles = css`
     font-size: var(--cyan-ui-font-size);
     line-height: var(--cyan-ui-line-height);
     color: var(--cyan-ui-color);
+  }
+  :host(.hoverable:hover){
+    filter: drop-shadow(0px 0px 8px var(--cyan-ui-hover-shadow-color));
+  }
+  :host(.clickable:active){
+    filter: drop-shadow(0px 0px 8px var(--cyan-ui-active-shadow-color));
   }`
