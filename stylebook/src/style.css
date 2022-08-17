@@ -1,0 +1,4 @@
+body {
+  background-color: var(--cyan-app-base-color);
+  transition: all 0.2s ease-in-out;
+}

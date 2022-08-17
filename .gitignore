@@ -13,6 +13,11 @@ dist-ssr
 *.local
 types
 
+# Stylebook modules
+stylebook/node_modules
+stylebook/dist
+stylebook/.vscode
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
