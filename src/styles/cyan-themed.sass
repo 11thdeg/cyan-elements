@@ -1,8 +1,21 @@
 /**
  * This is a theming file, for apps that want to use the cyan components without having to create a new theme.
  */
+body.cyan--themed
+  background-color: var(--cyan-app-base-color)
+  color: var(--cyan-text-color)
+  font-family: var(--cyan-text-font-family)
+  div.cyan-page
+    article.column
+      width: 220px
+
+
 .cyan--app
   background-color: var(--cyan-app-base-color)
   .cyan-page
     padding: var(--cyan-grid-gap)
     margin: 0
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    gap: var(--cyan-grid-gap)

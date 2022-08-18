@@ -1,13 +1,15 @@
 <script setup lang="ts">
 import Iconography from './stories/Iconography.vue';
+import Intro from './Intro.vue';
 </script>
 
 <template>
   <div class="cyan--app">
-    <div class="cyan-page">
-      <img src="/proprietary/icons/dark/fox.svg" alt="aa" style="height:128px; margin: 0 auto; display: block;"/>
-      <cyan-icon noun="fox"></cyan-icon>
-      <cyan-lightmode-toggle label="Dark/Light mode"></cyan-lightmode-toggle>
+    <div style="text-align:center; padding-top:12px">
+      <cyan-icon noun="fox" xlarge></cyan-icon>
+    </div>
+    <div class="cyan-page"> 
+      <Intro />
       <div class="bookLayout">
         <Iconography />
       </div>  
