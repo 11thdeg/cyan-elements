@@ -29,6 +29,9 @@ const iconlist = computed(() => {
     <section>
       <h1>Iconography</h1>
       <p>The icons are available onDark/dark and onBright/light variations.</p>
+      <p style="line-height: 24px">
+        <cyan-icon noun="stylebook" small></cyan-icon> In a paragraph.
+      </p>
       <p style="vertical-align:middle;">
         <cyan-toggle label="On a surface" @checked="onSurface" @change="onSurface=!onSurface"></cyan-toggle>
       </p>

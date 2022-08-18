@@ -32,23 +32,24 @@ export class CyanIcon extends LitElement {
 
   static styles = css`
     ${cyanUIComponentStyles}
-    img {
+    :host, img {
       height: 36px;
       width: 36px;
+      vertical-align: middle;
     }
-    img.xsmall {
+    :host, img.xsmall {
       height: 16px;
       width: 16px;
     }
-    img.small {
+    :host, img.small {
       height: 24px;
       width: 24px;
     }
-    img.xlarge {
+    :host, img.xlarge {
       height: 128px;
       width: 128px;
     }
-    img.large {
+    :host, img.large {
       height: 72px;
       width: 72px;
     }
