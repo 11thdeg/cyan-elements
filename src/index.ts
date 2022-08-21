@@ -9,6 +9,9 @@ export * from './cyan-spacer'
 export * from './components/cyan-lightmode-toggle'
 export * from './components/content/cyan-markdown-section'
 
+// Inputs
+export * from './components/input/cyan-textfield'
+
 // Layout components
 export * from './components/layout/cyan-column'
 export * from './components/layout/cyan-layout'
