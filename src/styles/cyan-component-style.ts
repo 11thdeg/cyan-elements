@@ -50,10 +50,15 @@ export const cyanFieldComponentStyles = css`
     border-bottom: 1px solid var(--cyan-field-border-color);
     position: relative;
     border-radius: 0 12px 0 0;
+    transition: all 0.2s ease-in-out;
   }
   :host([error]) {
     border-bottom: 1px solid var(--cyan-field-error-border-color);
     background-color: var(--cyan-field-error-background-color);
+  }
+  :host([error]:focus) {
+    border-bottom: 1px solid var(--cyan-field-error-border-color);
+    background-color: var(--cyan-field-focus-background-color);
   }
   :host .cyan-field-label {
     position: absolute;
@@ -66,8 +71,14 @@ export const cyanFieldComponentStyles = css`
     color: var(--cyan-field-label-color);
     pointer-events: none;
   }
+  :host(:hover) {
+    background-color: var(--cyan-field-hover-background-color);
+  }
   :host([error]) .cyan-field-label {
     color: var(--cyan-field-error-border-color);
+  }
+  :host([error]:focus) .cyan-field-label {
+    color: var(--cyan-field-focus-border-color);
   }
   :host .cyan-field-input {
     font-family: var(--cyan-field-font-family);
@@ -78,6 +89,17 @@ export const cyanFieldComponentStyles = css`
   :host([error]) .cyan-field-input {
     color: var(--cyan-field-error-color);
   }
+  :host([error]:focus) .cyan-field-input {
+    color: var(--cyan-field-focus-color);
+  }
   :host .cyan-field-input::placeholder {
     color: var(--cyan-field-placeholder-color);
+  }
+  :host(:focus), :host(:active) {
+    border-bottom: 1px solid var(--cyan-field-focus-border-color);
+    background-color: var(--cyan-field-focus-background-color);
+  }
+  :host(:focus) input, :host(:active) input {
+    outline: none;
+    border: none;
   }`

@@ -1,4 +1,14 @@
+// Complete solution based on the ideas presented in
+// https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/
 :root
+  // Support for dark and light mode available
+  color-scheme: light dark
+
+  // Material inspired text-opacity
+  --text-high-opacity: 1
+  --text-medium-opacity: 0.87
+  --text-low-opacity: 0.60
+
   // Primary palette:
   // https://gka.github.io/palettes/#/9|s|006655,00c853,eeff41|ffffe0,ff005e,006c09|1|1
   --chroma-primary-a:#006655
@@ -63,7 +73,10 @@
     // Inputs
     --cyan-field-label-color: var(--chroma-secondary-g)
     --cyan-field-background-color: var(--chroma-secondary-a)
+    --cyan-field-hover-background-color: var(--chroma-secondary-b)
     --cyan-field-border-color: var(--chroma-secondary-d)
+    --cyan-field-focus-border-color: var(--chroma-secondary-g)
+    --cyan-field-focus-background-color: var(--chroma-secondary-c)
     --cyan-field-placeholder-color: var(--chroma-secondary-c)
     --cyan-field-error-border-color: #bb1187
     --cyan-field-error-color: #bb1187
