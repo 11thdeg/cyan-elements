@@ -29,10 +29,28 @@ export class CyanTextfield extends LitElement {
   @property({ type: String })
     placeholder = ''
 
+  onChange (e:Event) {
+    this.value = (e.target as HTMLInputElement).value
+    const event = new CustomEvent('change', { detail: this.value })
+    this.dispatchEvent(event)
+  }
+
+  onBlur (e:Event) {
+    this.value = (e.target as HTMLInputElement).value
+    const event = new CustomEvent('blur', { detail: this.value })
+    this.dispatchEvent(event)
+  }
+
   render () {
     return html`
       <label class="cyan-textfield">
-        <input type="text" class="cyan-field-input" value="${this.value}" placeholder="${this.placeholder}"/>
+        <input
+          type="text"
+          class="cyan-field-input"
+          value="${this.value}"
+          placeholder="${this.placeholder}" 
+          @change="${this.onChange}"
+          @blur="${this.onBlur}"/>
         ${ this.label ? html`<span class="cyan-field-label">${this.hasAttribute('error') ? this.getAttribute('error') : this.label}</span>` : '' }
       </label>
     `
