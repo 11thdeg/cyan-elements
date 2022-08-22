@@ -51,6 +51,10 @@ export const cyanFieldComponentStyles = css`
     position: relative;
     border-radius: 0 12px 0 0;
   }
+  :host([error]) {
+    border-bottom: 1px solid var(--cyan-field-error-border-color);
+    background-color: var(--cyan-field-error-background-color);
+  }
   :host .cyan-field-label {
     position: absolute;
     top: 2px;
@@ -62,11 +66,17 @@ export const cyanFieldComponentStyles = css`
     color: var(--cyan-field-label-color);
     pointer-events: none;
   }
+  :host([error]) .cyan-field-label {
+    color: var(--cyan-field-error-border-color);
+  }
   :host .cyan-field-input {
     font-family: var(--cyan-field-font-family);
     font-size: var(--cyan-field-font-size);
     line-height: var(--cyan-field-line-height);
     color: var(--cyan-field-color);
+  }
+  :host([error]) .cyan-field-input {
+    color: var(--cyan-field-error-color);
   }
   :host .cyan-field-input::placeholder {
     color: var(--cyan-field-placeholder-color);

@@ -14,7 +14,7 @@
         value="Example error-value"
         label="Example label"
         placeholder="Example placeholder"
-        error="Example error"></cyan-textfield>
+        error="Example error message"></cyan-textfield>
     </section>
   </article>
 </template>

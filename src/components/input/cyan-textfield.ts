@@ -33,7 +33,7 @@ export class CyanTextfield extends LitElement {
     return html`
       <label class="cyan-textfield">
         <input type="text" class="cyan-field-input" value="${this.value}" placeholder="${this.placeholder}"/>
-        ${ this.label ? html`<span class="cyan-field-label">${this.label}</span>` : '' }
+        ${ this.label ? html`<span class="cyan-field-label">${this.hasAttribute('error') ? this.getAttribute('error') : this.label}</span>` : '' }
       </label>
     `
   }
