@@ -6,7 +6,7 @@
     <section>
       <h1>Textfield</h1>
       <cyan-textfield
-        value="Example value"
+        value=""
         label="Example label"
         placeholder="Example placeholder"></cyan-textfield>
       <br/>

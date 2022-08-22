@@ -39,3 +39,30 @@ export const cyanUIComponentStyles = css`
   :host(.clickable:active){
     filter: drop-shadow(0px 0px 8px var(--cyan-ui-active-shadow-color));
   }`
+
+export const cyanFieldComponentStyles = css`
+  ${cyanUIComponentStyles}
+  :host {
+    display: block;
+    height: 40px;
+    margin: 4px 0;
+    font-family: var(--cyan-field-font-family);
+    font-size: var(--cyan-field-font-size);
+    line-height: var(--cyan-field-line-height);
+    color: var(--cyan-field-color);
+    background-color: var(--cyan-field-background-color);
+    border-bottom: 1px solid var(--cyan-field-border-color);
+    position: relative;
+    border-radius: 0 12px 0 0;
+  }
+  :host .cyan-field-label {
+    position: absolute;
+    top: 2px;
+    left: 8px;
+    z-index: 1;
+    width: 100%;
+    font-size: var(--cyan-field-label-font-size);
+    line-height: var(--cyan-field-label-line-height);
+    color: var(--cyan-field-label-color);
+    pointer-events: none;
+  }`
