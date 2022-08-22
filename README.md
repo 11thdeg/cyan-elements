@@ -2,6 +2,17 @@
 
 A shared element library for pelilauta. charna, and so.
 
+# 0.1.0
+
+Components available
+- <cyan-toggle>
+- <cyan-textfield>
+- <cyan-icon>
+
+See stylebook for examples of use
+
+Try `cd stylebook && npm run dev` to run the stylebook.
+
 # Developer info
 
 Init the project
