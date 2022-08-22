@@ -46,10 +46,6 @@ export const cyanFieldComponentStyles = css`
     display: block;
     height: 40px;
     margin: 4px 0;
-    font-family: var(--cyan-field-font-family);
-    font-size: var(--cyan-field-font-size);
-    line-height: var(--cyan-field-line-height);
-    color: var(--cyan-field-color);
     background-color: var(--cyan-field-background-color);
     border-bottom: 1px solid var(--cyan-field-border-color);
     position: relative;
@@ -65,4 +61,13 @@ export const cyanFieldComponentStyles = css`
     line-height: var(--cyan-field-label-line-height);
     color: var(--cyan-field-label-color);
     pointer-events: none;
+  }
+  :host .cyan-field-input {
+    font-family: var(--cyan-field-font-family);
+    font-size: var(--cyan-field-font-size);
+    line-height: var(--cyan-field-line-height);
+    color: var(--cyan-field-color);
+  }
+  :host .cyan-field-input::placeholder {
+    color: var(--cyan-field-placeholder-color);
   }`

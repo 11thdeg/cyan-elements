@@ -7,7 +7,7 @@ export class CyanTextfield extends LitElement {
 
   static styles = css`
     ${cyanFieldComponentStyles}
-    :host .cyan-textfield-input {
+    :host .cyan-field-input {
       position: absolute;
       top: 0;
       left: 0;
@@ -32,7 +32,7 @@ export class CyanTextfield extends LitElement {
   render () {
     return html`
       <label class="cyan-textfield">
-        <input type="text" class="cyan-textfield-input" value="${this.value}" placeholder="${this.placeholder}"/>
+        <input type="text" class="cyan-field-input" value="${this.value}" placeholder="${this.placeholder}"/>
         ${ this.label ? html`<span class="cyan-field-label">${this.label}</span>` : '' }
       </label>
     `
