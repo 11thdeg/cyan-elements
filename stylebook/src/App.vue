@@ -2,6 +2,7 @@
 import Iconography from './stories/Iconography.vue';
 import Intro from './Intro.vue';
 import Inputs from './stories/Inputs.vue';
+import Interactions from './stories/Interactions.vue';
 </script>
 
 <template>
@@ -12,6 +13,7 @@ import Inputs from './stories/Inputs.vue';
     <div> 
       <Intro />
       <div class="cyan-view">
+        <Interactions />
         <Iconography />
         <Inputs />
       </div>  
