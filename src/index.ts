@@ -9,6 +9,9 @@ export * from './cyan-spacer'
 export * from './components/cyan-lightmode-toggle'
 export * from './components/content/cyan-markdown-section'
 
+// Interactions
+export * from './components/interactions/cyan-save-interaction'
+
 // Inputs
 export * from './components/input/cyan-textfield'
 

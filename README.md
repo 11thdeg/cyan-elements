@@ -2,12 +2,13 @@
 
 A shared element library for pelilauta. charna, and so.
 
-# 0.1.0
+# 0.2.0
 
 Components available
-- <cyan-toggle>
-- <cyan-textfield>
-- <cyan-icon>
+- `<cyan-toggle>`
+- `<cyan-textfield>`
+- `<cyan-icon>`
+- `<cyan-save-interaction>`
 
 See stylebook for examples of use
 
