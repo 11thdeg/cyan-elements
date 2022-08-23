@@ -2,6 +2,17 @@
 
 A shared element library for pelilauta. charna, and so.
 
+# 0.1.0
+
+Components available
+- <cyan-toggle>
+- <cyan-textfield>
+- <cyan-icon>
+
+See stylebook for examples of use
+
+Try `cd stylebook && npm run dev` to run the stylebook.
+
 # Developer info
 
 Init the project
@@ -23,4 +34,21 @@ npm run lint
 npm run build
 npm publish
 ```
+
+## Using with Vite/Vue
+```typescript
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [vue({
+    template: {
+      compilerOptions: {
+        isCustomElement: (tag) => {
+          return tag.startsWith('cyan-') // (return true)
+        }
+      }
+    }
+  })]
+})
+```
+
 

@@ -7,11 +7,12 @@ export class StylebookView extends LitElement {
     `
   render() {
     return html`
-        <cyan-layout>
+        <!--cyan-layout>
           <stylebook-intro></stylebook-intro>
           <stylebook-iconography></stylebook-iconography>
           <stylebook-markdown></stylebook-markdown>
-        </cyan-layout>
+        </cyan-layout-->
+        <cyan-element-explorer></cyan-element-explorer>
         `
   }
 }

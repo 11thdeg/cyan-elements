@@ -1,6 +1,6 @@
 import { html, LitElement, css } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
-import { logDebug } from './utils/loghelpers'
+import { logDebug } from '../utils/loghelpers'
 
 @customElement('cyan-lightmode-toggle')
 export class CyanLightmodeToggle extends LitElement {
@@ -14,6 +14,22 @@ export class CyanLightmodeToggle extends LitElement {
     dark=false
   @property({ type: String })
     label = ''
+
+  connectedCallback () {
+    super.connectedCallback()
+    logDebug('cyan-lightmode-toggle', 'connectedCallback')
+
+    // Nothing to do, if the lightmode is already set.
+    if (document.body.classList.contains('cyan--mode--dark') || document.body.classList.contains('cyan--mode--light')) return
+    
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      // set dark mode
+      document.body.classList.toggle('cyan--mode--dark')
+    } else {
+      // set light mode
+      document.body.classList.toggle('cyan--mode--light')
+    }
+  }
 
   onChange () {
     this.dark = !this.dark
@@ -30,6 +46,6 @@ export class CyanLightmodeToggle extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'cyan-lightmode-toffle': CyanLightmodeToggle
+    'cyan-lightmode-toggle': CyanLightmodeToggle
   }
 }
