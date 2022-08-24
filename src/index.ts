@@ -15,6 +15,10 @@ export * from './components/interactions/cyan-save-interaction'
 // Inputs
 export * from './components/input/cyan-textfield'
 
+// Navigation
+export * from './components/menu/cyan-menu'
+export * from './components/menu/cyan-menu-item'
+
 // Layout components
 export * from './components/layout/cyan-column'
 export * from './components/layout/cyan-layout'
