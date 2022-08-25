@@ -8,7 +8,7 @@ const disabled = ref(false)
     <h1>Menu</h1>
     <section class="toolbar">
       <div><cyan-toggle :checked="disabled" label="Loader 1" @change="disabled = !disabled"></cyan-toggle></div>
-      <cyan-menu :disabled="disabled">
+      <cyan-menu :open="!disabled" @close="disabled = !disabled">
         <cyan-menu-item>aaa!</cyan-menu-item>
         <cyan-menu-item route="#menu">bbb!</cyan-menu-item>
         <cyan-menu-item noun="admin">ccc!</cyan-menu-item>
