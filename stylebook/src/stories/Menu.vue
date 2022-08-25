@@ -15,7 +15,7 @@ const open = ref(false)
         <cyan-menu-item>aaa!</cyan-menu-item>
         <cyan-menu-item route="#menu">bbb!</cyan-menu-item>
         <cyan-menu-item noun="admin">ccc!</cyan-menu-item>
-        <cyan-menu-item route="#menu" noun="mekanismi">ddd!</cyan-menu-item>
+        <cyan-menu-item route="http://google.com" noun="google">ddd!</cyan-menu-item>
       </cyan-menu>
       </div>
     </section>

@@ -39,9 +39,9 @@ export class CyanMenuItem extends LitElement {
   @property({ type: String })
     route = ''
 
-  handleClick (e: Event) {
-    console.log('handleClick', e)
-    this.dispatchEvent(new CustomEvent('close', {bubbles: true, composed: true}))
+  handleClick () {
+    // console.log('handleClick', e)
+    setTimeout(() => this.dispatchEvent(new CustomEvent('close', {bubbles: true, composed: true})), 300)
   }
 
   render () {

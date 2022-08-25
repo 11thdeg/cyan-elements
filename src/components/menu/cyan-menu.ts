@@ -1,7 +1,6 @@
 import { html, css, LitElement } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import { cyanUIComponentStyles } from '../../styles/cyan-component-style'
-import { logDebug } from '../../utils/loghelpers'
 import {classMap} from 'lit/directives/class-map.js';
 
 @customElement('cyan-menu')
@@ -49,14 +48,14 @@ export class CyanMenu extends LitElement {
     }
   }
 
-  handleFocus (e: Event) {
-    logDebug('handleFocus', e)
+  handleFocus () {
+    // logDebug('handleFocus', e)
     this.open = true
     this.dispatchEvent(new Event('open', {bubbles: true, composed: true}))
   }
-  handleFocusOut (e: Event) {
-    logDebug('handleFocusOut', e)
-    this.open = false
+  handleFocusOut () {
+    // logDebug('handleFocusOut', e)
+    setTimeout(() => { this.open = false }, 300)
     this.dispatchEvent(new Event('close', {bubbles: true, composed: true}))
   }
 
