@@ -23,6 +23,14 @@ export class CyanMenuItem extends LitElement {
     a {
       text-decoration: none;
     }
+    a, span.clickable {
+      display: block;
+      width: 100%;
+      height: 100%;
+      cursor: context-menu;
+      text-align: left;
+      color: var(--cyan-menu-item-text-color);
+    }
   `
 
   @property({ type: String })
@@ -31,10 +39,15 @@ export class CyanMenuItem extends LitElement {
   @property({ type: String })
     route = ''
 
+  handleClick (e: Event) {
+    console.log('handleClick', e)
+    this.dispatchEvent(new CustomEvent('close', {bubbles: true, composed: true}))
+  }
+
   render () {
     const content = this.noun ? html`<cyan-icon noun="${this.noun}" small class="prepend"></cyan-icon><slot></slot>` : html`<slot></slot>`
-    return html`<li>
-      ${ this.route ? html`<a href="${this.route}">${content}</a>` : content }
+    return html`<li @click="${this.handleClick}">
+      ${ this.route ? html`<a href="${this.route}">${content}</a>` : html`<span class="clickable">${content}</span>` }
   </li>`
   }
 }

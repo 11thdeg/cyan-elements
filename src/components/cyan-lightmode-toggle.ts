@@ -24,7 +24,10 @@ export class CyanLightmodeToggle extends LitElement {
     
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       // set dark mode
-      document.body.classList.toggle('cyan--mode--dark')
+      // document.body.classList.toggle('cyan--mode--dark')
+
+      // Force light mode for debugging purposes.
+      document.body.classList.toggle('cyan--mode--light')
     } else {
       // set light mode
       document.body.classList.toggle('cyan--mode--light')
