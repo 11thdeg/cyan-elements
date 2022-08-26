@@ -7,6 +7,7 @@ import Menu from './stories/Menu.vue';
 import Chroma from './stories/Chroma.vue';
 import Atomics from './stories/Atomics.vue';
 import Typography from './stories/Typography.vue';
+import Buttons from './stories/Buttons.vue';
 </script>
 
 <template>
@@ -17,6 +18,7 @@ import Typography from './stories/Typography.vue';
     <div> 
       <Intro />
       <div class="cyan-view">
+        <Buttons />
         <Typography />
         <Atomics />
         <Chroma />
