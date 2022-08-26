@@ -4,7 +4,8 @@ import Intro from './Intro.vue';
 import Inputs from './stories/Inputs.vue';
 import Interactions from './stories/Interactions.vue';
 import Menu from './stories/Menu.vue';
-import Chroma from './stories/chroma.vue';
+import Chroma from './stories/Chroma.vue';
+import Atomics from './stories/Atomics.vue';
 </script>
 
 <template>
@@ -15,6 +16,7 @@ import Chroma from './stories/chroma.vue';
     <div> 
       <Intro />
       <div class="cyan-view">
+        <Atomics />
         <Chroma />
         <Menu />
         <Interactions />
