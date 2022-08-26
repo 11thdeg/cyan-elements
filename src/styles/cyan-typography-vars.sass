@@ -9,6 +9,8 @@
   --cyan-monospace-font-weight: 500
   --cyan-monospace-line-height: 24px
   // Headers
+  --cyan-heading-font-family: 'Overpass', sans-serif
+  --cyan-heading-font-weight: 200
   --cyan-h1-font-size: 48px
   --cyan-h1-font-weight: 400
   --cyan-h1-line-height: 56px
@@ -25,5 +27,58 @@
   --cyan-field-label-line-height: 12px
   --cyan-field-label-letter-spacing: 0.5px
 
-span.code
-  background-color: red
+@mixin TypeHeadline3()
+  font-size: 48px
+  letter-spacing: 0px
+  line-height: 56px
+  margin: 0
+  padding: 0
+  margin-bottom: 24px
+
+@mixin TypeHeadline4()
+  font-size: 34px
+  letter-spacing: 0.25px
+  line-height: 56px
+  margin: 0
+  padding: 0
+  margin-bottom: 12px
+
+@mixin TypeHeadline5()
+  font-size: 25px
+  letter-spacing: 0px
+  line-height: 32px
+  margin: 0
+  margin-top: 8px
+  padding: 0
+  margin-bottom: 12px
+
+@mixin TypeHeadline6()
+  font-size: 20px
+  letter-spacing: 0.15px
+  line-height: 32px
+  margin: 0
+  margin-top: 8px
+  padding: 0
+
+h1, h2, h3, h4
+  font-family: var(--cyan-heading-font-family)
+  font-weight: var(--cyan-heading-font-weight)
+
+h1, h2
+  color: var(--cyan-heading-color-a)
+
+h3, h4
+  color: var(--cyan-heading-color-b)
+
+h1, .TypeHeadline3
+  @include TypeHeadline3()
+
+h2, .TypeHeadline4
+  @include TypeHeadline4()
+
+h3, .TypeHeadline5
+  @include TypeHeadline5()
+
+h4, .TypeHeadline6
+  @include TypeHeadline6()
+

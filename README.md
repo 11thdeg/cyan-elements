@@ -2,13 +2,21 @@
 
 A shared element library for pelilauta. charna, and so.
 
-# 0.2.0
+# 0.4.0
 
 Components available
 - `<cyan-toggle>`
 - `<cyan-textfield>`
 - `<cyan-icon>`
 - `<cyan-save-interaction>`
+- `<cyan-code>`
+
+Atomics available
+- `.TypeHeadline3`
+- `.TypeHeadline4`
+- `.TypeHeadline5`
+- `.TypeHeadline6`
+- `.hideOnMobile`
 
 See stylebook for examples of use
 
