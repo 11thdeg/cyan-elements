@@ -18,6 +18,7 @@ Atomics available
 - `.TypeHeadline5`
 - `.TypeHeadline6`
 - `.hideOnMobile`
+- `.dontBreakOut`
 
 See stylebook for examples of use
 
