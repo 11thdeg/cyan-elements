@@ -24,7 +24,8 @@ export class CyanButton extends LitElement {
       font-weight: 500;
       font-size: 16px;
       line-height: 36px;
-      letter-spacing: 1.25px
+      letter-spacing: 1.25px;
+      display: inline-block;
     }
     :host button:hover {
       background-color: var(--cyan-button-background-color-hover);
@@ -34,6 +35,20 @@ export class CyanButton extends LitElement {
     }
     :host button:disabled {
       background-color: var(--cyan-button-background-color-disabled);
+    }
+    :host([text]) button {
+      color: var(--cyan-UI-text-color);
+      background: none;
+    }
+    :host([text]) button:hover {
+      background-color: var(--cyan-button-text-background-color-hover);
+    }
+    :host([text]) button:active {
+      background-color: var(--cyan-button-text-background-color-active);
+    }
+    :host([text]) button:disabled {
+      color: var(--cyan-UI-text-color-disabled);
+      background-color: var(--cyan-button-text-background-color-disabled);
     }
   `
   @property({ type: String, reflect: true })
@@ -62,7 +77,7 @@ export class CyanButton extends LitElement {
     })
     return html`
       <button class="${classes}" ?disabled="${this.disabled}">
-        ${ this.noun ? html`<cyan-icon small dark noun="${this.noun}" style="margin-left: -4px; margin-right: 2px;"></cyan-icon>` : '' }
+        ${ this.noun ? html`<cyan-icon small ?dark="${!this.text}" noun="${this.noun}" style="margin-left: -4px; margin-right: 2px; margin-top:-6px; display: inline-block"></cyan-icon>` : '' }
         ${ this.label }
         ${ this.working ? html`<cyan-save-interaction ?active="${this.working == 'true' }" style="display: inline-block; line-height: 26px; vertical-align: middle; margin-right: -8px; margin-top: -3px">` : '' }
       </button>

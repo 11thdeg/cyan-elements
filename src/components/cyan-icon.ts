@@ -37,19 +37,19 @@ export class CyanIcon extends LitElement {
       width: 36px;
       vertical-align: middle;
     }
-    :host, img.xsmall {
+    :host([xsmall]), img.xsmall {
       height: 16px;
       width: 16px;
     }
-    :host, img.small {
+    :host([small]), img.small {
       height: 24px;
       width: 24px;
     }
-    :host, img.xlarge {
+    :host([xlarge]), img.xlarge {
       height: 128px;
       width: 128px;
     }
-    :host, img.large {
+    :host([large]), img.large {
       height: 72px;
       width: 72px;
     }
