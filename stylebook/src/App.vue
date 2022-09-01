@@ -10,6 +10,7 @@ import Typography from './stories/Typography.vue';
 import Buttons from './stories/Buttons.vue';
 import { ref } from 'vue';
 import Toolbars from './stories/Toolbars.vue';
+import AssetSelect from './stories/AssetSelect.vue';
 
 const layout = ref('bookLayout')
 </script>
@@ -26,6 +27,7 @@ const layout = ref('bookLayout')
     </div>
     <main id="layout" :class="layout"> 
       <Intro />
+      <AssetSelect />
       <Toolbars />
       <Typography />
       <Iconography />

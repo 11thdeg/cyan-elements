@@ -24,6 +24,8 @@ export * from './components/interactions/cyan-save-interaction'
 export * from './components/input/cyan-textfield'
 export * from './components/input/cyan-button'
 export * from './components/input/cyan-toolbar'
+export * from './components/input/cyan-asset-select'
+export * from './components/input/cyan-asset-option'
 
 // Navigation
 export * from './components/menu/cyan-menu'
