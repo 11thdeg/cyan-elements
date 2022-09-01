@@ -25,7 +25,7 @@ const iconlist = computed(() => {
 </script>
 
 <template>
-  <article class="column">
+  <article class="Column double">
     <section>
       <h1>Iconography</h1>
       <p>The icons are available onDark/dark and onBright/light variations.</p>

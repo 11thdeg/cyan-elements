@@ -10,35 +10,28 @@ import Typography from './stories/Typography.vue';
 import Buttons from './stories/Buttons.vue';
 import { ref } from 'vue';
 
-const layout = ref('dashboardLayout')
-
-function setLayoutClass (layout:string) {
-  const el = document.getElementById('layout');
-  if (el) {
-    el.className = layout;
-  }
-}
+const layout = ref('bookLayout')
 </script>
 
 <template>
   <div class="cyan--app">
     <div style="text-align:center; padding:12px 0; border-bottom: solid 1px var(--chroma-primary-d)">
       <h1><cyan-icon noun="fox" large></cyan-icon>Cyan elements stylebook</h1>
-      <select v-model="layout" @change="setLayoutClass(layout)">
+      <select v-model="layout">
         <option value="singleColumnLayout">singleColumnLayout</option>
         <option value="bookLayout">bookLayout</option>
         <option value="dashboardLayout">dashboardLayout</option>
       </select>
     </div>
-    <main id="layout"> 
+    <main id="layout" :class="layout"> 
       <Intro />
-      <Buttons />
       <Typography />
+      <Iconography />
+      <Buttons />
       <Atomics />
       <Chroma />
       <Menu />
       <Interactions />
-      <Iconography />
       <Inputs /> 
     </main>
   </div>
