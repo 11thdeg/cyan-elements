@@ -27,11 +27,12 @@ export const cyanComponentStyle = css`
 `
 export const cyanUIComponentStyles = css`
   ${cyanComponentStyle}
-  :host {
+  :host, ::slotted(*) {
     font-family: var(--cyan-ui-font-family);
     font-size: var(--cyan-ui-font-size);
+    letter-spacing: var(--cyan-ui-letter-spacing);
     line-height: var(--cyan-ui-line-height);
-    color: var(--cyan-ui-color);
+    font-weight: var(--cyan-ui-font-weight);
   }
   :host(.hoverable:hover){
     filter: drop-shadow(0px 0px 8px var(--cyan-ui-hover-shadow-color));

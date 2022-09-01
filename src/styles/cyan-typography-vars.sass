@@ -1,8 +1,22 @@
+// UI Elements
 :root
-  --cyan-ui-font-family: 'Roboto', sans-serif
-  --cyan-ui-font-size: 14px
+  --cyan-ui-font-family: 'Cabin', 'Roboto', sans-serif
+  --cyan-ui-font-size: 16px
+  --cyan-ui-letter-spacing: 1.25px
+  --cyan-ui-line-height: 24px
   --cyan-ui-font-weight: 400
-  --cyan-ui-line-height: 14px
+
+@mixin TypeUI
+  font-family: var(--cyan-ui-font-family)
+  font-size: var(--cyan-ui-font-size)
+  letter-spacing: var(--cyan-ui-letter-spacing)
+  line-height: var(--cyan-ui-line-height)
+  font-weight: var(--cyan-ui-font-weight)
+
+.TypeUI
+  @include TypeUI
+
+:root
   // Monospace, code etc
   --cyan-monospace-font-family: 'Roboto Mono', monospace
   --cyan-monospace-font-size: 14px
