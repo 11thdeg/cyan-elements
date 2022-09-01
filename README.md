@@ -11,12 +11,15 @@ Components available
 - `<cyan-save-interaction>`
 - `<cyan-code>`
 - `<cyan-button>`
+- `<cyan-toolbar>`
 
 Atomics available
 - `.TypeHeadline3`
 - `.TypeHeadline4`
 - `.TypeHeadline5`
 - `.TypeHeadline6`
+- `.TypeUI`
+- `.lowEmphasis`
 - `.hideOnMobile`
 - `.dontBreakOut`
 

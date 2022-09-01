@@ -9,6 +9,7 @@ import Atomics from './stories/Atomics.vue';
 import Typography from './stories/Typography.vue';
 import Buttons from './stories/Buttons.vue';
 import { ref } from 'vue';
+import Toolbars from './stories/Toolbars.vue';
 
 const layout = ref('bookLayout')
 </script>
@@ -25,6 +26,7 @@ const layout = ref('bookLayout')
     </div>
     <main id="layout" :class="layout"> 
       <Intro />
+      <Toolbars />
       <Typography />
       <Iconography />
       <Buttons />

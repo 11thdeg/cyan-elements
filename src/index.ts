@@ -23,6 +23,7 @@ export * from './components/interactions/cyan-save-interaction'
 // Inputs
 export * from './components/input/cyan-textfield'
 export * from './components/input/cyan-button'
+export * from './components/input/cyan-toolbar'
 
 // Navigation
 export * from './components/menu/cyan-menu'
