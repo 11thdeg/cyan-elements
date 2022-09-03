@@ -1,17 +1,24 @@
 import { html, css, LitElement } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
+import { cyanUIComponentStyles } from '../../styles/cyan-component-style'
 
 @customElement('cyan-asset-option')
 export class CyanAssetOption extends LitElement {
   
   static styles = css`
+    ${cyanUIComponentStyles}
     :host {
       display: block;
       overflow: hidden;
+      border-radius: 4px;
+      padding: 4px;
+    }
+    :host([selected]) {
+      background-color: var(--chroma-secondary-g);
     }
     :host img {
-      width: 48px;
-      height: 48px;
+      width: 72px;
+      height: 72px;
       background-color: var(--chroma-secondary-h);
     }
     :host([round]) img{
@@ -20,6 +27,11 @@ export class CyanAssetOption extends LitElement {
     :host p {
       margin: 0;
       padding: 0;
+      text-align: center;
+      overflow: hidden;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 16px;
     }
   `
 
@@ -31,6 +43,8 @@ export class CyanAssetOption extends LitElement {
     name = ''
   @property({type: Boolean, reflect: true})
     round = false
+  @property({type: Boolean, reflect: true})
+    selected = false
 
   onclick = () => {
     this.dispatchEvent(new CustomEvent('change', {detail: {
