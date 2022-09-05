@@ -23,7 +23,7 @@ export class CyanTextfield extends LitElement {
   @property({ type: String })
     label = ''
 
-  @property({ type: String })
+  @property({ type: String, reflect: true })
     value = ''
 
   @property({ type: String })
