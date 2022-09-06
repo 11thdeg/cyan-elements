@@ -26,6 +26,7 @@ export * from './components/input/cyan-button'
 export * from './components/input/cyan-toolbar'
 export * from './components/input/cyan-asset-select'
 export * from './components/input/cyan-asset-option'
+export * from './components/input/cyan-select'
 
 // Navigation
 export * from './components/menu/cyan-menu'

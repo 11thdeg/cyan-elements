@@ -27,6 +27,7 @@ const layout = ref('bookLayout')
     </div>
     <main id="layout" :class="layout"> 
       <Intro />
+      <Inputs /> 
       <AssetSelect />
       <Toolbars />
       <Typography />
@@ -36,7 +37,6 @@ const layout = ref('bookLayout')
       <Chroma />
       <Menu />
       <Interactions />
-      <Inputs /> 
     </main>
   </div>
 </template>

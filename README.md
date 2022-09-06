@@ -12,6 +12,8 @@ Components available
 - `<cyan-code>`
 - `<cyan-button>`
 - `<cyan-toolbar>`
+- `<cyan-select>`
+- `<cyan-asset-select>` and `<cyan-asset-option>`
 
 Atomics available
 - `.TypeHeadline3`
@@ -22,6 +24,7 @@ Atomics available
 - `.lowEmphasis`
 - `.hideOnMobile`
 - `.dontBreakOut`
+- `.codeblock`
 
 See stylebook for examples of use
 
