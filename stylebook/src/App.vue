@@ -11,22 +11,28 @@ import Buttons from './stories/Buttons.vue';
 import { ref } from 'vue';
 import Toolbars from './stories/Toolbars.vue';
 import AssetSelect from './stories/AssetSelect.vue';
+import Markdown from './stories/Markdown.vue';
 
 const layout = ref('bookLayout')
+
+const layouts = [
+  { label: 'singleColumnLayout', value: 'singleColumnLayout' },
+  { label: 'bookLayout', value: 'bookLayout' },
+  { label: 'dashboardLayout', value: 'dashboardLayout' },
+]
 </script>
 
 <template>
   <div class="cyan--app">
     <div style="text-align:center; padding:12px 0; border-bottom: solid 1px var(--chroma-primary-d)">
       <h1><cyan-icon noun="fox" large></cyan-icon>Cyan elements stylebook</h1>
-      <select v-model="layout">
-        <option value="singleColumnLayout">singleColumnLayout</option>
-        <option value="bookLayout">bookLayout</option>
-        <option value="dashboardLayout">dashboardLayout</option>
-      </select>
+      <div style="max-width: 300px;margin: 0 auto">
+        <cyan-select label="Layout mode" :options="layouts" :value="layout" @change="layout = $event.target.value"/>
+      </div>
     </div>
     <main id="layout" :class="layout"> 
       <Intro />
+      <Markdown />
       <Inputs /> 
       <AssetSelect />
       <Toolbars />

@@ -41,13 +41,45 @@
   --cyan-field-label-line-height: 12px
   --cyan-field-label-letter-spacing: 0.5px
 
+
+  // TypeHeadLine 3
+  --cyan-type-headline-3-font-size: 48px
+  --cyan-type-headline-3-letter-spacing: 0px
+  --cyan-type-headline-3-line-height: 56px
+  --cyan-type-headline-3-font-weight: 400
+  --cyan-type-headline-3-margin: 0 0 24px 0
+  --cyan-type-headline-3-padding: 0
+
+  // TypeHeadLine 4
+  --cyan-type-headline-4-font-size: 34px
+  --cyan-type-headline-4-letter-spacing: 0.25px
+  --cyan-type-headline-4-line-height: 56px
+  --cyan-type-headline-4-font-weight: 200
+  --cyan-type-headline-4-margin: 0 0 12px 0
+  --cyan-type-headline-4-padding: 0
+
+  // TypeHeadLine 5
+  --cyan-type-headline-5-font-size: 25px
+  --cyan-type-headline-5-letter-spacing: 0px
+  --cyan-type-headline-5-line-height: 32px
+  --cyan-type-headline-5-font-weight: 400
+  --cyan-type-headline-5-margin: 0 8px 12px 0
+  --cyan-type-headline-5-padding: 0
+
+  // TypeHeadLine 6
+  --cyan-type-headline-6-font-size: 20px
+  --cyan-type-headline-6-letter-spacing: 0.15px
+  --cyan-type-headline-6-line-height: 32px
+  --cyan-type-headline-6-font-weight: 500
+  --cyan-type-headline-6-margin: 0 0 8px 0
+  --cyan-type-headline-6-padding: 0
+
 @mixin TypeHeadline3()
-  font-size: 48px
-  letter-spacing: 0px
-  line-height: 56px
-  margin: 0
-  padding: 0
-  margin-bottom: 24px
+  font-size: var(--cyan-type-headline-3-font-size)
+  letter-spacing: var(--cyan-type-headline-3-letter-spacing)
+  line-height: var(--cyan-type-headline-3-line-height)
+  margin: var(--cyan-type-headline-3-margin)
+  padding: var(--cyan-type-headline-3-padding)
 
 @mixin TypeHeadline4()
   font-size: 34px

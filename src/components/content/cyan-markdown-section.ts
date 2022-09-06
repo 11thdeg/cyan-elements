@@ -15,7 +15,7 @@ export class CyanMarkdownSection extends LitElement {
   render () {
     const markup = marked(this.content)
     return html`
-      <section class="cyan-markdown-section">
+      <section>
       ${unsafeHTML(markup)}
       </section>`
   }
