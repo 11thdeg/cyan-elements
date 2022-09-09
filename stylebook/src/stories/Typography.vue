@@ -1,6 +1,29 @@
+<script lang="ts" setup>
+import { ref } from 'vue'
+
+const styleTest = ref('TypeBody1')
+const typeStyles = [
+  { label: "TypeHeadline3", value: "TypeHeadline3"},
+  { label: "TypeHeadline4", value: "TypeHeadline4"},
+  { label: "TypeHeadline5", value: "TypeHeadline5"},
+  { label: "TypeHeadline6", value: "TypeHeadline6"},
+  { label: "TypeBody1", value: "TypeBody1"},
+  { label: "TypeBody2", value: "TypeBody2"},
+  { label: "TypeButton", value: "TypeButton"},
+  { label: "TypeCaption", value: "TypeCaption"},
+]
+</script>
+
 <template>
   <article class="Column double-cut">
     <h1>Typography</h1>
+    <section>
+      <h3>Tester</h3>
+      <cyan-select :value="styleTest" :options="typeStyles" @change="styleTest = $event.target.value"/>
+      <p :class="styleTest">sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
+    </section>
+
+
     <p class="lowEmphasis">
       This text has a <cyan-code>lowEmphasis</cyan-code> class active.
     </p>
