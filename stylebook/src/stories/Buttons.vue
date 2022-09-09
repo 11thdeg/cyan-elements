@@ -15,5 +15,13 @@
     <cyan-button text label="Not Working yet" noun="stylebook" working="false"></cyan-button>
     <cyan-button text label="Working" noun="monsters" working="true"></cyan-button>
     <cyan-button text label="Disabled" noun="discussion" disabled="true"></cyan-button>
+
+    <section>
+      <h3>Tags</h3>
+      <cyan-tag label="Label"></cyan-tag>
+      <cyan-tag label="Icon" noun="stylebook"></cyan-tag>
+      <cyan-tag label="Disabled" noun="delete" disabled="true"></cyan-tag>
+      <cyan-tag label="Action" action="delete"></cyan-tag> 
+    </section>
   </article>
 </template>

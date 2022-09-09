@@ -35,7 +35,7 @@ export class CyanIcon extends LitElement {
     :host, img {
       height: 36px;
       width: 36px;
-      vertical-align: middle;
+      vertical-align: text-top;
     }
     :host([xsmall]), img.xsmall {
       height: 16px;
