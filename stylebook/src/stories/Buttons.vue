@@ -22,6 +22,7 @@
       <cyan-tag label="Icon" noun="stylebook"></cyan-tag>
       <cyan-tag label="Disabled" noun="delete" disabled="true"></cyan-tag>
       <cyan-tag label="Action" action="delete"></cyan-tag> 
+      <cyan-tag label="Action" action="add" noun="avatar"></cyan-tag>
     </section>
   </article>
 </template>

@@ -33,23 +33,24 @@ export class CyanIcon extends LitElement {
   static styles = css`
     ${cyanUIComponentStyles}
     :host, img {
+      display: inline-block;
       height: 36px;
       width: 36px;
       vertical-align: text-top;
     }
-    :host([xsmall]), img.xsmall {
+    :host([xsmall]), :host([xsmall]) img {
       height: 16px;
       width: 16px;
     }
-    :host([small]), img.small {
+    :host([small]), :host([small]) img {
       height: 24px;
       width: 24px;
     }
-    :host([xlarge]), img.xlarge {
+    :host([xlarge]), :host([xlarge]) img {
       height: 128px;
       width: 128px;
     }
-    :host([large]), img.large {
+    :host([large]), :host([large]) img {
       height: 72px;
       width: 72px;
     }
@@ -78,11 +79,10 @@ export class CyanIcon extends LitElement {
 
   render () {
     if(!nouns[this.noun]) logError(`Icon '${this.noun}' not found`)
-    const classes = this.xsmall ? 'xsmall' : this.small ? 'small' : this.xlarge ? 'xlarge' : this.large ? 'large' : ''
+    // const classes = this.xsmall ? 'xsmall' : this.small ? 'small' : this.xlarge ? 'xlarge' : this.large ? 'large' : ''
     return html`<img
       src="/proprietary/icons/${this.light ? 'light' : this.dark ? 'dark' : this.lightmode}/${nouns[this.noun]||nouns['missing']}"
-      alt="${this.noun}"
-      class="${classes}"/>`
+      alt="${this.noun}" />`
   }
 }
 
