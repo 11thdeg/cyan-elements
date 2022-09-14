@@ -23,6 +23,7 @@
       <cyan-tag label="Disabled" noun="delete" disabled="true"></cyan-tag>
       <cyan-tag label="Action" action="delete"></cyan-tag> 
       <cyan-tag label="Action" action="add" noun="avatar"></cyan-tag>
+      <cyan-tag label="Notification" notification noun="discussion" action="add"></cyan-tag>
     </section>
   </article>
 </template>

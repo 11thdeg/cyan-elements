@@ -20,6 +20,10 @@ export class CyanTag extends LitElement {
       font-size: 13px;
       line-height: 13px;
     }
+    :host([notification]) {
+      background-image: linear-gradient(-42deg, var(--chroma-secondary-g) 0%, var(--chroma-primary-i) 100%);
+      color: var(--chroma-secondary-c);
+    }
     .action-noun{
       background-color: var(--cyan-tag-action-background-color);
       border-radius: 50%;
@@ -30,6 +34,9 @@ export class CyanTag extends LitElement {
       position: absolute;
       right: 1px;
       top: 1px;
+    }
+    :host([notification]) .action-noun{
+      background-color: var(--chroma-primary-h);
     }
     .TypeCaption{
       font-family: var(--cyan-text-font-family);
