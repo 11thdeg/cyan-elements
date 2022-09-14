@@ -46,7 +46,8 @@
   --cyan-field-label-line-height: 16px
   --cyan-field-label-letter-spacing: 0.4px
 
-
+  --cyan-row-gap: 24px
+  --cyan-col-gap: 12px
 
 @mixin TypeBody1()
   font-family: var(--cyan-text-font-family)
@@ -76,6 +77,7 @@
 
 p, .TypeBody1
   @include TypeBody1
+  color: var(--cyan-text-color)
 
 .TypeBody2
   @include TypeBody2
