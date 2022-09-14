@@ -34,7 +34,10 @@ export class CyanButton extends LitElement {
       background-color: var(--cyan-button-background-color-active);
     }
     :host button:disabled {
+      color: var(--cyan-button-color-disabled);
       background-color: var(--cyan-button-background-color-disabled);
+      border: 1px solid var(--cyan-button-border-color-disabled);
+      margin: 4px;
     }
     :host([text]) button {
       color: var(--cyan-UI-text-color);
@@ -47,8 +50,30 @@ export class CyanButton extends LitElement {
       background-color: var(--cyan-button-text-background-color-active);
     }
     :host([text]) button:disabled {
-      color: var(--cyan-UI-text-color-disabled);
+      color: var(--cyan-button-text-color-disabled);
       background-color: var(--cyan-button-text-background-color-disabled);
+    }
+    :host([dark]) button {
+      color: white;
+    }
+    :host([dark]) button:hover {
+      background-color: rgba(255,255,255,0.2);
+    }
+    :host([dark]) button:active {
+      background-color: rgba(255,255,255,0.3);
+    }
+    :host([disabled]) cyan-icon {
+      opacity: 0.37;
+    }
+    :host([secondary]) button {
+      color: var(--cyan-button-secondary-color);
+      background-color: var(--cyan-button-secondary-background-color);
+    }
+    :host([secondary]) button:hover {
+      background-color: var(--cyan-button-secondary-background-color-hover);
+    }
+    :host([secondary]) button:active {
+      background-color: var(--cyan-button-secondary-background-color-active);
     }
   `
   @property({ type: String, reflect: true })
@@ -69,6 +94,9 @@ export class CyanButton extends LitElement {
   @property({ type: Boolean, reflect: true })
     disabled = false
 
+  @property({ type: Boolean, reflect: true })
+    dark = false
+
   render () {
     const classes = classMap({
       'secondary': this.secondary && !this.text,
@@ -77,7 +105,7 @@ export class CyanButton extends LitElement {
     })
     return html`
       <button class="${classes}" ?disabled="${this.disabled}">
-        ${ this.noun ? html`<cyan-icon small ?dark="${!this.text}" noun="${this.noun}" style="margin-left: -4px; margin-right: 2px; margin-top:-6px; display: inline-block"></cyan-icon>` : '' }
+        ${ this.noun ? html`<cyan-icon small ?dark="${this.dark || !this.text}" noun="${this.noun}" style="margin-left: -4px; margin-right: 2px; margin-top:-6px; display: inline-block"></cyan-icon>` : '' }
         ${ this.label }
         ${ this.working ? html`<cyan-save-interaction ?active="${this.working == 'true' }" style="display: inline-block; line-height: 26px; vertical-align: middle; margin-right: -8px; margin-top: -3px">` : '' }
       </button>

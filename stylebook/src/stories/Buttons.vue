@@ -9,12 +9,28 @@
     <cyan-button label="Working" noun="monsters" working="true"></cyan-button>
     <cyan-button label="Disabled" noun="google" disabled="true"></cyan-button>
 
+    <section>
+      <h3>Secondary</h3>
+      <cyan-button secondary label="Label"></cyan-button>
+      <cyan-button secondary label="Icon" noun="discussion"></cyan-button>
+      <cyan-button secondary label="Not Working yet" noun="facebook" working="false"></cyan-button>
+      <cyan-button secondary label="Working" noun="monsters" working="true"></cyan-button>
+      <cyan-button secondary label="Disabled" noun="google" disabled="true"></cyan-button>
+    </section>
+
     <h3>Text</h3>
     <cyan-button text label="Label"></cyan-button>
     <cyan-button text label="Icon" noun="discussion"></cyan-button>
     <cyan-button text label="Not Working yet" noun="stylebook" working="false"></cyan-button>
     <cyan-button text label="Working" noun="monsters" working="true"></cyan-button>
     <cyan-button text label="Disabled" noun="discussion" disabled="true"></cyan-button>
+
+    <section class="chroma-box-a card">
+      <h3>Forced dark</h3>
+      <cyan-button dark label="Label"></cyan-button>
+      <cyan-button dark label="Icon" noun="discussion"></cyan-button>
+      <cyan-button dark text label="Text" noun="stylebook"></cyan-button>
+    </section>
 
     <section>
       <h3>Tags</h3>

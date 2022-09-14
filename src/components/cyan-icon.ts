@@ -12,22 +12,22 @@ export class CyanIcon extends LitElement {
   @property({ type: String })
     noun: string
 
-  @property({ type: Boolean })
+  @property({ type: Boolean, reflect: true })
     xsmall = false
 
-  @property({ type: Boolean })
+  @property({ type: Boolean, reflect: true })
     small = false
 
-  @property({ type: Boolean })
+  @property({ type: Boolean, reflect: true })
     xlarge = false
 
-  @property({ type: Boolean })
+  @property({ type: Boolean, reflect: true })
     large = false
 
-  @property({ type: Boolean })
+  @property({ type: Boolean, reflect: true })
     light = false
 
-  @property({ type: Boolean })
+  @property({ type: Boolean, reflect: true })
     dark = false
 
   static styles = css`

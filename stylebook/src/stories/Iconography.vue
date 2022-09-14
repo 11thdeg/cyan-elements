@@ -38,6 +38,13 @@ const iconlist = computed(() => {
       <p>
         <cyan-toggle label="Invert icon color" @checked="invert" @change="invert=!invert"></cyan-toggle>
       </p>
+      <div class="chroma-box-a card" style="display:flex">
+        <cyan-icon noun="stylebook" dark xlarge></cyan-icon>
+        <cyan-icon noun="stylebook" dark large></cyan-icon>
+        <cyan-icon noun="stylebook" dark></cyan-icon>
+        <cyan-icon noun="stylebook" dark small></cyan-icon>
+        <cyan-icon noun="stylebook" dark xsmall></cyan-icon>
+      </div>
       <div
         class="iconlist"
         :class="{ surface: onSurface }"

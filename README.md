@@ -29,6 +29,12 @@ Atomics available
 - `.hideOnMobile`
 - `.dontBreakOut`
 - `.codeblock`
+- `.card`
+- `.rise-b`
+- `.chroma-card-a`
+- `.chroma-card-b`
+- `.chroma-card-c`
+
 
 See stylebook for examples of use
 
