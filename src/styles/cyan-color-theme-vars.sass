@@ -11,6 +11,7 @@
   --text-low-opacity: 0.60
   
   .cyan--mode--light
+    --cyan-background-color: #fff
     // Headers
     --cyan-heading-color-a: var(--chroma-secondary-e)
     --cyan-heading-color-b: var(--chroma-secondary-b)
@@ -53,7 +54,6 @@
     // Cleaned ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
-    --cyan-app-base-color: #fff
     --cyan-toggle-knob-color-on: #a2e4ec
     --cyan-toggle-knob-color-off: #e7fbfb
     --cyan-toggle-knob-back-color-off: #76c8d5
@@ -86,7 +86,13 @@
     --cyan-menu-item-text-color: var(--chroma-secondary-f)
     
   .cyan--mode--dark
-    --cyan-app-base-color: #121212
+    --cyan-background-color: #002337
+    // Basic text
+    --cyan-low-emphasis-color: rgba(231, 251, 251, var(--text-low-opacity))
+    --cyan-text-color: rgba(231, 251, 251, var(--text-medium-opacity))
+    --cyan-high-emphasis-color: rgba(231, 251, 251, var(--text-high-opacity))
+
+    // ^Cleaned up to here
     --cyan-base-color: #121212
     --cyan-heading-color: #a2e4ec
     --cyan-text-color: rgba(255, 255, 255, 0.87)

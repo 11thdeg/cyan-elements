@@ -45,7 +45,7 @@ import CodeSpan from '../components/CodeSpan.vue';
             <cyan-icon noun="adventurer" small/>
             <h3>In a Card?</h3>
             <cyan-spacer />
-            <cyan-button label="button"/>
+            <cyan-lightmode-toggle />
           </cyan-toolbar>
           <p>With some text?</p>
         </div>

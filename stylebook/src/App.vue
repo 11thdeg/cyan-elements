@@ -12,6 +12,7 @@ import { ref } from 'vue';
 import Toolbars from './stories/Toolbars.vue';
 import AssetSelect from './stories/AssetSelect.vue';
 import Markdown from './stories/Markdown.vue';
+import Theming from './stories/Theming.vue';
 
 const layout = ref('bookLayout')
 
@@ -33,6 +34,7 @@ const layouts = [
     <main id="layout" :class="layout"> 
       <Intro />
       <Atomics />
+      <Theming />
       <Buttons />
       <Inputs /> 
       <AssetSelect />

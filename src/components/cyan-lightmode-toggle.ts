@@ -43,7 +43,7 @@ export class CyanLightmodeToggle extends LitElement {
   }
 
   render () {
-    return html`<cyan-toggle @change="${this.onChange}" ?checked="${this.dark}" label="${this.label}"></cyan-toggle>`
+    return html`<cyan-icon @click="${this.onChange}" noun="lightmode"></cyan-icon>`
   }
 }
 
