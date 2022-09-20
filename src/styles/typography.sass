@@ -1,4 +1,5 @@
 @import 'typography/TypeHeadline.sass'
+@import 'atomics/dontBreakOut.sass'
   
 // UI Elements
 :root
@@ -101,4 +102,7 @@ h4
 cyan-toolbar h1, cyan-toolbar h2, cyan-toolbar h3, cyan-toolbar h4
   line-height: 48px
   margin-bottom: 0
-
+  max-height: 48px
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis

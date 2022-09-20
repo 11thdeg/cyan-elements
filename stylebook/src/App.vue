@@ -32,11 +32,12 @@ const layouts = [
     </div>
     <main id="layout" :class="layout"> 
       <Intro />
+      <Toolbars />
       <Atomics />
       <Buttons />
       <Inputs /> 
       <AssetSelect />
-      <Toolbars />
+      
       <Typography />
       <Iconography />
       <Chroma />
