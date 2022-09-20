@@ -11,5 +11,8 @@ import ColorVar from '../components/ColorVar.vue';
     <ColorVar var="--cyan-low-emphasis-color" />
     <ColorVar var="--cyan-text-color" />
     <ColorVar var="--cyan-high-emphasis-color" />
+    <h3>Boxes and bubbles</h3>
+    <ColorVar var="--cyan-bubble-background-color-a" />
+    <ColorVar var="--cyan-bubble-background-color-b" />
   </article>
 </template>
