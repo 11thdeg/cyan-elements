@@ -6,7 +6,6 @@ export const cyanComponentStyle = css`
     font-size: var(--cyan-font-size);
     line-height: var(--cyan-line-height);
     color: var(--cyan-color);
-    background-color: var(--cyan-background-color);
   }
   :host h1, :host h2, ::slotted(h1), ::slotted(h2) {
     color: var(--cyan-heading-color-a);
