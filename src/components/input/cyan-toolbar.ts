@@ -14,6 +14,18 @@ export class CyanToolbar extends LitElement {
       height: 48px;
       padding: 4px 0;
       justify-content: flex-start;
+      gap: var(--cyan-col-gap);
+    }
+    ::slotted(cyan-icon) {
+      margin: 0;
+      padding: 0;
+      width: 48px;
+      height: 48px;
+    }
+    ::slotted(cyan-icon[small]) {
+      width: 24px;
+      height: 24px;
+      padding: 12px;
     }`
 
 

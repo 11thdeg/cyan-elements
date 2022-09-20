@@ -27,6 +27,12 @@ export class CyanButton extends LitElement {
       letter-spacing: 1.25px;
       display: inline-block;
     }
+    :host(:first-child) button{
+      margin-left: 0;
+    }
+    :host(:last-child) button{
+      margin-right: 0;
+    }
     :host button:hover {
       background-color: var(--cyan-button-background-color-hover);
     }

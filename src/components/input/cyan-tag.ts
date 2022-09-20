@@ -24,6 +24,12 @@ export class CyanTag extends LitElement {
       background-image: linear-gradient(-42deg, var(--chroma-secondary-g) 0%, var(--chroma-primary-i) 100%);
       color: var(--chroma-secondary-c);
     }
+    :host(:first-child) {
+      margin-left: 0;
+    }
+    :host(:last-child) {
+      margin-right: 0;
+    }
     .action-noun{
       background-color: var(--cyan-tag-action-background-color);
       border-radius: 50%;
