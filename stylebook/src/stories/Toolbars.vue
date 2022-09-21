@@ -52,10 +52,11 @@ import CodeSpan from '../components/CodeSpan.vue';
       </section>
       <section>
         <h3>With some tags?</h3>
-        <cyan-toolbar small>
-          <cyan-tag label="tag" />
-          <cyan-tag label="tag" />
-          <cyan-tag label="tag" />
+        <p>Below is a <cyan-code>{{ '<cyan-toolbar small>' }}</cyan-code> with some <cyan-code>{{ '<cyan-tag>' }}</cyan-code>'s  and a  <cyan-code>{{ '<cyan-icon noun="adventurer" small/>' }}</cyan-code>.</p>
+        <cyan-toolbar small style="border: dashed 1px var(--chroma-primary-f)">
+          <cyan-tag label="tag" noun="add"/>
+          <cyan-tag label="another" action="send"/>
+          <cyan-tag label="third" />
           <cyan-spacer />
           <cyan-icon noun="adventurer" small/>
         </cyan-toolbar>
