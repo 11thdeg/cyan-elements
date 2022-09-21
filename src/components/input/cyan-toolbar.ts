@@ -16,6 +16,11 @@ export class CyanToolbar extends LitElement {
       justify-content: flex-start;
       gap: var(--cyan-col-gap);
     }
+    :host([small]) {
+      height: 24px;
+      padding: 4px 0;
+      margin: 0;
+    }
     ::slotted(cyan-icon) {
       margin: 0;
       padding: 0;
@@ -26,7 +31,10 @@ export class CyanToolbar extends LitElement {
       width: 24px;
       height: 24px;
       padding: 12px;
-    }`
+    }
+    :host([small]) ::slotted(cyan-icon[small]) {
+      padding: 0;
+    })`
 
 
   render () {

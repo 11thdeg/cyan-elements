@@ -52,12 +52,12 @@ import CodeSpan from '../components/CodeSpan.vue';
       </section>
       <section>
         <h3>With some tags?</h3>
-        <cyan-toolbar class="rise-b" style="padding: 0 4px; border-radius: 28px;">
+        <cyan-toolbar small>
           <cyan-tag label="tag" />
           <cyan-tag label="tag" />
           <cyan-tag label="tag" />
           <cyan-spacer />
-          <cyan-button label="button"/>
+          <cyan-icon noun="adventurer" small/>
         </cyan-toolbar>
       </section>
     </article>
