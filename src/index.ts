@@ -22,6 +22,7 @@ export * from './components/interactions/cyan-save-interaction'
 
 // Inputs
 export * from './components/input/cyan-textfield'
+export * from './components/input/cyan-textarea'
 export * from './components/input/cyan-button'
 export * from './components/input/cyan-toolbar'
 export * from './components/input/cyan-asset-select'

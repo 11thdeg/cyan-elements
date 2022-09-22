@@ -12,7 +12,7 @@ const options = [
   <article class="Column double-cut" id="Inputs">
     <h1>Inputs</h1>
     <section>
-      <h2>Select</h2>
+      <!--h2>Select</h2>
       <cyan-select label="A Select element" @change="selected = $event.target.value" :value="selected" :options="options">
       </cyan-select>
       <p>Selected: {{ selected }}</p>
@@ -37,7 +37,16 @@ const options = [
         value="Example error-value"
         label="Example label"
         placeholder="Example placeholder"
-        error="Example error message"></cyan-textfield>
+        error="Example error message"></cyan-textfield-->
+    </section>
+    <section>
+      <h2>Textarea</h2>
+      <cyan-textarea
+        :value="inputValue"
+        @blur="inputValue = $event.target.value"
+        label="Example label"
+        placeholder="Example placeholder"></cyan-textarea>
+      {{inputValue}}
     </section>
   </article>
 </template>
