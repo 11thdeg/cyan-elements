@@ -2,13 +2,41 @@
 
 A shared element library for pelilauta. charna, and so.
 
-# 0.2.0
+# 0.13.0
 
 Components available
 - `<cyan-toggle>`
 - `<cyan-textfield>`
 - `<cyan-icon>`
 - `<cyan-save-interaction>`
+- `<cyan-code>`
+- `<cyan-button>`
+- `<cyan-toolbar>`
+- `<cyan-select>`
+- `<cyan-asset-select>` and `<cyan-asset-option>`
+- `<cyan-tag>`
+- `<cyan-textarea>`
+- `<cyan-love-button>`
+
+Atomics available
+- `.TypeHeadline3`
+- `.TypeHeadline4`
+- `.TypeHeadline5`
+- `.TypeHeadline6`
+- `.TypeBody1`
+- `.TypeBody2`
+- `.TypeCaption`
+- `.TypeUI`
+- `.lowEmphasis`
+- `.hideOnMobile`
+- `.dontBreakOut`
+- `.codeblock`
+- `.card`
+- `.rise-b`
+- `.chroma-card-a`
+- `.chroma-card-b`
+- `.chroma-card-c`
+
 
 See stylebook for examples of use
 

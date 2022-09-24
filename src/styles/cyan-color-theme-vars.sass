@@ -1,5 +1,6 @@
+
 // Complete solution based on the ideas presented in
-// https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/
+// https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/ 
 :root
   // Support for dark and light mode available
   color-scheme: light dark
@@ -8,43 +9,68 @@
   --text-high-opacity: 1
   --text-medium-opacity: 0.87
   --text-low-opacity: 0.60
-
-  // Primary palette:
-  // https://gka.github.io/palettes/#/9|s|006655,00c853,eeff41|ffffe0,ff005e,006c09|1|1
-  --chroma-primary-a:#006655
-  --chroma-primary-b:#127a56
-  --chroma-primary-c:#288f56
-  --chroma-primary-d:#3fa356
-  --chroma-primary-e:#5ab754
-  --chroma-primary-f:#79cb51
-  --chroma-primary-g:#9bdd4d
-  --chroma-primary-h:#c2ef48
-  --chroma-primary-i:#eeff41
-
-  // Secondary palette:
-  // https://gka.github.io/palettes/#/9|s|002337,05e7fb,e7fbfb|ffffe0,ff005e,006c09|1|1
-  --chroma-secondary-a: #002337
-  --chroma-secondary-b: #043c50
-  --chroma-secondary-c: #10566b
-  --chroma-secondary-d: #227286
-  --chroma-secondary-e: #388ea1
-  --chroma-secondary-f: #53abbb
-  --chroma-secondary-g: #76c8d5
-  --chroma-secondary-h: #a2e4ec
-  --chroma-secondary-i: #e7fbfb
-
-  // Alerts:
-  --chroma-alert: #bb1187
-  --chroma-alert-field-tint: #fff
-  // rgba(187, 17, 135, 0.4) #f1cfe7  
-
+  
   .cyan--mode--light
-    --cyan-app-base-color: #fff
+    --cyan-background-color: #fff
+
+    // Bubbles
+    --cyan-bubble-background-color-a: rgba(155, 221, 77, 0.4)
+    --cyan-bubble-background-color-b: rgba(155, 221, 77, 0.2)
+
+    // Headers
+    --cyan-heading-color-a: var(--chroma-secondary-e)
+    --cyan-heading-color-b: var(--chroma-secondary-b)
+
+    // UI text
+    --cyan-UI-text-color: rgba(0,0,0,var(--text-high-opacity))
+    --cyan-UI-text-color-disabled: rgba(0,0,0,var(--text-low-opacity))
+
+    // Basic text
+    --cyan-low-emphasis-color: rgba(0, 35, 55, var(--text-low-opacity))
+    --cyan-text-color: rgba(0, 35, 55, var(--text-medium-opacity))
+    --cyan-high-emphasis-color: rgba(0, 35, 55, var(--text-high-opacity))
+    
+    // Button, primary
+    --cyan-button-color: var(--chroma-secondary-i)
+    --cyan-button-color-disabled: var(--chroma-secondary-g)
+    --cyan-button-background-color: var(--chroma-primary-c)
+    --cyan-button-background-color-hover: var(--chroma-primary-d)
+    --cyan-button-background-color-active: var(--chroma-primary-b)
+    --cyan-button-background-color-disabled: var(--chroma-secondary-i)
+    --cyan-button-border-color-disabled: var(--chroma-secondary-h)
+
+    // Button, secondary
+    --cyan-button-secondary-color: var(--chroma-secondary-i)
+    --cyan-button-secondary-background-color: var(--chroma-secondary-d)
+    --cyan-button-secondary-background-color-hover: var(--chroma-secondary-e)
+    --cyan-button-secondary-background-color-active: var(--chroma-secondary-c)
+
+    // Button, text
+    --cyan-button-text-background-color-hover: var(--chroma-primary-i)
+    --cyan-button-text-background-color-active: var(--chroma-primary-h)
+    --cyan-button-text-background-color-disabled: var(--chroma-secondary-i)
+    --cyan-button-text-color-disabled: var(--chroma-secondary-h)
+
+    // Tags
+    --cyan-tag-background-color: var(--chroma-secondary-i)
+    --cyan-tag-background-color-hover: var(--chroma-secondary-h)
+    --cyan-tag-background-color-active: var(--chroma-secondary-g)
+
+    --cyan-tag-color: var(--chroma-secondary-f)
+    --cyan-tag-action-background-color: var(--chroma-secondary-h)
+
+    --cyan-tag-background-color-secondary: var(--chroma-primary-h)
+    --cyan-tag-background-color-secondary-hover: var(--chroma-primary-g)
+    --cyan-tag-background-color-secondary-active: var(--chroma-primary-i)
+
+    // Cleaned ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
     --cyan-toggle-knob-color-on: #a2e4ec
     --cyan-toggle-knob-color-off: #e7fbfb
     --cyan-toggle-knob-back-color-off: #76c8d5
     --cyan-toggle-knob-back-color-on: #53abbb
-    --cyan-heading-color: #388ea1
+    
     --cyan-text-color: #334f5f
     --cyan-base-color: #ffffff
     --cyan-ui-color: #334f5f
@@ -52,8 +78,8 @@
     --cyan-ui-hover-shadow-color: #334f5f
     --cyan-ui-active-shadow-color: #388ea1
     // Code
-    --cyan-code-color: #334f5f
-    --cyan-code-background-color: #f5f5f5
+    --cyan-code-color: var(--chroma-secondary-c)
+    --cyan-code-background-color: var(--chroma-secondary-i)
     // Inputs
     --cyan-field-label-color: var(--chroma-secondary-f)
     --cyan-field-background-color: var(--chroma-secondary-i)
@@ -72,7 +98,18 @@
     --cyan-menu-item-text-color: var(--chroma-secondary-f)
     
   .cyan--mode--dark
-    --cyan-app-base-color: #121212
+    --cyan-background-color: #002337
+
+    // Bubbles
+    --cyan-bubble-background-color-a: rgba(155, 221, 77, 0.4)
+    --cyan-bubble-background-color-b: rgba(155, 221, 77, 0.2)
+    
+    // Basic text
+    --cyan-low-emphasis-color: rgba(231, 251, 251, var(--text-low-opacity))
+    --cyan-text-color: rgba(231, 251, 251, var(--text-medium-opacity))
+    --cyan-high-emphasis-color: rgba(231, 251, 251, var(--text-high-opacity))
+
+    // ^Cleaned up to here
     --cyan-base-color: #121212
     --cyan-heading-color: #a2e4ec
     --cyan-text-color: rgba(255, 255, 255, 0.87)

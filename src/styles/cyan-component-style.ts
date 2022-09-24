@@ -6,15 +6,41 @@ export const cyanComponentStyle = css`
     font-size: var(--cyan-font-size);
     line-height: var(--cyan-line-height);
     color: var(--cyan-color);
-    background-color: var(--cyan-background-color);
   }
-  :host h1, host h2, ::slotted(h1), ::slotted(h2) {
-    color: var(--cyan-heading-color);
+  :host h1, :host h2, ::slotted(h1), ::slotted(h2) {
+    color: var(--cyan-heading-color-a);
   }
   :host h1, ::slotted(h1) {
-    font-size: var(--cyan-h1-font-size);
-    font-weight: var(--cyan-h1-font-weight);
-    line-height: var(--cyan-h1-line-height);
+    font-size: var(--cyan-type-headline-3-font-size);
+    letter-spacing: var(--cyan-type-headline-3-letter-spacing);
+    line-height: var(--cyan-type-headline-3-line-height);
+    margin: var(--cyan-type-headline-3-margin);
+    padding: var(--cyan-type-headline-3-padding);
+    font-weight: var(--cyan-type-headline-3-font-weight);
+  }
+  :host h2, ::slotted(h2) {
+    font-size: var(--cyan-type-headline-4-font-size);
+    letter-spacing: var(--cyan-type-headline-4-letter-spacing);
+    line-height: var(--cyan-type-headline-4-line-height);
+    margin: var(--cyan-type-headline-4-margin);
+    padding: var(--cyan-type-headline-4-padding);
+    font-weight: var(--cyan-type-headline-4-font-weight);
+  }
+  :host h3, ::slotted(h3) {
+    font-size: var(--cyan-type-headline-5-font-size);
+    letter-spacing: var(--cyan-type-headline-5-letter-spacing);
+    line-height: var(--cyan-type-headline-5-line-height);
+    margin: var(--cyan-type-headline-5-margin);
+    padding: var(--cyan-type-headline-5-padding);
+    font-weight: var(--cyan-type-headline-5-font-weight);
+  }
+  :host h4, ::slotted(h4) {
+    font-size: var(--cyan-type-headline-6-font-size);
+    letter-spacing: var(--cyan-type-headline-6-letter-spacing);
+    line-height: var(--cyan-type-headline-6-line-height);
+    margin: var(--cyan-type-headline-6-margin);
+    padding: var(--cyan-type-headline-6-padding);
+    font-weight: var(--cyan-type-headline-6-font-weight);
   }
   :host p, ::slotted(p) {
     font-family: var(--cyan-text-font-family);
@@ -27,11 +53,12 @@ export const cyanComponentStyle = css`
 `
 export const cyanUIComponentStyles = css`
   ${cyanComponentStyle}
-  :host {
+  :host, ::slotted(*) {
     font-family: var(--cyan-ui-font-family);
     font-size: var(--cyan-ui-font-size);
+    letter-spacing: var(--cyan-ui-letter-spacing);
     line-height: var(--cyan-ui-line-height);
-    color: var(--cyan-ui-color);
+    font-weight: var(--cyan-ui-font-weight);
   }
   :host(.hoverable:hover){
     filter: drop-shadow(0px 0px 8px var(--cyan-ui-hover-shadow-color));

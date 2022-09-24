@@ -49,12 +49,10 @@ export class CyanMenu extends LitElement {
   }
 
   handleFocus () {
-    // logDebug('handleFocus', e)
     this.open = true
     this.dispatchEvent(new Event('open', {bubbles: true, composed: true}))
   }
   handleFocusOut () {
-    // logDebug('handleFocusOut', e)
     setTimeout(() => { this.open = false }, 300)
     this.dispatchEvent(new Event('close', {bubbles: true, composed: true}))
   }

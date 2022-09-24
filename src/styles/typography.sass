@@ -1,0 +1,109 @@
+@import 'typography/TypeHeadline.sass'
+@import 'atomics/dontBreakOut.sass'
+  
+// UI Elements
+:root
+  // Font families
+  --cyan-heading-font-family: 'Overpass', sans-serif
+  --cyan-monospace-font-family: 'Roboto Mono', monospace
+  --cyan-text-font-family: 'Cabin',sans-serif
+  --cyan-ui-font-family: 'Cabin', 'Roboto', sans-serif
+  
+  // Cleaned up to here ^
+  --cyan-ui-font-size: 16px
+  --cyan-ui-letter-spacing: 1.25px
+  --cyan-ui-line-height: 24px
+  --cyan-ui-font-weight: 400
+
+@mixin TypeUI
+  font-family: var(--cyan-ui-font-family)
+  font-size: var(--cyan-ui-font-size)
+  letter-spacing: var(--cyan-ui-letter-spacing)
+  line-height: var(--cyan-ui-line-height)
+  font-weight: var(--cyan-ui-font-weight)
+
+.TypeUI
+  @include TypeUI
+
+:root
+  // Monospace, code etc
+  
+  --cyan-monospace-font-size: 14px
+  --cyan-monospace-font-weight: 500
+  --cyan-monospace-line-height: 24px
+  // Headers
+
+  // Basic text
+  
+  --cyan-text-font-size: 17px
+  --cyan-text-font-weight: 400
+  --cyan-text-line-height: 24px
+  --cyan-text-letter-spacing: 0.5px
+
+  // Inputs
+  --cyan-field-label-font-family: var(--cyan-ui-font-family)
+  --cyan-field-label-font-size: 13px
+  --cyan-field-label-font-weight: normal
+  --cyan-field-label-line-height: 16px
+  --cyan-field-label-letter-spacing: 0.4px
+
+  --cyan-row-gap: 24px
+  --cyan-col-gap: 12px
+
+@mixin TypeBody1()
+  font-family: var(--cyan-text-font-family)
+  font-weight: normal
+  font-size: 17px
+  line-height: 24px
+  letter-spacing: 0.5px
+
+@mixin TypeBody2()
+  font-family: var(--cyan-text-font-family)
+  font-weight: 400
+  font-size: 15px
+  line-height: 24px
+  letter-spacing: 0.25px
+
+@mixin TypeCaption()
+  font-family: var(--cyan-text-font-family)
+  font-size: 13px
+  font-weight: normal
+  letter-spacing: 0.4px
+  line-height: 16px
+  margin: 0
+  padding: 0
+
+.TypeCaption
+  @include TypeCaption
+
+p, .TypeBody1
+  @include TypeBody1
+  color: var(--cyan-text-color)
+
+.TypeBody2
+  @include TypeBody2
+
+h1
+  color: var(--cyan-heading-color-a)
+  @include TypeHeadline3()
+
+h2
+  color: var(--cyan-heading-color-a)
+  @include TypeHeadline4()
+
+h3
+  color: var(--cyan-heading-color-b)
+  @include TypeHeadline5()
+
+h4
+  color: var(--cyan-heading-color-b)
+  @include TypeHeadline6()
+
+cyan-toolbar h1, cyan-toolbar h2, cyan-toolbar h3, cyan-toolbar h4
+  line-height: 48px
+  margin-bottom: 0
+  padding-top: 0px
+  max-height: 48px
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis

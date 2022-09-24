@@ -21,7 +21,7 @@ export class CyanSaveInteraction extends LitElement {
       margin: 0;
       padding: 0;
     }
-    :host([active=true]) img {
+    :host([active]) img {
       opacity: 1;
     }
     :host([large]) img {

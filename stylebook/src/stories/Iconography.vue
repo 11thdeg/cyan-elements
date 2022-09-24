@@ -25,7 +25,7 @@ const iconlist = computed(() => {
 </script>
 
 <template>
-  <article class="column">
+  <article class="Column double">
     <section>
       <h1>Iconography</h1>
       <p>The icons are available onDark/dark and onBright/light variations.</p>
@@ -38,6 +38,13 @@ const iconlist = computed(() => {
       <p>
         <cyan-toggle label="Invert icon color" @checked="invert" @change="invert=!invert"></cyan-toggle>
       </p>
+      <div class="chroma-box-a card" style="display:flex">
+        <cyan-icon noun="stylebook" dark xlarge></cyan-icon>
+        <cyan-icon noun="stylebook" dark large></cyan-icon>
+        <cyan-icon noun="stylebook" dark></cyan-icon>
+        <cyan-icon noun="stylebook" dark small></cyan-icon>
+        <cyan-icon noun="stylebook" dark xsmall></cyan-icon>
+      </div>
       <div
         class="iconlist"
         :class="{ surface: onSurface }"
