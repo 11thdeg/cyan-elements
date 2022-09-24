@@ -2,7 +2,7 @@
 
 A shared element library for pelilauta. charna, and so.
 
-# 0.10.1
+# 0.13.0
 
 Components available
 - `<cyan-toggle>`
@@ -15,6 +15,8 @@ Components available
 - `<cyan-select>`
 - `<cyan-asset-select>` and `<cyan-asset-option>`
 - `<cyan-tag>`
+- `<cyan-textarea>`
+- `<cyan-love-button>`
 
 Atomics available
 - `.TypeHeadline3`

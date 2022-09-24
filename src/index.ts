@@ -19,6 +19,7 @@ export * from './components/content/cyan-code'
 
 // Interactions
 export * from './components/interactions/cyan-save-interaction'
+export * from './components/interactions/cyan-love-button'
 
 // Inputs
 export * from './components/input/cyan-textfield'

@@ -41,5 +41,12 @@
       <cyan-tag label="Action" action="add" noun="avatar"></cyan-tag>
       <cyan-tag label="Notification" notification noun="discussion" action="add"></cyan-tag>
     </section>
+
+    <section>
+      <h3>Love button</h3>
+      <cyan-love-button></cyan-love-button>
+      <cyan-love-button on="true"></cyan-love-button>
+      <cyan-love-button on="true" count="4"></cyan-love-button>
+    </section>
   </article>
 </template>
