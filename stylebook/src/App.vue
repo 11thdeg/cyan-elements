@@ -35,7 +35,7 @@ const layouts = [
     <main id="layout" :class="layout"> 
       <Intro />
       <Editor />
-      <!-- Inputs /> 
+      <Inputs /> 
       <Atomics />
       <Theming />
       <Buttons />
@@ -47,7 +47,7 @@ const layouts = [
       <Chroma />
       <Menu />
       <Interactions />
-      <Markdown /-->
+      <Markdown />
     </main>
   </div>
 </template>

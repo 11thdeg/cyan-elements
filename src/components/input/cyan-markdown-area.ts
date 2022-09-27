@@ -1,6 +1,6 @@
 import Europa from 'europa'
 import { html } from 'lit'
-import { customElement } from 'lit/decorators.js'
+import { customElement, property } from 'lit/decorators.js'
 import { logDebug } from '../../utils/loghelpers'
 import { CyanTextarea } from './cyan-textarea'
 
@@ -70,6 +70,26 @@ export class CyanMarkdownArea extends CyanTextarea {
       this.onChange(e)
     }
   }*/
+
+  private _inject = ''
+  set inject (value: string) {
+    const textarea = this.shadowRoot?.querySelector('textarea')
+    if (!textarea) return // Should not happen
+
+    const before = textarea.value.substring(0, textarea.selectionStart)
+    const after = textarea.value.substring(textarea.selectionEnd, textarea.value.length)
+
+    textarea.value = before + value + after
+
+    logDebug('cyan-markdown-area','Injected', value)
+    this._inject = value
+    this.onChange(textarea.value)
+  }
+
+  @property({ type: String })
+  get inject () {
+    return this._inject
+  }
 
   render () {
     const height = this.rows * 24 + 'px'

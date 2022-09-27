@@ -62,9 +62,10 @@ export class CyanTextarea extends LitElement {
   @property({ type: Boolean, reflect: true })
     collapse = false
   
-  onChange (e:Event) {
-    this.onExpandableTextareaInput(e)
-    this.value = (e.target as HTMLInputElement).value
+  onChange (e:Event|string) {
+    this.onExpandableTextareaInput()
+    if (typeof e === 'string') this.value = e
+    else this.value = (e.target as HTMLInputElement).value
     const event = new CustomEvent('change', { detail: this.value })
     this.dispatchEvent(event)
   }
@@ -75,16 +76,16 @@ export class CyanTextarea extends LitElement {
     this.dispatchEvent(event)
   }
 
-  onExpandableTextareaInput({ target: node }:Event) {
+  onExpandableTextareaInput() {
     if (this.collapse) return
-    if ((node as Node).nodeName.toLowerCase() !== 'textarea') return
-    const elm = node as HTMLTextAreaElement
-    if (elm.scrollHeight > elm.clientHeight) {
-      elm.style.height = `${elm.scrollHeight}px`
-      this.style.height = `${elm.scrollHeight}px`
-    } else if (elm.scrollHeight < elm.clientHeight) {
-      elm.style.height = `${elm.scrollHeight}px`
-      this.style.height = `${elm.scrollHeight}px`
+    const textarea = this.shadowRoot?.querySelector('textarea')
+    if (!textarea) return // Should not happen
+    if (textarea.scrollHeight > textarea.clientHeight) {
+      textarea.style.height = `${textarea.scrollHeight}px`
+      this.style.height = `${textarea.scrollHeight}px`
+    } else if (textarea.scrollHeight < textarea.clientHeight) {
+      textarea.style.height = `${textarea.scrollHeight}px`
+      this.style.height = `${textarea.scrollHeight}px`
     }
   }
 
