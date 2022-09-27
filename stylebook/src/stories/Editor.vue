@@ -9,10 +9,10 @@ const rendered = computed(() => marked(md.value))
 <template>
   <article class="Column" id="Editor">
     <h1>Editor</h1>
-    <cyan-markdown-area @change="md = $event.detail"/>
+    <cyan-markdown-area rows="7" label="A markdown editor" @change="md = $event.detail" placeholder="Supports copy-paste from html, and images"/>
   </article>
   <article class="Column">
-    <h1>Editor Data</h1>
+    <h1>Rendered</h1>
     <section :innerHTML="rendered"></section>
   </article>
 </template>

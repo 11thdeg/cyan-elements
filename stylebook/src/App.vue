@@ -34,9 +34,9 @@ const layouts = [
     </div>
     <main id="layout" :class="layout"> 
       <Intro />
-      <!--Editor /-->
-      <Inputs /> 
-      <!--Atomics />
+      <Editor />
+      <!-- Inputs /> 
+      <Atomics />
       <Theming />
       <Buttons />
       
