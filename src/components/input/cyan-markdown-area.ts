@@ -7,7 +7,35 @@ import { CyanTextarea } from './cyan-textarea'
 @customElement('cyan-markdown-area')
 export class CyanMarkdownArea extends CyanTextarea {
 
-  handlePaste = (e: ClipboardEvent) => {
+
+  handlePaste (e: ClipboardEvent) {
+    // We got this - no need to propagate
+    e.preventDefault()
+    e.stopPropagation()
+    
+    // Get the text representation of the clipboard
+    const clipboardData = e.clipboardData
+    if (!clipboardData) return
+
+    // Do some magic here
+    const text = clipboardData.getData('text/html')
+    const europa = new Europa()
+    const magic = europa.convert(text)
+
+    // Insert the data to the textarea
+    const textarea = this.shadowRoot?.querySelector('textarea')
+    if (!textarea) return // Should not happen
+
+    const before = textarea.value.substring(0, textarea.selectionStart)
+    const after = textarea.value.substring(textarea.selectionEnd, textarea.value.length)
+
+    textarea.value = before + magic + after
+
+    logDebug('cyan-markdown-area','Pasted', magic)
+    this.onChange(e)
+  }
+
+  /*ahandlePaste = (e: ClipboardEvent) => {
     e.preventDefault()
     e.stopPropagation()
   
@@ -41,7 +69,7 @@ export class CyanMarkdownArea extends CyanTextarea {
       }
       this.onChange(e)
     }
-  }
+  }*/
 
   render () {
     const height = this.rows * 24 + 'px'
