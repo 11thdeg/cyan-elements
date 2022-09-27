@@ -13,6 +13,7 @@ import Toolbars from './stories/Toolbars.vue';
 import AssetSelect from './stories/AssetSelect.vue';
 import Markdown from './stories/Markdown.vue';
 import Theming from './stories/Theming.vue';
+import Editor from './stories/Editor.vue';
 
 const layout = ref('bookLayout')
 
@@ -33,8 +34,9 @@ const layouts = [
     </div>
     <main id="layout" :class="layout"> 
       <Intro />
+      <!--Editor /-->
       <Inputs /> 
-      <Atomics />
+      <!--Atomics />
       <Theming />
       <Buttons />
       
@@ -45,7 +47,7 @@ const layouts = [
       <Chroma />
       <Menu />
       <Interactions />
-      <Markdown />
+      <Markdown /-->
     </main>
   </div>
 </template>

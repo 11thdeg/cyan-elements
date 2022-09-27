@@ -8,16 +8,15 @@ export class CyanTextarea extends LitElement {
   static styles = css`
     ${cyanFieldComponentStyles}
     :host {
+      position: relative;
       transition: none;
+      display: block;
+      height: auto;
     }
     :host textarea {
       resize: none;
-      position: absolute;
-      top: 0;
-      left: 0;
       background: none;
       border: none;
-      height: 28px;
       margin: 0;
       padding: 0 8px;
       padding-top: 16px;
@@ -26,8 +25,20 @@ export class CyanTextarea extends LitElement {
       transition: none;
       font-family: var(--cyan-monospace-font-family);
     }
+    :host textarea::-webkit-scrollbar {
+      display: none;
+    }
     :host textarea:focus {
       outline: none;
+    }
+    :host textarea:focus::placeholder {
+      opacity: 0;
+    }
+    :host span.cyan-field-label {
+      transition: all ease-out 0.2s;
+    }
+    :host(:focus) span.cyan-field-label {
+      opacity: 0;
     }
   `
   @property({ type: String })
@@ -40,7 +51,7 @@ export class CyanTextarea extends LitElement {
     placeholder = ''
 
   @property({ type: Number, reflect: true })
-    cols = 5
+    rows = 11
 
   @property({ type: Boolean, reflect: true })
     disabled = false
@@ -49,7 +60,7 @@ export class CyanTextarea extends LitElement {
     fixed = false
 
   @property({ type: Boolean, reflect: true })
-    collapsed = false
+    collapse = false
   
   onChange (e:Event) {
     this.onExpandableTextareaInput(e)
@@ -65,7 +76,7 @@ export class CyanTextarea extends LitElement {
   }
 
   onExpandableTextareaInput({ target: node }:Event) {
-    if (this.collapsed) return
+    if (this.collapse) return
     if ((node as Node).nodeName.toLowerCase() !== 'textarea') return
     const elm = node as HTMLTextAreaElement
     if (elm.scrollHeight > elm.clientHeight) {
@@ -78,9 +89,19 @@ export class CyanTextarea extends LitElement {
   }
 
   render () {
+    const height = this.rows * 24 + 'px'
     return html`
-      <label class="cyan-textfield">
+      <style>
+        :host textarea {
+          height: ${height};
+        }
+        :host([collapse]) textarea {
+          height: 72px;
+        }
+      </style>
+      <label>
         <textarea
+          rows="${this.rows}"
           placeholder="${this.placeholder}" 
           @input="${this.onChange}"
           @change="${this.onChange}"

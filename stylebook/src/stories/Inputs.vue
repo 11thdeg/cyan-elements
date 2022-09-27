@@ -7,10 +7,11 @@ const options = [
   { label: "value 1", value: "A"},
   { label: "value 2", value: "B"}
 ]
+const textAreaCollapse = ref(false)
 </script>
 <template>
   <article class="Column double-cut" id="Inputs">
-    <h1>Inputs</h1>
+    <!--h1>Inputs</h1>
     <section>
       <h2>Select</h2>
       <cyan-select label="A Select element" @change="selected = $event.target.value" :value="selected" :options="options">
@@ -38,10 +39,13 @@ const options = [
         label="Example label"
         placeholder="Example placeholder"
         error="Example error message"></cyan-textfield>
-    </section>
+    </section-->
     <section>
       <h2>Textarea</h2>
+      <cyan-toggle label="collapse" :checked="textAreaCollapse" @change="textAreaCollapse = $event.detail"/>
       <cyan-textarea
+        rows="5"
+        :collapse="textAreaCollapse"
         :value="inputValue"
         @blur="inputValue = $event.target.value"
         label="Example label"

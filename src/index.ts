@@ -24,6 +24,7 @@ export * from './components/interactions/cyan-love-button'
 // Inputs
 export * from './components/input/cyan-textfield'
 export * from './components/input/cyan-textarea'
+export * from './components/input/cyan-markdown-area'
 export * from './components/input/cyan-button'
 export * from './components/input/cyan-toolbar'
 export * from './components/input/cyan-asset-select'
