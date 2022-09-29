@@ -4,7 +4,7 @@ import { ref } from 'vue';
 const open = ref(false)
 </script>
 <template>
-  <article class="column" id="Menu">
+  <article class="Column" id="Menu">
     <h1>Menu</h1>
     <section class="toolbar">
       <div style="text-align: right">
