@@ -14,6 +14,7 @@ import AssetSelect from './stories/AssetSelect.vue';
 import Markdown from './stories/Markdown.vue';
 import Theming from './stories/Theming.vue';
 import Editor from './stories/Editor.vue';
+import Fabs from './stories/Fabs.vue';
 
 const layout = ref('bookLayout')
 
@@ -34,6 +35,7 @@ const layouts = [
     </div>
     <main id="layout" :class="layout"> 
       <Intro />
+      <Fabs />
       <Interactions />
       
       <Inputs /> 
