@@ -23,12 +23,29 @@ export class CyanFab extends LitElement {
       position: relative;
       color: var(--cyan-fab-color);
       background-color: var(--cyan-fab-background-color);
+      text-decoration: none;
+    }
+    :host([secondary]) button {
+      color: var(--cyan-fab-color-secondary);
+      background-color: var(--cyan-fab-background-color-secondary);
+    }
+    :host([small]) button {
+      height: 40px;
+      min-width: 40px;
+      border-radius: 12px;
+      line-height: 40px;
     }
     :host button:hover {
       background-color: var(--cyan-fab-background-color-hover);
     }
+    :host([secondary]) button:hover {
+      background-color: var(--cyan-fab-background-color-secondary-hover);
+    }
     :host button:active {
       background-color: var(--cyan-fab-background-color-active);
+    }
+    :host([secondary]) button:active {
+      background-color: var(--cyan-fab-background-color-secondary-active);
     }
     :host button cyan-icon {
       margin: 0;
@@ -37,11 +54,21 @@ export class CyanFab extends LitElement {
       top: 16px;
       left: 16px;
     }
+    :host([small]) button cyan-icon {
+      top: 8px;
+      left: 8px;
+    }
     :host button span {
       margin: 0 16px;
     }
+    :host([small]) button span {
+      margin: 0 12px;
+    }
     :host button cyan-icon + span {
       margin-left: 48px;
+    }
+    :host([small]) button cyan-icon + span {
+      margin-left: 40px;
     }
   `
   @property({ type: String, reflect: true })
@@ -60,7 +87,7 @@ export class CyanFab extends LitElement {
     small = false
 
   render () {
-    const icon = this.noun ? html`<cyan-icon small noun=${this.noun} !small="this.small"></cyan-icon>` : ''
+    const icon = this.noun ? html`<cyan-icon small noun=${this.noun} ?dark="${this.secondary}"></cyan-icon>` : ''
     let label = this.label ? html`<span>${this.label}</span>` : ''
     if (!this.label && !this.noun) label = html`<slot></slot>`
 
