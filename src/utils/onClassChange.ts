@@ -10,5 +10,5 @@ export function onClassChange(element:HTMLElement, callback:CallableFunction) {
     });
   });
   observer.observe(element, { attributes: true })
-  return observer.disconnect;
+  return observer;
 }

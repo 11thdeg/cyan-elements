@@ -22,6 +22,8 @@ const forceDark = computed(() => {
 const iconlist = computed(() => {
   return nounsfile as Record<string, string>
 })
+
+const hideExampleIcon = ref(false)
 </script>
 
 <template>
@@ -29,6 +31,15 @@ const iconlist = computed(() => {
     <section>
       <h1>Iconography</h1>
       <p>The icons are available onDark/dark and onBright/light variations.</p>
+
+      <section class="chroma-box-a card">
+        <h4>Icon adding and removing from the dom</h4>
+        <cyan-toggle :value="hideExampleIcon" @change="hideExampleIcon = $event">Hide icon</cyan-toggle>
+        <div>
+          <cyan-icon v-if="!hideExampleIcon" dark/>
+        </div>
+      </section>
+
       <p style="line-height: 24px">
         <cyan-icon noun="stylebook" small></cyan-icon> In a paragraph.
       </p>

@@ -62,7 +62,7 @@ export class CyanIcon extends LitElement {
     this.noun = 'missing'
   }
 
-  lightModeDisconnect:CallableFunction|null = null
+  lightModeDisconnect:MutationObserver|null = null
   lightmode = document.body.classList.contains('cyan--mode--dark') ? 'dark' : 'light'
 
   connectedCallback(): void {
@@ -75,7 +75,7 @@ export class CyanIcon extends LitElement {
 
   disconnectedCallback(): void {
     super.disconnectedCallback()
-    if (this.lightModeDisconnect) this.lightModeDisconnect()
+    if (this.lightModeDisconnect) this.lightModeDisconnect.disconnect()
   }
 
   render () {
