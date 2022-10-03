@@ -13,12 +13,35 @@ export const buttonStyles = css`
     font-weight: var(--cyan-ui-font-weight);
     transition: 0.2s all ease-in-out;
   }
+  :host button:disabled {
+    color: var(--cyan-button-color-disabled);
+    background-color: var(--cyan-button-background-color-disabled);
+  }
+  :host([text]) button {
+    box-shadow: none;
+    color: var(--cyan-button-text-color);
+    background: none;
+  }
+  :host([text]) button:hover {
+    box-shadow: none;
+    background-color: var(--cyan-button-text-background-color-hover);
+  }
+  :host([text]) button:active {
+    box-shadow: none;
+    background-color: var(--cyan-button-text-background-color-active);
+  }
+  :host([text]) button:disabled {
+    color: var(--cyan-button-text-color-disabled);
+    background-color: var(--cyan-button-text-background-color-disabled);
+  }
   :host button:focus {
     outline: none;
   }
   :host button:active {
     box-shadow: 1px 1px 10px -1px var(--cyan-button-shadow-color-active);
+    background-color: var(--cyan-button-background-color-active);
   }
   :host button:hover {
     box-shadow: 1px 1px 10px -1px var(--cyan-button-shadow-color-hover);
+    background-color: var(--cyan-button-background-color-hover);
   }`
