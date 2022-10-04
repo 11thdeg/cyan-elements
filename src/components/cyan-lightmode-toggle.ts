@@ -1,6 +1,7 @@
 import { html, LitElement, css } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import { logDebug } from '../utils/loghelpers'
+import { DarkMode } from '../directives/DarkMode'
 
 @customElement('cyan-lightmode-toggle')
 export class CyanLightmodeToggle extends LitElement {
@@ -37,7 +38,7 @@ export class CyanLightmodeToggle extends LitElement {
   onChange () {
     this.dark = !this.dark
     this.dispatchEvent(new CustomEvent('change', { detail: this.dark }))
-    logDebug('onChange:', this.dark)
+    // logDebug('onChange:', this.dark)
     document.body.classList.toggle('cyan--mode--dark')
     document.body.classList.toggle('cyan--mode--light')
   }

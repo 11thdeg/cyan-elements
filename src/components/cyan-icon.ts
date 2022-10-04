@@ -1,16 +1,16 @@
-import { html, css, LitElement } from 'lit'
+import { html, css } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import nounsFile from '../assets/proprietary/icons/nouns.json'
 import { logError } from '../utils/loghelpers'
-import { onClassChange } from '../utils/onClassChange'
 import { cyanUIComponentStyles } from '../styles/cyan-component-style'
+import { CyanThemedElement } from '../cyan-themed-element'
 
 const nouns = nounsFile as Record<string, string>
 
 @customElement('cyan-icon')
-export class CyanIcon extends LitElement {
+export class CyanIcon extends CyanThemedElement {
   @property({ type: String })
-    noun: string
+    noun = 'fox'
 
   @property({ type: Boolean, reflect: true })
     xsmall = false
@@ -24,14 +24,10 @@ export class CyanIcon extends LitElement {
   @property({ type: Boolean, reflect: true })
     large = false
 
-  @property({ type: Boolean, reflect: true })
-    light = false
-
-  @property({ type: Boolean, reflect: true })
-    dark = false
-
   static styles = css`
     ${cyanUIComponentStyles}
+    
+
     :host, img {
       display: inline-block;
       height: 36px;
@@ -57,33 +53,11 @@ export class CyanIcon extends LitElement {
     }
   `
 
-  constructor () {
-    super()
-    this.noun = 'missing'
-  }
-
-  lightModeDisconnect:MutationObserver|null = null
-  lightmode = document.body.classList.contains('cyan--mode--dark') ? 'dark' : 'light'
-
-  connectedCallback(): void {
-    super.connectedCallback()
-    this.lightModeDisconnect = onClassChange(document.body, (el:Element) => {
-      this.lightmode = el.classList.contains('cyan--mode--dark') ? 'dark' : 'light'
-      this.requestUpdate()
-    })
-  }
-
-  disconnectedCallback(): void {
-    super.disconnectedCallback()
-    if (this.lightModeDisconnect) this.lightModeDisconnect.disconnect()
-  }
-
   render () {
     if(!nouns[this.noun]) logError(`Icon '${this.noun}' not found`)
-    // const classes = this.xsmall ? 'xsmall' : this.small ? 'small' : this.xlarge ? 'xlarge' : this.large ? 'large' : ''
-    return html`<img
-      src="/proprietary/icons/${this.light ? 'light' : this.dark ? 'dark' : this.lightmode}/${nouns[this.noun]||nouns['missing']}"
-      alt="${this.noun}" />`
+    const iconUri = nouns[this.noun] || nouns['fox']
+    const path = `/proprietary/icons/${this.light ? 'light' : this.dark ? 'dark' : this.mode}/${iconUri}`
+    return html`<img src="${path}" alt="${this.noun}" />`
   }
 }
 
