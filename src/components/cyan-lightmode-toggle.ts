@@ -1,7 +1,6 @@
 import { html, LitElement, css } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import { logDebug } from '../utils/loghelpers'
-import { DarkMode } from '../directives/DarkMode'
 
 @customElement('cyan-lightmode-toggle')
 export class CyanLightmodeToggle extends LitElement {

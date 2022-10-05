@@ -14,16 +14,26 @@ export class CyanMenu extends LitElement {
     div.cyan-popup-menu-container {
       position: relative;
       margin: 0;
-      padding: 2px;
-      height: 44px;
+      padding: 0;
+      height: 48px;
+      width: 48px;
       display: block;
+    }
+    div.cyan-popup-menu-container:hover,
+    div.cyan-popup-menu-container:focus {
+      background-color: var(--cyan-menu-focus-background-color);
+    }
+    div.cyan-popup-menu-container cyan-icon {
+      position: absolute;
+      top: 6px;
+      left: 6px;
     }
     ul.cyan_popup_menu {
       box-shadow: var(--cyan-rise-c-box-shadow);
       background-color: var(--cyan-rise-c-background-color);
       transition: all 0.3s ease;
       transform: scale(0);
-      transform-origin: 50% 0;
+      transform-origin: 95% 5%;
       margin: 0;
       padding: 2px;
       width: min(220px, 100vw);
@@ -39,7 +49,7 @@ export class CyanMenu extends LitElement {
   @property({type: Boolean, reflect: true})
     open = false
   @property({type: String, reflect: true})
-    noun = 'menu'
+    noun = 'kebab'
 
   handleClose (e: Event) {
     if (e.target !== this) {

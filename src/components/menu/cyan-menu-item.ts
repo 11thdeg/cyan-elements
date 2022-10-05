@@ -13,9 +13,16 @@ export class CyanMenuItem extends LitElement {
       margin: 0;
       padding: 4px 16px;
       border-radius: 6px;
+      transition: all 0.3s ease;
     }
     :host li:hover {
       background-color: var(--cyan-menu-item-hover-background-color);
+    }
+    :host([secondary]) li {
+      background-color: var(--cyan-menu-item-secondary-background-color);
+    }
+    :host([secondary]) li:hover {
+      background-color: var(--cyan-menu-item-secondary-background-color-hover);
     }
     .prepend {
       margin-right: 16px;
@@ -38,6 +45,12 @@ export class CyanMenuItem extends LitElement {
 
   @property({ type: String })
     route = ''
+
+  @property({ type: Boolean, reflect: true })
+    secondary = false
+
+  @property({ type: Boolean, reflect: true })
+    disabled = false
 
   handleClick () {
     // console.log('handleClick', e)
