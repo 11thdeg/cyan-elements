@@ -49,6 +49,7 @@
       <cyan-love-button></cyan-love-button>
       <cyan-love-button on="true"></cyan-love-button>
       <cyan-love-button on="true" count="4"></cyan-love-button>
+      <cyan-love-button disabled count="4"></cyan-love-button>
     </section>
   </article>
 </template>
