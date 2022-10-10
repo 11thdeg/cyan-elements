@@ -1,0 +1,12 @@
+@import './dontBreakOut.sass'
+
+@mixin oneLiner()
+  @include dontBreakOut()
+  height: 24px
+  overflow: hidden
+  text-overflow: ellipsis
+
+p, .TypeBody1, .TypeUI
+  &.oneLiner
+    @include oneLiner()
+    
