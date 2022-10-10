@@ -1,14 +1,9 @@
-import { html, LitElement, css } from 'lit'
+import { html, LitElement } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import { logDebug } from '../utils/loghelpers'
 
 @customElement('cyan-lightmode-toggle')
 export class CyanLightmodeToggle extends LitElement {
-  static styles = css`
-    :host {
-      display: block;
-      height: 24px;
-    }`
 
   @property({ type: Boolean })
     dark=false
@@ -43,7 +38,8 @@ export class CyanLightmodeToggle extends LitElement {
   }
 
   render () {
-    return html`<cyan-icon @click="${this.onChange}" noun="lightmode"></cyan-icon>`
+    return html`<cyan-button text @click="${this.onChange}" noun="lightmode" 
+     label="${this.label}"></cyan-button>`
   }
 }
 
