@@ -41,6 +41,13 @@ Atomics available
 - `.chroma-card-b`
 - `.chroma-card-c`
 
+#### Layout bases
+- `<main class="singleColumnLayout">`
+- `<main class="dashboardLayout">`
+- `<main class="bookLayout">`
+
+All of these expect the elements inside the layout to have the class `.Column`. Additional functionality can be added by adding the class `.double` or `.double-cut` to the element.
+
 
 See stylebook for examples of use
 

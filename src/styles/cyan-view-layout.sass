@@ -8,11 +8,10 @@
   margin: 0 auto
   padding: 12px 8px
   box-sizing: border-box
-  section
-    margin: 0
 
 .Column
   @include dontBreakOut()
+
 // *** singleColumnLayout ************************************************
 .singleColumnLayout
   @include LayoutBase()
@@ -35,13 +34,13 @@
   .dashboardLayout
     flex-direction: row
     flex-wrap: wrap
-  .dashboardLayout > article.Column
+  .dashboardLayout > .Column
     width: calc(100% / 2 - 60px)
     flex-grow: 0
     flex-shrink: 0
 
 @media screen and (min-width: 1024px)
-  .dashboardLayout > article.Column
+  .dashboardLayout > .Column
     width: calc(100% / 3 - 16px)
 
 // *** emptyLayout ****************************************************
