@@ -86,7 +86,7 @@ export class CyanButton extends LitElement {
     if (!this.label && !this.noun) label = html`<slot></slot>`
   
     return html`
-        <button>
+        <button ?disabled=${this.disabled}>
           ${icon}
           ${label}
         </button>

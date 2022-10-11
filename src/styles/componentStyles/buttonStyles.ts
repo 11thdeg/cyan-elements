@@ -16,6 +16,12 @@ export const buttonStyles = css`
   :host button:disabled {
     color: var(--cyan-button-color-disabled);
     background-color: var(--cyan-button-background-color-disabled);
+    box-shadow: none;
+  }
+  :host button:disabled:hover {
+    color: var(--cyan-button-color-disabled);
+    background-color: var(--cyan-button-background-color-disabled);
+    box-shadow: none;
   }
   :host([text]) button {
     box-shadow: none;
