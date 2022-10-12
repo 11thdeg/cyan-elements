@@ -3,6 +3,8 @@ import { ref } from 'vue';
 
 const loader1 = ref(true)
 const loader2 = ref(true)
+
+const count = ref(4)
 </script>
 <template>
   <article class="Column" id="Inputs">
@@ -20,6 +22,10 @@ const loader2 = ref(true)
       <cyan-loader />
       <cyan-loader large />
       <cyan-loader inline />
+    </section>
+    <section>
+      <h4>Watch</h4>
+      <cyan-watch-button :count="count" />
     </section>
   </article>
 </template>

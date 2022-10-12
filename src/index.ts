@@ -20,6 +20,7 @@ export * from './components/content/cyan-code'
 // Interactions
 export * from './components/interactions/cyan-save-interaction'
 export * from './components/interactions/cyan-love-button'
+export * from './components/interactions/cyan-watch-button'
 export * from './components/interactions/cyan-loader'
 
 // Inputs
