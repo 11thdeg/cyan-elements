@@ -35,13 +35,13 @@
     flex-direction: row
     flex-wrap: wrap
   .dashboardLayout > .Column
-    width: calc(100% / 2 - 60px)
+    width: calc(100% / 2 - (3 * var(--cyan-col-gap)))
     flex-grow: 0
     flex-shrink: 0
 
 @media screen and (min-width: 1024px)
   .dashboardLayout > .Column
-    width: calc(100% / 3 - 16px)
+    width: calc(100% / 3 - (4 * var(--cyan-col-gap)))
 
 // *** emptyLayout ****************************************************
 .emptyLayout
