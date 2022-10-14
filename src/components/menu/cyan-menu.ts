@@ -19,6 +19,10 @@ export class CyanMenu extends LitElement {
       width: 48px;
       display: block;
     }
+    :host([small]) div.cyan-popup-menu-container {
+      height: 32px;
+      width: 32px;
+    }
     div.cyan-popup-menu-container:hover,
     div.cyan-popup-menu-container:focus {
       background-color: var(--cyan-menu-focus-background-color);
@@ -27,6 +31,10 @@ export class CyanMenu extends LitElement {
       position: absolute;
       top: 6px;
       left: 6px;
+    }
+    :host([small]) div.cyan-popup-menu-container cyan-icon {
+      top: 3px;
+      left: 4px;
     }
     ul.cyan_popup_menu {
       box-shadow: var(--cyan-rise-c-box-shadow);
@@ -50,6 +58,8 @@ export class CyanMenu extends LitElement {
     open = false
   @property({type: String, reflect: true})
     noun = 'kebab'
+  @property({type: Boolean, reflect: true})
+    small = false
 
   handleClose (e: Event) {
     if (e.target !== this) {
@@ -76,7 +86,7 @@ export class CyanMenu extends LitElement {
       @focusout="${this.handleFocusOut}"
       @blur="${this.handleFocusOut}"
       @close="${this.handleFocusOut}">
-      <cyan-icon noun="${this.noun}"></cyan-icon>
+      <cyan-icon noun="${this.noun}" ?small=${this.small}></cyan-icon>
       <ul class="${classMap({ cyan_popup_menu: true, open: this.open })}">
         <slot></slot>
       </ul>

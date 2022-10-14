@@ -58,7 +58,13 @@ import CodeSpan from '../components/CodeSpan.vue';
           <cyan-tag label="another" action="send"/>
           <cyan-tag label="third" />
           <cyan-spacer />
+          <cyan-icon noun="adventurer" xsmall/>
           <cyan-icon noun="adventurer" small/>
+          <cyan-menu small>
+            <cyan-menu-item>An item</cyan-menu-item>
+            <cyan-menu-item>Another item</cyan-menu-item>
+            <cyan-menu-item>Third item</cyan-menu-item>
+          </cyan-menu>
         </cyan-toolbar>
       </section>
     </article>
