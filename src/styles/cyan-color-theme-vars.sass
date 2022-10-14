@@ -33,7 +33,12 @@
 
     // UI text
     --cyan-UI-text-color: rgba(0,0,0,var(--text-high-opacity))
+    --cyan-UI-text-color-hover: rgba(0,33,50,var(--text-medium-opacity))
+    --cyan-UI-text-color-active: rgba(0,75,100,var(--text-low-opacity))
     --cyan-UI-text-color-disabled: rgba(0,0,0,var(--text-low-opacity))
+    --cyan-ui-color: var(--cyan-UI-text-color)
+    --cyan-ui-color-hover: var(--cyan-UI-text-color-hover)
+    --cyan-ui-color-active: var(--cyan-UI-text-color-active)
 
     // Basic text
     --cyan-low-emphasis-color: rgba(0, 35, 55, var(--text-low-opacity))
@@ -69,6 +74,10 @@
     --cyan-button-text-background-color-disabled: var(--chroma-secondary-i)
     --cyan-button-text-color-disabled: var(--chroma-secondary-h)
 
+    // Button, Navigation
+    --cyan-nav-button-hover-background-color: var(--chroma-secondary-i)
+    --cyan-nav-button-active-background-color: var(--chroma-secondary-h)
+
     // Menu
     --cyan-menu-focus-background-color: var(--chroma-secondary-i)
     --cyan-menu-item-secondary-background-color: var(--chroma-primary-i)
@@ -98,7 +107,7 @@
     
     --cyan-text-color: #334f5f
     --cyan-base-color: #ffffff
-    --cyan-ui-color: #334f5f
+    
     // Hover color for buttons, links, etc
     --cyan-ui-hover-shadow-color: #334f5f
     --cyan-ui-active-shadow-color: #388ea1
@@ -172,3 +181,13 @@
     --cyan-rise-c-background-color: var(--chroma-secondary-b)
     --cyan-menu-item-hover-background-color: var(--chroma-secondary-c)
     --cyan-menu-item-text-color: var(--chroma-secondary-i)
+
+a
+  cyan-nav-button
+    color: var(--cyan-ui-color)
+a:hover
+  cyan-nav-button
+    color: var(--cyan-ui-color-hover)
+a:active
+  cyan-nav-button
+    color: var(--cyan-ui-color-active)

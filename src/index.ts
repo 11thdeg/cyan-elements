@@ -38,6 +38,7 @@ export * from './components/input/cyan-tag'
 // Navigation
 export * from './components/menu/cyan-menu'
 export * from './components/menu/cyan-menu-item'
+export * from './components/navigation/cyan-nav-button'
 
 // Layout components
 export * from './components/layout/cyan-column'
