@@ -20,6 +20,7 @@ Components available
 - `<cyan-love-button>`
 - `<cyan-loader>`
 - `<cyan-fab>`
+- `<cyan-nav-button [compact] [light|dark]>` and `<cyan-nav-section [folds] [open] label=[string] [light|dark]>`
 
 Atomics available
 - `.oneLiner` keeps the text on a line
@@ -36,6 +37,7 @@ Atomics available
 - `.dontBreakOut`
 - `.codeblock`
 - `.card`
+- `.rise-a`
 - `.rise-b`
 - `.chroma-card-a`
 - `.chroma-card-b`

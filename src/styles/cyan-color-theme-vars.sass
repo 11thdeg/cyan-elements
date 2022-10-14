@@ -46,8 +46,10 @@
     --cyan-high-emphasis-color: rgba(0, 35, 55, var(--text-high-opacity))
 
     --cyan-link-color: var(--chroma-secondary-f)
+    --cyan-link-color-hover: var(--chroma-secondary-e)
 
     --cyan-divider-color: var(--chroma-secondary-h)
+    --cyan-nav-header-color: var(--chroma-secondary-f)
     
     // Button, primary
     --cyan-button-color: var(--chroma-secondary-i)
@@ -181,6 +183,13 @@
     --cyan-rise-c-background-color: var(--chroma-secondary-b)
     --cyan-menu-item-hover-background-color: var(--chroma-secondary-c)
     --cyan-menu-item-text-color: var(--chroma-secondary-i)
+
+a
+  color: var(--cyan-link-color)
+  text-decoration: none
+  &:hover
+    color: var(--cyan-link-color-hover)
+    text-decoration: underline
 
 a
   cyan-nav-button

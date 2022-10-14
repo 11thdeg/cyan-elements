@@ -10,5 +10,19 @@ function alert () {
     </a>
     <cyan-nav-button noun="avatar" compact>Compact version</cyan-nav-button>
     <cyan-nav-button noun="outlink" @click="alert">AtClick Alert</cyan-nav-button>
+
+    <!-- navSection: folds -->
+    <cyan-nav-section label="A Nav Section" folds>
+        <cyan-nav-button noun="outlink">Outlink example here</cyan-nav-button>
+        <cyan-nav-button noun="avatar" compact>Compact version</cyan-nav-button>
+        <cyan-nav-button noun="outlink" @click="alert">AtClick Alert</cyan-nav-button>
+    </cyan-nav-section>
+
+    <!-- navSection: no folds -->
+    <cyan-nav-section label="A Nav Section">
+        <cyan-nav-button noun="outlink">Outlink example here</cyan-nav-button>
+        <cyan-nav-button noun="avatar" compact>Compact version</cyan-nav-button>
+        <cyan-nav-button @click="alert">AtClick Alert</cyan-nav-button>
+    </cyan-nav-section>
   </article>
 </template>
