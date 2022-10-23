@@ -1,7 +1,7 @@
-import { html, css } from "lit";
-import { customElement, property } from "lit/decorators.js";
-import { CyanThemedElement } from "../../cyan-themed-element";
-import { cyanUIComponentStyles } from "../../styles/cyan-component-style";
+import { html, css } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
+import { CyanThemedElement } from '../../cyan-themed-element';
+import { cyanUIComponentStyles } from '../../styles/cyan-component-style';
 
 @customElement('cyan-nav-button')
 export class CyanNavButton extends CyanThemedElement {

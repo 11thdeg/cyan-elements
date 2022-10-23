@@ -21,6 +21,17 @@
         <h3>Chroma-box-c</h3>
         <p><cyan-code>chroma-box-c</cyan-code> is a <cyan-code>block</cyan-code> element with a background color.</p>
       </div>
+
+      <h3>Complex example of box use</h3>
+      <div id="emailLoginForm" class="card chroma-box-a rise-a">
+        <h3>Kirjaudu sähköpostilla</h3>
+        <p class="TypeBody2">Voit kirjautua pelkän sähköpostiosoitteen avulla. Syötä osoitteesi allaolevaan kenttään ja paina kirjaudu. Lähetämme sähköpostiisi maagisen linkin, jonka avulla voit kirjautua Pelilaudalle.</p>
+        <cyan-textfield label="Osoite"></cyan-textfield>
+        <cyan-toolbar>
+          <cyan-spacer></cyan-spacer>
+          <cyan-button disabled label="Lähetä linkki"></cyan-button>
+        </cyan-toolbar>
+      </div>
     </section>
   </article>
 </template>

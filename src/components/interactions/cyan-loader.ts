@@ -50,7 +50,7 @@ export class CyanLoader extends LitElement {
 
   render () {
     const lightmode = getCyanLightmode()
-    const animation = this.inline ? "loader-small" : "loader"
+    const animation = this.inline ? 'loader-small' : 'loader'
     return html`
       <img src="/proprietary/animated/${lightmode}/${animation}.svg" alt="Loading...">`
   }
