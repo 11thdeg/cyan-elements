@@ -42,6 +42,7 @@
       <cyan-tag label="Action" action="delete"></cyan-tag> 
       <cyan-tag label="Action" action="add" noun="avatar"></cyan-tag>
       <cyan-tag label="Notification" notification noun="discussion" action="add"></cyan-tag>
+      <cyan-tag label="aaa" secondary></cyan-tag>
     </section>
 
     <section>

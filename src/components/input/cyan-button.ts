@@ -35,7 +35,7 @@ export class CyanButton extends LitElement {
       background-color: rgba(255,255,255,0.3);
     }
     :host([disabled]) cyan-icon {
-      opacity: 0.37;
+      opacity: 0.48;
     }
     :host([secondary]) button {
       color: var(--cyan-button-secondary-color);

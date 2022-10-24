@@ -44,6 +44,9 @@ export class CyanTag extends LitElement {
     :host([notification]) .action-noun{
       background-color: var(--chroma-primary-h);
     }
+    :host([secondary]) {
+      background-color: var(--cyan-tag-secondary-background-color);
+    }
     .TypeCaption{
       font-family: var(--cyan-text-font-family);
       font-size: 13px;
