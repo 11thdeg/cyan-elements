@@ -6,17 +6,17 @@ A shared element library for pelilauta. charna, and so.
 
 Components available
 - `<cyan-toggle>`
-- `<cyan-textfield>`
-- `<cyan-textarea>`
+- `<cyan-textfield [error]>`
+- `<cyan-textarea [error]>`
 - `<cyan-markdown-area>`
 - `<cyan-icon>`
 - `<cyan-save-interaction>`
 - `<cyan-code>`
-- `<cyan-button>`
+- `<cyan-button [text] noun=[noun]>`
 - `<cyan-toolbar>`
 - `<cyan-select>`
 - `<cyan-asset-select>` and `<cyan-asset-option>`
-- `<cyan-tag [notification] label=[string] noun=[noun] prepend=[noun]>`
+- `<cyan-tag [notification] label=[string] noun=[noun] prepend=[noun] [secondary]>`
 - `<cyan-love-button>`
 - `<cyan-loader>`
 - `<cyan-fab>`

@@ -62,6 +62,9 @@ export class CyanTextarea extends LitElement {
   @property({ type: Boolean, reflect: true })
     collapse = false
   
+  @property({ type: Boolean, reflect: true })
+    error = false
+
   onChange (e:Event|string) {
     this.onExpandableTextareaInput()
     if (typeof e === 'string') this.value = e

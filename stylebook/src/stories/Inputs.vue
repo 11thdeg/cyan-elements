@@ -52,11 +52,12 @@ const errorMessage = computed(() => showErrors.value ? 'This is an error message
       <cyan-toggle label="collapse" :checked="textAreaCollapse" @change="textAreaCollapse = $event.detail"/> 
       <cyan-code>{{ textAreaCollapse }}</cyan-code>
       <cyan-textarea
+        :error="showErrors"
         rows="5"
         :collapse="textAreaCollapse"
         :value="inputValue"
         @blur="inputValue = $event.target.value"
-        label="Example label"
+        :label="showErrors ? 'Error here!' : 'A field that could have an error'"
         placeholder="Example placeholder"></cyan-textarea>
       {{inputValue}}
     </section>
