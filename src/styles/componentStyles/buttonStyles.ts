@@ -26,7 +26,7 @@ export const buttonStyles = css`
   :host([text]) button {
     box-shadow: none;
     color: var(--cyan-button-text-color);
-    background: none;
+    background: var(--cyan-button-text-color-background);
   }
   :host([text]) button:hover {
     box-shadow: none;

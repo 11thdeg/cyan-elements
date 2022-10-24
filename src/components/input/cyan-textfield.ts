@@ -29,6 +29,9 @@ export class CyanTextfield extends LitElement {
   @property({ type: String })
     placeholder = ''
 
+  @property({ type: Boolean, reflect: true })
+    error = false
+
   onChange (e:Event) {
     this.value = (e.target as HTMLInputElement).value
     const event = new CustomEvent('change', { detail: this.value })

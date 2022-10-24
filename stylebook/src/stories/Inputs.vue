@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { computed } from '@vue/reactivity';
 import { ref } from 'vue';
 
 const inputValue = ref('')
@@ -8,10 +9,13 @@ const options = [
   { label: "value 2", value: "B"}
 ]
 const textAreaCollapse = ref(false)
+
+const showErrors = ref(false)
+const errorMessage = computed(() => showErrors.value ? 'This is an error message' : false)
 </script>
 <template>
   <article class="Column double-cut" id="Inputs">
-    <!--h1>Inputs</h1>
+    <h1>Inputs</h1>
     <section>
       <h2>Select</h2>
       <cyan-select label="A Select element" @change="selected = $event.target.value" :value="selected" :options="options">
@@ -34,15 +38,19 @@ const textAreaCollapse = ref(false)
         placeholder="Example placeholder"></cyan-textfield>
       <br>
       {{inputValue}}
+
+      <cyan-toggle label="Toggle error message" :checked="showErrors" @change="showErrors = $event.detail" />
+      <cyan-code>{{ showErrors }}</cyan-code>
       <cyan-textfield
         value="Example error-value"
-        label="Example label"
+        :label="showErrors ? 'Error here!' : 'A field that could have an error'"
         placeholder="Example placeholder"
-        error="Example error message"></cyan-textfield>
-    </section-->
+        :error="showErrors"></cyan-textfield>
+    </section>
     <section>
       <h2>Textarea</h2>
-      <cyan-toggle label="collapse" :checked="textAreaCollapse" @change="textAreaCollapse = $event.detail"/>
+      <cyan-toggle label="collapse" :checked="textAreaCollapse" @change="textAreaCollapse = $event.detail"/> 
+      <cyan-code>{{ textAreaCollapse }}</cyan-code>
       <cyan-textarea
         rows="5"
         :collapse="textAreaCollapse"

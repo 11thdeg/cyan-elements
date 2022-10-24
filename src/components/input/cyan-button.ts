@@ -14,10 +14,10 @@ export class CyanButton extends LitElement {
       position: relative;
       height: 38px;
       min-width: 38px;
-      margin: 5px;
+      margin: 5px 0;
       padding: 0;
       border-radius: 19px;
-      display: inline-block;
+      display: block;
     }
     :host(:first-child) button{
       margin-left: 0;
