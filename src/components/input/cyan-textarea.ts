@@ -1,6 +1,7 @@
 import { html, css, LitElement } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import { cyanFieldComponentStyles } from '../../styles/cyan-component-style'
+import { logDebug } from '../../utils/loghelpers'
 
 @customElement('cyan-textarea')
 export class CyanTextarea extends LitElement {
@@ -37,9 +38,9 @@ export class CyanTextarea extends LitElement {
     :host span.cyan-field-label {
       transition: all ease-out 0.2s;
     }
-    :host(:focus) span.cyan-field-label {
+    /*:host(:focus) span.cyan-field-label {
       opacity: 0;
-    }
+    }*/
   `
   @property({ type: String })
     label = ''
@@ -64,6 +65,29 @@ export class CyanTextarea extends LitElement {
   
   @property({ type: Boolean, reflect: true })
     error = false
+
+  protected _inject = ''
+
+  @property({ type: String })
+  get inject () {
+    return this._inject
+  }
+  set inject (value:string) {
+    if (value === this._inject) return
+    this._inject = value
+
+    // Insert the data to the textarea
+    const textarea = this.shadowRoot?.querySelector('textarea')
+    if (!textarea) return // Should not happen
+ 
+    const before = textarea.value.substring(0, textarea.selectionStart)
+    const after = textarea.value.substring(textarea.selectionEnd, textarea.value.length)
+ 
+    textarea.value = before + this._inject + after
+ 
+    logDebug('cyan-markdown-area','Injected', this._inject)
+  }
+
 
   onChange (e:Event|string) {
     this.onExpandableTextareaInput()

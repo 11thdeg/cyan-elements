@@ -12,6 +12,7 @@ const textAreaCollapse = ref(false)
 
 const showErrors = ref(false)
 const errorMessage = computed(() => showErrors.value ? 'This is an error message' : false)
+const inject = ref('')
 </script>
 <template>
   <article class="Column double-cut" id="Inputs">
@@ -51,15 +52,18 @@ const errorMessage = computed(() => showErrors.value ? 'This is an error message
       <h2>Textarea</h2>
       <cyan-toggle label="collapse" :checked="textAreaCollapse" @change="textAreaCollapse = $event.detail"/> 
       <cyan-code>{{ textAreaCollapse }}</cyan-code>
+      <cyan-button @click="inject += 'a'" label="Add more a's" text />
       <cyan-textarea
         :error="showErrors"
         rows="5"
         :collapse="textAreaCollapse"
         :value="inputValue"
+        :inject="inject"
         @blur="inputValue = $event.target.value"
         :label="showErrors ? 'Error here!' : 'A field that could have an error'"
         placeholder="Example placeholder"></cyan-textarea>
       {{inputValue}}
+    <cyan-code>{{ inject }}</cyan-code>
     </section>
   </article>
 </template>

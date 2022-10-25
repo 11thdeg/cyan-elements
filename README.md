@@ -1,25 +1,33 @@
 # Cyan Elements
 
-A shared element library for pelilauta. charna, and so.
+A Design System for the 11thDEG sites.
 
-# 0.15.9+
+_Or_
 
-Components available
-- `<cyan-toggle>`
+A shared element library for Pelilauta,  Charna, and so.
+
+# 0.17.7+
+
+#### Components available
+
+`<tag-name [boolean attribute] another=[typed attribute] (boolean property) (yet-another=[typed property])>`
+
+- `<cyan-toggle [checked]>`
 - `<cyan-textfield [error]>`
-- `<cyan-textarea [error]>`
-- `<cyan-markdown-area>`
+- `<cyan-textarea [error] (inject=[added to cursor position]) >`
+- `<cyan-markdown-area {extends cyan-textarea}>`
 - `<cyan-icon>`
 - `<cyan-save-interaction>`
 - `<cyan-code>`
 - `<cyan-button [text] noun=[noun]>`
-- `<cyan-toolbar>`
+- `<cyan-toolbar [small]>`
+-- `<cyan-spacer>`
 - `<cyan-select>`
 - `<cyan-asset-select>` and `<cyan-asset-option>`
 - `<cyan-tag [notification] label=[string] noun=[noun] prepend=[noun] [secondary]>`
 - `<cyan-love-button>`
-- `<cyan-loader>`
-- `<cyan-fab>`
+- `<cyan-loader [large|inline]>`
+- `<cyan-fab [secondary] [small]>`
 - `<cyan-nav-button [compact] [light|dark]>` and `<cyan-nav-section [folds] [open] label=[string] [light|dark]>`
 
 Atomics available

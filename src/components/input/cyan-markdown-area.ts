@@ -6,8 +6,6 @@ import { CyanTextarea } from './cyan-textarea'
 
 @customElement('cyan-markdown-area')
 export class CyanMarkdownArea extends CyanTextarea {
-
-
   handlePaste (e: ClipboardEvent) {
     // We got this - no need to propagate
     e.preventDefault()
@@ -17,10 +15,17 @@ export class CyanMarkdownArea extends CyanTextarea {
     const clipboardData = e.clipboardData
     if (!clipboardData) return
 
+    let magic = ''
+
     // Do some magic here
-    const text = clipboardData.getData('text/html')
-    const europa = new Europa()
-    const magic = europa.convert(text)
+    const html = clipboardData.getData('text/html')
+    if (html) {
+      const europa = new Europa()
+      magic = europa.convert(html)
+    }
+    else {
+      magic = clipboardData.getData('text/plain')
+    }
 
     // Insert the data to the textarea
     const textarea = this.shadowRoot?.querySelector('textarea')
@@ -71,7 +76,6 @@ export class CyanMarkdownArea extends CyanTextarea {
     }
   }*/
 
-  private _inject = ''
   set inject (value: string) {
     const textarea = this.shadowRoot?.querySelector('textarea')
     if (!textarea) return // Should not happen

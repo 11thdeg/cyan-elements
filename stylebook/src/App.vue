@@ -36,25 +36,20 @@ const layouts = [
     </div>
     <main id="layout" :class="layout"> 
       <Intro />
+      <Editor />
       <Inputs /> 
       <NavButtons />
       <Atomics />
       <Iconography />
       <Buttons />
       <Fabs />
-      <Interactions />
-      
-      
-      <Editor />
+      <Interactions />      
       <Theming />
-      
       <AssetSelect />
       <Toolbars />
       <Typography />
-      
       <Chroma />
       <Menu />
-      
       <Markdown />
     </main>
   </div>
