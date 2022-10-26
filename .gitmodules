@@ -1,3 +1,6 @@
 [submodule "src/assets/proprietary"]
 	path = src/assets/proprietary
 	url = https://github.com/11thdeg/proprietary.git
+[submodule "src/chroma"]
+	path = src/chroma
+	url = https://github.com/11thdeg/chroma.git
