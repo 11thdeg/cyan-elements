@@ -9,6 +9,8 @@
     <cyan-button label="Not Working yet" noun="facebook" working="false"></cyan-button>
     <cyan-button label="Working" noun="monsters" working="true"></cyan-button>
     <cyan-button label="Disabled" noun="fox" disabled="true"></cyan-button>
+    <cyan-button label="A hilariously long label, should not break out at any point. And the button should look good even if the label is breaking out?"
+    noun="arrow-up"></cyan-button>
 
     <section>
       <h3>Secondary</h3>

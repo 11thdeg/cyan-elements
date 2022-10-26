@@ -36,6 +36,7 @@ const layouts = [
     </div>
     <main id="layout" :class="layout"> 
       <Intro />
+      <Typography />
       <Editor />
       <Inputs /> 
       <NavButtons />
@@ -46,8 +47,7 @@ const layouts = [
       <Interactions />      
       <Theming />
       <AssetSelect />
-      <Toolbars />
-      <Typography />
+      <Toolbars /> 
       <Chroma />
       <Menu />
       <Markdown />

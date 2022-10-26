@@ -17,5 +17,10 @@
         <cyan-lightmode-toggle></cyan-lightmode-toggle>
       </cyan-toolbar>
     </section>
+
+    <section class="card rise-a" style="margin-top: var(--cyan-row-gap)">
+      <h3>Layout Modes</h3>
+      <p class="TypeBody2">We provide few layout modes for the "main" part of the app. These modes are responsive, and support mobile, desktop, and wide viewports</p>
+    </section>
   </article>
 </template>

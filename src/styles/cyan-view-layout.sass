@@ -43,11 +43,11 @@
   @include LayoutBase()
 
 .dashboardLayout > .Column, .dashboardLayout > .column
-  width: calc(100% / 3 - (2 * var(--cyan-column-gap)))
+  width: calc(100% / 3 - (2 * var(--cyan-column-gap)) - 2px)
 
 @media screen and (max-width: $wide-breakpoint)
   .dashboardLayout > .Column, .dashboardLayout > .column
-    width: calc(100% / 2 - var(--cyan-column-gap))
+    width: calc(100% / 2 - var(--cyan-column-gap) - 2px)
 
 @media screen and (max-width: $mobile-breakpoint)
   .dashboardLayout > .Column, .dashboardLayout > .column
