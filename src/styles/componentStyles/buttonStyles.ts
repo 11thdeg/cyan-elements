@@ -50,4 +50,9 @@ export const buttonStyles = css`
   :host button:hover {
     box-shadow: 1px 1px 10px -1px var(--cyan-button-shadow-color-hover);
     background-color: var(--cyan-button-background-color-hover);
+  }
+  @media screen and (max-width: 600px) {
+    :host button .hideOnMobile {
+      display: none !important;
+    }
   }`

@@ -1,0 +1,7 @@
+:root {
+  --cyan-page-grid-base: 4px;
+  /* Row gap = 3 */
+  --cyan-row-gap: calc(6 * var(--cyan-page-grid-base));
+  /* Column gap = 3 */
+  --cyan-column-gap: calc(3 * var(--cyan-page-grid-base));
+}

@@ -81,8 +81,12 @@ export class CyanButton extends LitElement {
     dark = false
 
   render () {
-    const icon = this.noun ? html`<cyan-icon small noun=${this.noun} ?dark="${this.dark || !this.text}"></cyan-icon>` : ''
-    let label = this.label ? html`<span>${this.label}</span>` : ''
+    const darkIcon = this.dark ||
+      !this.text && !this.disabled
+    const icon = this.noun ? html`<cyan-icon small noun=${this.noun} ?dark="${darkIcon}"></cyan-icon>` : ''
+    let label = this.noun ? 
+      this.label ? html`<span class="hideOnMobile">${this.label}</span>` : '' :
+      this.label ? html`<span>${this.label}</span>` : ''
     if (!this.label && !this.noun) label = html`<slot></slot>`
   
     return html`

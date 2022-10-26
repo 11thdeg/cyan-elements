@@ -1,15 +1,18 @@
 @import atomics/dontBreakOut.sass
+@import layout/layout-vars.sass
 
 // A long treatise on main viewport layouts
 @mixin LayoutBase()
   display: flex
-  flex-direction: column
-  gap: var(--cyan-row-gap) var(--cyan-col-gap)
-  margin: 0 auto
-  padding: 12px 8px
+  flex-direction: row
+  flex-wrap: wrap
+  gap: var(--cyan-row-gap) var(--cyan-column-gap)
+  margin: var(--cyan-row-gap) var(--cyan-column-gap)
+  padding: 0
   box-sizing: border-box
 
-.Column
+// We expect the containers inside a layout to be ".Columns"
+.Column, .column
   @include dontBreakOut()
   img
     max-width: 100%
@@ -17,33 +20,39 @@
 // *** singleColumnLayout ************************************************
 .singleColumnLayout
   @include LayoutBase()
-
-@media screen and (max-width: 599px)
-  .singleColumnLayout
-    max-width: 720px
-    margin: 0 auto
-
-@media screen and (min-width: 600px)
-  .singleColumnLayout
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  .Column, .column
     width: 720px
-    margin: 0 auto
+    max-width: 720px
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    flex-grow: 1
+    flex-shrink: 0
+
+@media screen and (max-width: $mobile-breakpoint)
+  .singleColumnLayout
+    .Column, .column
+      width: 100%
+      max-width: 100%
 
 // *** dashBoardLayout ************************************************
 .dashboardLayout
   @include LayoutBase()
 
-@media screen and (min-width: 600px)
-  .dashboardLayout
-    flex-direction: row
-    flex-wrap: wrap
-  .dashboardLayout > .Column
-    width: calc(100% / 2 - (3 * var(--cyan-col-gap)))
-    flex-grow: 0
-    flex-shrink: 0
+.dashboardLayout > .Column, .dashboardLayout > .column
+  width: calc(100% / 3 - (2 * var(--cyan-column-gap)))
 
-@media screen and (min-width: 1024px)
-  .dashboardLayout > .Column
-    width: calc(100% / 3 - (4 * var(--cyan-col-gap)))
+@media screen and (max-width: $wide-breakpoint)
+  .dashboardLayout > .Column, .dashboardLayout > .column
+    width: calc(100% / 2 - var(--cyan-column-gap))
+
+@media screen and (max-width: $mobile-breakpoint)
+  .dashboardLayout > .Column, .dashboardLayout > .column
+    width: 100%
+    max-width: 100%
 
 // *** emptyLayout ****************************************************
 .emptyLayout
