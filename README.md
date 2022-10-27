@@ -6,7 +6,7 @@ _Or_
 
 A shared element library for Pelilauta,  Charna, and so.
 
-# 0.17.7+
+# 0.18.0+
 
 #### Components available
 
@@ -41,7 +41,7 @@ Atomics available
 - `.TypeCaption`
 - `.TypeUI`
 - `.lowEmphasis`
-- `.hideOnMobile`
+- `.hideOnMobile` and `.onlyOnMobile` hide an element below or above 600px device width, respectively.
 - `.dontBreakOut`
 - `.codeblock`
 - `.card`

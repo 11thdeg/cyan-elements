@@ -7,6 +7,14 @@
       <cyan-code>oneLiner</cyan-code> forces the text to fit a single (24px, or 48px) line. --> And thus, here is
       a lot of text, that should be cut by an ellipsis.
     </p>
+
+    <section>
+      <h2>Media helpers</h2>
+      <p class="TypeBody2"><cyan-code>.onlyOnMobile</cyan-code> hides the button below, if we are on a screen wider than 600px</p>
+      <cyan-button label="visible only on a mobile device" class="onlyOnMobile" />
+    </section>
+
+
     <section>
       <h2>Chroma-box</h2>
       <div class="chroma-box-a card rise-a">

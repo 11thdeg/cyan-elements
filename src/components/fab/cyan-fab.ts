@@ -1,6 +1,7 @@
 import { html, css, LitElement } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import { buttonStyles } from '../../styles/componentStyles'
+import { resolveNounURI } from '../../utils/resolveNounURI'
 
 @customElement('cyan-fab')
 export class CyanFab extends LitElement {
@@ -16,7 +17,6 @@ export class CyanFab extends LitElement {
       min-width: 56px;
       box-sizing: border-box;
       margin: 0;
-      padding: 12px;
       border-radius: 16px;
       line-height: 56px;
       padding: 0;
@@ -47,16 +47,8 @@ export class CyanFab extends LitElement {
     :host([secondary]) button:active {
       background-color: var(--cyan-fab-background-color-secondary-active);
     }
-    :host button cyan-icon {
-      margin: 0;
-      padding: 0;
-      position: absolute;
-      top: 16px;
-      left: 16px;
-    }
-    :host([small]) button cyan-icon {
-      top: 8px;
-      left: 8px;
+    :host([small]) img.noun {
+      margin-left: 10px
     }
     :host button span {
       margin: 0 16px;
@@ -64,11 +56,26 @@ export class CyanFab extends LitElement {
     :host([small]) button span {
       margin: 0 12px;
     }
-    :host button cyan-icon + span {
-      margin-left: 48px;
+    :host button img + span {
+      margin-left: 0px;
     }
-    :host([small]) button cyan-icon + span {
-      margin-left: 40px;
+    :host([small]) button img + span {
+      margin-left: 0px;
+    }
+    img.noun {
+      height: 24px;
+      width: 24px;
+      vertical-align: middle;
+      display: inline-block;
+      margin-left: 16px;
+    }
+    @media screen and (max-width: 600px) {
+      :host button span.hideOnMobile {
+        display: none;
+      }
+      img.noun, :host([small]) img.noun {
+        margin-left: 0px;
+      }
     }
   `
   @property({ type: String, reflect: true })
@@ -86,15 +93,21 @@ export class CyanFab extends LitElement {
   @property({ type: Boolean, reflect: true })
     small = false
 
+
+  renderIcon () {
+    if (!this.noun) return html``
+    const path = resolveNounURI(this.noun, this.secondary)
+    return html`<img class="noun" src="${path}" alt="${this.noun}">`
+  }
+
   render () {
-    const icon = this.noun ? html`<cyan-icon small noun=${this.noun} ?dark="${this.secondary}"></cyan-icon>` : ''
-    let label = this.label ? html`<span>${this.label}</span>` : ''
-    if (!this.label && !this.noun) label = html`<slot></slot>`
+    const icon = this.renderIcon()
+    const buttonText = this.label ? html`${this.label}` : html`<slot></slot>`
 
     return html`
       <button>
         ${icon}
-        ${label}
+        ${this.noun ? html`<span class="hideOnMobile">${buttonText}</span>` : html`<span>${buttonText}</span>`}
       </button>
     `
   }
