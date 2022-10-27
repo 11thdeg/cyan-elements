@@ -27,8 +27,11 @@ A shared element library for Pelilauta,  Charna, and so.
 - `<cyan-tag [notification] label=[string] noun=[noun] prepend=[noun] [secondary]>`
 - `<cyan-love-button>`
 - `<cyan-loader [large|inline]>`
-- `<cyan-fab [secondary] [small]>`
+- `<cyan-fab noun=[noun] [secondary] [small]>[slot]</cyan-fab>`
 - `<cyan-nav-button [compact] [light|dark]>` and `<cyan-nav-section [folds] [open] label=[string] [light|dark]>`
+
+#### Microinteractions available
+- `<cyan-hamburger-button aria-label="[string]"" aria-controls="[string]" [active]>`
 
 Atomics available
 - `.oneLiner` keeps the text on a line

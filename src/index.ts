@@ -44,4 +44,5 @@ export * from './components/menu/cyan-menu'
 export * from './components/menu/cyan-menu-item'
 export * from './components/navigation/cyan-nav-button'
 export * from './components/navigation/cyan-nav-section'
+export * from './components/hamburger/cyan-hamburger-button'
 

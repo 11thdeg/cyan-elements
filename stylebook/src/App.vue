@@ -16,6 +16,7 @@ import Theming from './stories/Theming.vue';
 import Editor from './stories/Editor.vue';
 import Fabs from './stories/Fabs.vue';
 import NavButtons from './stories/NavButtons.vue';
+import Hamburger from './stories/Hamburger.vue';
 
 const layout = ref('bookLayout')
 
@@ -36,6 +37,7 @@ const layouts = [
     </div>
     <main id="layout" :class="layout"> 
       <Intro />
+      <Hamburger />
       <Typography />
       <Editor />
       <Inputs /> 
