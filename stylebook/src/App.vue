@@ -17,6 +17,7 @@ import Editor from './stories/Editor.vue';
 import Fabs from './stories/Fabs.vue';
 import NavButtons from './stories/NavButtons.vue';
 import Hamburger from './stories/Hamburger.vue';
+import Headings from './stories/Headings.vue';
 
 const layout = ref('bookLayout')
 
@@ -37,12 +38,13 @@ const layouts = [
     </div>
     <main id="layout" :class="layout"> 
       <Intro />
+      <Atomics />
+      <Headings />
       <Hamburger />
       <Typography />
       <Editor />
       <Inputs /> 
       <NavButtons />
-      <Atomics />
       <Iconography />
       <Buttons />
       <Fabs />

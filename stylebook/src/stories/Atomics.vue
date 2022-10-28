@@ -14,6 +14,24 @@
       <cyan-button label="visible only on a mobile device" class="onlyOnMobile" />
     </section>
 
+    <section>
+      <h2>Cards and Rises</h2>
+      <div style="display:flex; flex-direction: row; flex-wrap: wrap; gap:8px">
+        <div class="card rise-a" style="width:calc(50% - 34px); flex-grow: 0;flex-shrink: 0;">
+          <cyan-code>.card .rise-a</cyan-code>
+        </div>
+        <div class="card rise-b" style="width:calc(50% - 34px); flex-grow: 0;flex-shrink: 0;">
+          <cyan-code>.card .rise-b</cyan-code>
+        </div>
+        <div class="card rise-c" style="width:calc(50% - 34px); flex-grow: 0;flex-shrink: 0;">
+          <cyan-code>.Card .rise-c</cyan-code>
+        </div>
+        <div class="card rise-d" style="width:calc(50% - 34px); flex-grow: 0;flex-shrink: 0;">
+          <cyan-code>.Card .rise-d</cyan-code>
+        </div>
+      </div>
+    </section>
+
 
     <section>
       <h2>Chroma-box</h2>

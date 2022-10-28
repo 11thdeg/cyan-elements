@@ -30,6 +30,9 @@ A shared element library for Pelilauta,  Charna, and so.
 - `<cyan-fab noun=[noun] [secondary] [small]>[slot]</cyan-fab>`
 - `<cyan-nav-button [compact] [light|dark]>` and `<cyan-nav-section [folds] [open] label=[string] [light|dark]>`
 
+### Content tags
+- `<cyan-heading [level=1|2|3|4] label="[heading text]></cyan-heading>` is a 24px ot 48px high heading, which automatically resizes to fit the content and slot.
+
 #### Microinteractions available
 - `<cyan-hamburger-button aria-label="[string]"" aria-controls="[string]" [active]>`
 
@@ -48,8 +51,7 @@ Atomics available
 - `.dontBreakOut`
 - `.codeblock`
 - `.card`
-- `.rise-a`
-- `.rise-b`
+- `.rise-a`, `.rise-b`, `.rise-c`, `.rise-d` add a _material style_ elevation to an element. These work well with cards.
 - `.chroma-card-a`
 - `.chroma-card-b`
 - `.chroma-card-c`
