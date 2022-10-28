@@ -22,12 +22,20 @@ export class CyanHamburgerButton extends CyanThemedElement {
       margin: 4px;
       padding: 0;
       border-radius: 50%;
-      background-color: var(--cyan-button-text-color-background);
-      position: relative
+      background-color: var(--cyan-color-hamburger-background);
+      position: relative;
+      transition: background-color 0.3s ease-in-out;
+    }
+    :host(:hover) {
+      background-color: var(--cyan-color-hamburger-background-hover);
     }
     :host([active]) {
-      background-color: var(--cyan-button-text-background-color-hover);
+      background-color: var(--cyan-color-hamburger-background-active);
     }
+    :host([active]:hover) {
+      background-color: var(--cyan-color-hamburger-background-active-hover);
+    }
+
     :host button {
       transition-property: opacity, filter;
       transition-duration: 0.15s;
@@ -38,9 +46,6 @@ export class CyanHamburgerButton extends CyanThemedElement {
       height: 48px;
       width: 48px;
       padding: 0 4px
-    }
-    :host button:hover {
-      opacity: 0.7
     }
     .hamburger-box {
       width: 40px;
@@ -57,12 +62,15 @@ export class CyanHamburgerButton extends CyanThemedElement {
     .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
       width: 40px;
       height: 4px;
-      background-color: var(--cyan-hamburger-color);
+      background-color: var(--cyan-color-hamburger);
       border-radius: 4px;
       position: absolute;
       transition-property: transform;
       transition-duration: 0.15s;
       transition-timing-function: ease;
+    }
+    :host([active]) .hamburger-inner, :host([active]) .hamburger-inner::before, :host([active]) .hamburger-inner::after {
+      background-color: var(--cyan-color-hamburger-active);
     }
     .hamburger-inner::before, .hamburger-inner::after {
       content: "";
