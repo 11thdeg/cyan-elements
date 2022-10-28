@@ -40,42 +40,6 @@ export class CyanMarkdownArea extends CyanTextarea {
     this.onChange(e)
   }
 
-  /*ahandlePaste = (e: ClipboardEvent) => {
-    e.preventDefault()
-    e.stopPropagation()
-  
-    // We got a clipboard event, let's see what it contains
-    const clipboardData = e.clipboardData
-    if(!clipboardData) return
-  
-    const html = e.clipboardData.getData('text/html')
-    if (html) {
-      const europa = new Europa()
-      const markdown = europa.convert(html)
-      
-      logDebug('Markdown', markdown)
-
-
-      // Insert the markdown
-      const el = this.shadowRoot?.querySelector('textarea')
-      logDebug('Element', el?.name)
-      if (el) {
-        const selectionStart = el.selectionStart
-        const selectionEnd = el.selectionEnd
-        logDebug('Selection', selectionStart, selectionEnd)
-        if (selectionStart && selectionEnd) {
-          const before = el.value.substring(0, selectionStart)
-          const after = el.value.substring(selectionEnd)
-          el.value = before + '\n' + markdown + '\n' + after
-        }
-        else {
-          el.value += markdown
-        }
-      }
-      this.onChange(e)
-    }
-  }*/
-
   set inject (value: string) {
     const textarea = this.shadowRoot?.querySelector('textarea')
     if (!textarea) return // Should not happen

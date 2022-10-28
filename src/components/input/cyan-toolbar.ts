@@ -25,8 +25,8 @@ export class CyanToolbar extends LitElement {
     ::slotted(cyan-icon) {
       margin: 0;
       padding: 0;
-      width: 48px;
-      height: 48px;
+      width: 36px;
+      height: 36px;
     }
     ::slotted(cyan-icon[small]) {
       width: 24px;
