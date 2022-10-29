@@ -13,7 +13,7 @@ export class CyanThemedElement extends LitElement {
 
   connectedCallback() {
     super.connectedCallback();
-    this.mode = document.querySelector('.cyan--app')?.classList.contains('cyan-mode-dark') ? 'dark' : 'light'
+    this.mode = document.body.classList.contains('cyan--mode--dark') ? 'dark' : 'light'
     const observer = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
         if (
