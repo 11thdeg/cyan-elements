@@ -15,6 +15,7 @@ export class CyanToolbar extends LitElement {
       padding: 4px 0;
       justify-content: flex-start;
       gap: var(--cyan-col-gap);
+      max-width: 100%;
     }
     :host([small]) {
       height: 24px;

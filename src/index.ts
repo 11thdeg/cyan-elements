@@ -40,6 +40,9 @@ export * from './components/input/cyan-asset-option'
 export * from './components/input/cyan-select'
 export * from './components/input/cyan-tag'
 
+// Toolbars
+export * from './components/toolbar/cyan-toolbar-heading'
+
 // Navigation
 export * from './components/menu/cyan-menu'
 export * from './components/menu/cyan-menu-item'

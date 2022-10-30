@@ -1,9 +1,11 @@
 @import 'typography/TypeHeadline.sass'
 @import 'atomics/dontBreakOut.sass'
+@import 'typography/toolbar.sass'
 
 // UI Elements
 :root
   // Font families
+  --cyan-font-family-heading: 'Overpass', 'Cabin', sans-serif
   --cyan-heading-font-family: 'Overpass', sans-serif
   --cyan-monospace-font-family: 'Roboto Mono', monospace
   --cyan-text-font-family: 'Cabin',sans-serif
@@ -99,15 +101,15 @@ h4
   color: var(--cyan-heading-color-b)
   @include TypeHeadline6()
 
-cyan-toolbar h1, cyan-toolbar h2, cyan-toolbar h3, cyan-toolbar h4,
-cyan-toolbar h1.TypeHeadline5
-  line-height: 48px
-  margin: 0
-  padding: 0
-  height: 48px
-  white-space: nowrap
-  overflow: hidden
-  text-overflow: ellipsis
+// cyan-toolbar h1, cyan-toolbar h2, cyan-toolbar h3, cyan-toolbar h4,
+// cyan-toolbar h1.TypeHeadline5
+//   line-height: 48px
+//   margin: 0
+//   padding: 0
+//   height: 48px
+//   white-space: nowrap
+//   overflow: hidden
+//   text-overflow: ellipsis
 
 a
   text-decoration: none

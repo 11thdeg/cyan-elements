@@ -21,7 +21,8 @@ A shared element library for Pelilauta,  Charna, and so.
 - `<cyan-code>`
 - `<cyan-button [text] noun=[noun]>`
 - `<cyan-toolbar [small]>`
--- `<cyan-spacer>`
+-- `<cyan-toolbar-header level=[1|2|3|4]>` creates a responsive header element inside a toolbar. 
+-- `<cyan-spacer>` creates a spacer element inside a toolbar.
 - `<cyan-select>`
 - `<cyan-asset-select>` and `<cyan-asset-option>`
 - `<cyan-tag [notification] label=[string] noun=[noun] prepend=[noun] [secondary]>`
