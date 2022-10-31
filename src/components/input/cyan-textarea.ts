@@ -1,10 +1,11 @@
-import { html, css, LitElement } from 'lit'
+import { html, css } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import { cyanFieldComponentStyles } from '../../styles/cyan-component-style'
 import { logDebug } from '../../utils/loghelpers'
+import { CyanFieldElement } from './cyan-field-element'
 
 @customElement('cyan-textarea')
-export class CyanTextarea extends LitElement {
+export class CyanTextarea extends CyanFieldElement {
 
   static styles = css`
     ${cyanFieldComponentStyles}

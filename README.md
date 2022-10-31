@@ -6,7 +6,7 @@ _Or_
 
 A shared element library for Pelilauta,  Charna, and so.
 
-# 0.18.0+
+# 0.22.0+
 
 #### Components available
 
@@ -37,7 +37,11 @@ A shared element library for Pelilauta,  Charna, and so.
 #### Microinteractions available
 - `<cyan-hamburger-button aria-label="[string]"" aria-controls="[string]" [active]>`
 
-Atomics available
+## Events
+- `cyan-field-focus` and `cyan-field-blur` are fired when a field is focused or blurred.
+- `cyan-mode-dark` and `cyan-mode-light` are fired when the user changes the mode.
+
+## Atomics available
 - `.oneLiner` keeps the text on a line
 - `.TypeHeadline3`
 - `.TypeHeadline4`

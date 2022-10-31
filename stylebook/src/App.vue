@@ -8,7 +8,7 @@ import Chroma from './stories/Chroma.vue';
 import Atomics from './stories/Atomics.vue';
 import Typography from './stories/Typography.vue';
 import Buttons from './stories/Buttons.vue';
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 import Toolbars from './stories/Toolbars.vue';
 import AssetSelect from './stories/AssetSelect.vue';
 import Markdown from './stories/Markdown.vue';
@@ -19,6 +19,7 @@ import NavButtons from './stories/NavButtons.vue';
 import Hamburger from './stories/Hamburger.vue';
 import Headings from './stories/Headings.vue';
 import AppBar from './components/AppBar.vue';
+import { logDebug } from '../../src/utils/loghelpers'
 
 const layout = ref('bookLayout')
 
@@ -27,11 +28,28 @@ const layouts = [
   { label: 'bookLayout', value: 'bookLayout' },
   { label: 'dashboardLayout', value: 'dashboardLayout' },
 ]
+
+const keyboard = ref(false)
+
+onMounted(() => {
+  document.addEventListener('cyan-field-focus', () => {
+    keyboard.value = true
+  })
+  document.addEventListener('cyan-field-blur', () => {
+    keyboard.value = false
+  })
+  document.addEventListener('cyan-mode-dark', () => {
+    logDebug('cyan-mode-dark')
+  })
+  document.addEventListener('cyan-mode-light', () => {
+    logDebug('cyan-mode-light')
+  })
+})
 </script>
 
 <template>
   <div class="cyan--app" style="margin: 0; padding: 0">
-    <AppBar />
+    <AppBar :keyboard="keyboard"/>
     <div style="text-align:center; padding:12px 0; border-bottom: solid 1px var(--chroma-primary-d); padding-top: 72px">
       <h1><cyan-icon noun="fox" large></cyan-icon>Cyan elements stylebook</h1>
       <div style="max-width: 300px;margin: 0 auto">

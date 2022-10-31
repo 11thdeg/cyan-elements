@@ -1,6 +1,5 @@
 import { html, LitElement } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
-import { logDebug } from '../utils/loghelpers'
 
 @customElement('cyan-lightmode-toggle')
 export class CyanLightmodeToggle extends LitElement {
@@ -12,17 +11,15 @@ export class CyanLightmodeToggle extends LitElement {
 
   connectedCallback () {
     super.connectedCallback()
-    logDebug('cyan-lightmode-toggle', 'connectedCallback')
+    // logDebug('cyan-lightmode-toggle', 'connectedCallback')
 
     // Nothing to do, if the lightmode is already set.
     if (document.body.classList.contains('cyan--mode--dark') || document.body.classList.contains('cyan--mode--light')) return
     
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       // set dark mode
-      // document.body.classList.toggle('cyan--mode--dark')
-
-      // Force light mode for debugging purposes.
-      document.body.classList.toggle('cyan--mode--light')
+      document.body.classList.toggle('cyan--mode--dark')
+      this.dark = true
     } else {
       // set light mode
       document.body.classList.toggle('cyan--mode--light')
@@ -31,8 +28,8 @@ export class CyanLightmodeToggle extends LitElement {
 
   onChange () {
     this.dark = !this.dark
-    this.dispatchEvent(new CustomEvent('change', { detail: this.dark }))
-    // logDebug('onChange:', this.dark)
+    const eventName  = this.dark ? 'cyan-mode-dark' : 'cyan-mode-light'
+    this.dispatchEvent(new Event(eventName, { bubbles: true }))
     document.body.classList.toggle('cyan--mode--dark')
     document.body.classList.toggle('cyan--mode--light')
   }
