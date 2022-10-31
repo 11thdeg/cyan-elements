@@ -26,19 +26,19 @@ export const buttonStyles = css`
   :host([text]) button {
     box-shadow: none;
     color: var(--cyan-button-text-color);
-    background: var(--cyan-button-text-color-background);
+    background: var(--cyan-background-button-text);
   }
   :host([text]) button:hover {
     box-shadow: none;
-    background-color: var(--cyan-button-text-background-color-hover);
+    background: var(--cyan-background-button-text-hover);
   }
   :host([text]) button:active {
     box-shadow: none;
-    background-color: var(--cyan-button-text-background-color-active);
+    background: var(--cyan-button-text-background-color-active);
   }
   :host([text]) button:disabled {
     color: var(--cyan-button-text-color-disabled);
-    background-color: var(--cyan-button-text-background-color-disabled);
+    background: var(--cyan-button-text-background-color-disabled);
   }
   :host button:focus {
     outline: none;

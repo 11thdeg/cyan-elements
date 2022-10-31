@@ -25,15 +25,6 @@ export class CyanButton extends LitElement {
     :host(:last-child) button{
       margin-right: 0;
     }
-    :host([dark]) button {
-      color: white;
-    }
-    :host([dark]) button:hover {
-      background-color: rgba(255,255,255,0.2);
-    }
-    :host([dark]) button:active {
-      background-color: rgba(255,255,255,0.3);
-    }
     :host([disabled]) cyan-icon {
       opacity: 0.48;
     }
