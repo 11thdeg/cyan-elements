@@ -4,7 +4,7 @@ import { css } from 'lit'
 export const buttonStyles = css`
   :host button {
     color: var(--cyan-button-color);
-    background-color: var(--cyan-button-background-color);
+    background: var(--cyan-background-button);
     border: none;
     box-shadow: 1px 1px 10px -1px var(--cyan-button-shadow-color);
     font-family: var(--cyan-ui-font-family);
@@ -15,12 +15,12 @@ export const buttonStyles = css`
   }
   :host button:disabled {
     color: var(--cyan-button-color-disabled);
-    background-color: var(--cyan-button-background-color-disabled);
+    background: var(--cyan-background-button-disabled);
     box-shadow: none;
   }
   :host button:disabled:hover {
     color: var(--cyan-button-color-disabled);
-    background-color: var(--cyan-button-background-color-disabled);
+    background: var(--cyan-background-button-disabled);
     box-shadow: none;
   }
   :host([text]) button {
@@ -43,13 +43,13 @@ export const buttonStyles = css`
   :host button:focus {
     outline: none;
   }
-  :host button:active {
-    box-shadow: 1px 1px 10px -1px var(--cyan-button-shadow-color-active);
-    background-color: var(--cyan-button-background-color-active);
-  }
   :host button:hover {
     box-shadow: 1px 1px 10px -1px var(--cyan-button-shadow-color-hover);
-    background-color: var(--cyan-button-background-color-hover);
+    background: var(--cyan-background-button-hover);
+  }
+  :host button:active {
+    box-shadow: 1px 1px 10px -1px var(--cyan-button-shadow-color-active);
+    background: var(--cyan-background-button-active);
   }
   @media screen and (max-width: 600px) {
     :host button .hideOnMobile {

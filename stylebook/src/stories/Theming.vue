@@ -35,5 +35,9 @@ const nouns = ref(['fox'])
     <h3>Boxes and bubbles</h3>
     <ColorVar var="--cyan-bubble-background-color-a" />
     <ColorVar var="--cyan-bubble-background-color-b" />
+
+    <section class="card" style="background: var(--cyan-background-overlay-dark);">
+      <cyan-code>style="background: var(--cyan-background-overlay-dark);</cyan-code>
+    </section>
   </article>
 </template>

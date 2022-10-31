@@ -8,3 +8,11 @@
     <cyan-menu />
   </cyan-toolbar>
 </template>
+
+<style>
+#AppBar {
+  position: fixed;
+  width: 100vw;
+  z-index: 90000;
+}
+</style>

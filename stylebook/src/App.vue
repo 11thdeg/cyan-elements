@@ -32,7 +32,7 @@ const layouts = [
 <template>
   <div class="cyan--app" style="margin: 0; padding: 0">
     <AppBar />
-    <div style="text-align:center; padding:12px 0; border-bottom: solid 1px var(--chroma-primary-d)">
+    <div style="text-align:center; padding:12px 0; border-bottom: solid 1px var(--chroma-primary-d); padding-top: 72px">
       <h1><cyan-icon noun="fox" large></cyan-icon>Cyan elements stylebook</h1>
       <div style="max-width: 300px;margin: 0 auto">
         <cyan-select label="Layout mode" :options="layouts" :value="layout" @change="layout = $event.target.value"/>
