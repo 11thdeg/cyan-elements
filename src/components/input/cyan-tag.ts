@@ -8,7 +8,7 @@ export class CyanTag extends LitElement {
     :host {
       position: relative;
       display: inline-block;
-      background-color: var(--cyan-tag-background-color);
+      background: var(--cyan-background-tag);
       vertical-align: middle;
       height: 13px;
       padding: 5px 8px;

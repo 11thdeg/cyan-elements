@@ -22,8 +22,9 @@ export class CyanFab extends LitElement {
       padding: 0;
       position: relative;
       color: var(--cyan-fab-color);
-      background-color: var(--cyan-fab-background-color);
+      background: var(--cyan-background-fab);
       text-decoration: none;
+      transition: all 0.2s ease-in-out;
     }
     :host([secondary]) button {
       color: var(--cyan-fab-color-secondary);
