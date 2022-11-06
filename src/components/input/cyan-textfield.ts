@@ -3,7 +3,7 @@ import { customElement, property } from 'lit/decorators.js'
 import { cyanFieldComponentStyles } from '../../styles/cyan-component-style'
 import { CyanFieldElement } from './cyan-field-element'
 
-@customElement('cyan-textfield')
+@customElement('cyan-textfield-old')
 export class CyanTextfield extends CyanFieldElement {
 
   static styles = css`
@@ -63,6 +63,6 @@ export class CyanTextfield extends CyanFieldElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'cyan-textfield': CyanTextfield
+    'cyan-textfield-old': CyanTextfield
   }
 }

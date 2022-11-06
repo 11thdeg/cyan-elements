@@ -29,7 +29,7 @@ export * from './components/interactions/cyan-watch-button'
 export * from './components/interactions/cyan-loader'
 
 // Inputs
-export * from './components/input/cyan-textfield'
+// export * from './components/input/cyan-textfield'
 export * from './components/input/cyan-textarea'
 export * from './components/input/cyan-markdown-area'
 export * from './components/input/cyan-button'
@@ -39,6 +39,7 @@ export * from './components/input/cyan-asset-select'
 export * from './components/input/cyan-asset-option'
 export * from './components/input/cyan-select'
 export * from './components/input/cyan-tag'
+export * from './components/cyan-textfield'
 
 // Toolbars
 export * from './components/toolbar/cyan-toolbar-heading'

@@ -20,6 +20,7 @@ import Hamburger from './stories/Hamburger.vue';
 import Headings from './stories/Headings.vue';
 import AppBar from './components/AppBar.vue';
 import { logDebug } from '../../src/utils/loghelpers'
+import Textfield from './stories/Textfield.vue';
 
 const layout = ref('bookLayout')
 
@@ -58,6 +59,7 @@ onMounted(() => {
     </div>
     <main id="layout" :class="layout"> 
       <Intro />
+      <Textfield />
       <Atomics />
       <Headings />
       <Hamburger />
