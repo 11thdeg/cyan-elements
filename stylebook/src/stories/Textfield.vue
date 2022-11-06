@@ -16,5 +16,14 @@ const error = ref(false)
     <cyan-textfield :value="fielda" label="Label" @change="fielda = $event.target.value" :disabled="disabled" 
       :error="error" />
     <p>{{ fielda }}</p>
+    <section>
+      <h3>In use</h3>
+      <cyan-toolbar>
+        <cyan-icon noun="mekanismi" />
+        <cyan-textfield :value="fielda" label="Label" @change="fielda = $event.target.value" :disabled="disabled" 
+          :error="error" style="flex-grow: 1; flex-shrink: 1;"/>
+        <cyan-button style="flex-shrink: 0;" label="Clear" @click="fielda = ''"/> 
+      </cyan-toolbar>
+    </section>
   </article>
 </template>
