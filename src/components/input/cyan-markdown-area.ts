@@ -2,7 +2,7 @@ import Europa from 'europa'
 import { html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import { logDebug } from '../../utils/loghelpers'
-import { CyanTextarea } from './cyan-textarea'
+import { CyanTextarea } from '../cyan-textarea'
 
 @customElement('cyan-markdown-area')
 export class CyanMarkdownArea extends CyanTextarea {

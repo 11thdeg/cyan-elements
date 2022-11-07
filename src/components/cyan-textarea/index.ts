@@ -1,19 +1,20 @@
 import { html, css } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
-import { cyanFieldComponentStyles } from '../../styles/cyan-component-style'
+import { fieldStyles } from './fieldStyles'
 import { logDebug } from '../../utils/loghelpers'
-import { CyanFieldElement } from './cyan-field-element'
+import { CyanFieldElement } from '../input/cyan-field-element'
 
 @customElement('cyan-textarea')
 export class CyanTextarea extends CyanFieldElement {
 
   static styles = css`
-    ${cyanFieldComponentStyles}
+    ${fieldStyles}
     :host {
       position: relative;
       transition: none;
       display: block;
       height: auto;
+      border-radius: 0 12px 0 0;
     }
     :host textarea {
       resize: none;
@@ -23,9 +24,10 @@ export class CyanTextarea extends CyanFieldElement {
       padding: 0 8px;
       padding-top: 16px;
       width: calc(100% - 16px);
-      color: var(--cyan-textfield-color);
       transition: none;
-      font-family: var(--cyan-monospace-font-family);
+      font-family: var(--cyan-font-family-field, sans-serif);
+      font-size: var(--cyan-font-size-field, 14px);
+      color: var(--cyan-color-field, black);
     }
     :host textarea::-webkit-scrollbar {
       display: none;
@@ -37,7 +39,13 @@ export class CyanTextarea extends CyanFieldElement {
       opacity: 0;
     }
     :host span.cyan-field-label {
-      transition: all ease-out 0.2s;
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 0px 8px;
+      font-family: var(--cyan-font-family-ui, sans-serif);
+      font-size: var(--cyan-font-size-caption, 11px);
+      color: var(--cyan-border-color-field, blue);
     }
     /*:host(:focus) span.cyan-field-label {
       opacity: 0;
@@ -130,6 +138,7 @@ export class CyanTextarea extends CyanFieldElement {
       </style>
       <label>
         <textarea
+          ?disabled=${this.disabled}
           rows="${this.rows}"
           placeholder="${this.placeholder}" 
           @input="${this.onChange}"

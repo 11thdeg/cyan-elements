@@ -8,7 +8,8 @@ const error = ref(false)
 
 <template>
   <article class="Column">
-    <h2>TextField</h2>
+    <h2>Textfield</h2>
+    <p class="TypeBody2 lowEmphasis">Overrides default input type text with custom styling and field events for mobile keyboard</p>
     <cyan-toolbar>
       <cyan-toggle :checked="disabled" @change="disabled = $event.target.checked" label="Disabled"/>
       <cyan-toggle :checked="error" @change="error = $event.target.checked" label="Error"/>
@@ -17,13 +18,18 @@ const error = ref(false)
       :error="error" />
     <p>{{ fielda }}</p>
     <section>
-      <h3>In use</h3>
-      <cyan-toolbar>
+      <h3>In a toolbar</h3>
+      <cyan-toolbar class="rise-a">
         <cyan-icon noun="mekanismi" />
         <cyan-textfield :value="fielda" label="Label" @change="fielda = $event.target.value" :disabled="disabled" 
           :error="error" style="flex-grow: 1; flex-shrink: 1;"/>
         <cyan-button style="flex-shrink: 0;" label="Clear" @click="fielda = ''"/> 
       </cyan-toolbar>
+    </section>
+    <section class="card rise-b" style="margin-top: var(--cyan-row-gap)">
+      <h3>In a Card</h3>
+      <cyan-textfield :value="fielda" label="Label" @change="fielda = $event.target.value" :disabled="disabled" 
+      :error="error" />
     </section>
   </article>
 </template>

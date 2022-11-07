@@ -21,6 +21,7 @@ import Headings from './stories/Headings.vue';
 import AppBar from './components/AppBar.vue';
 import { logDebug } from '../../src/utils/loghelpers'
 import Textfield from './stories/Textfield.vue';
+import Textarea from './stories/Textarea.vue';
 
 const layout = ref('bookLayout')
 
@@ -59,6 +60,7 @@ onMounted(() => {
     </div>
     <main id="layout" :class="layout"> 
       <Intro />
+      <Textarea />
       <Textfield />
       <Atomics />
       <Headings />

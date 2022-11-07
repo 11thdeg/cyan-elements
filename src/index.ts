@@ -30,7 +30,7 @@ export * from './components/interactions/cyan-loader'
 
 // Inputs
 // export * from './components/input/cyan-textfield'
-export * from './components/input/cyan-textarea'
+export * from './components/cyan-textarea'
 export * from './components/input/cyan-markdown-area'
 export * from './components/input/cyan-button'
 export * from './components/fab/cyan-fab'
