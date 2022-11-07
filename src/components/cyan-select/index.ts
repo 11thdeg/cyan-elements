@@ -1,12 +1,28 @@
 import { html, css, LitElement } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
-import { cyanFieldComponentStyles } from '../../styles/cyan-component-style'
+import { fieldStyles } from '../cyan-textarea/fieldStyles'
 
 @customElement('cyan-select')
 export class CyanSelect extends LitElement {
   
   static styles = css`
-    ${cyanFieldComponentStyles}
+    ${ fieldStyles }
+    :host {
+      position: relative;
+      display: block;
+      height: auto;
+      border-radius: 0 12px 0 0;
+      height: 36px;
+    }
+    :host span.cyan-field-label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 0px 8px;
+      font-family: var(--cyan-font-family-ui, sans-serif);
+      font-size: var(--cyan-font-size-caption, 11px);
+      color: var(--cyan-border-color-field, blue);
+    }
     select {
       width: calc(100% - 8px);
       margin:0;

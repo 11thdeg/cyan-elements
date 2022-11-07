@@ -22,6 +22,7 @@ import AppBar from './components/AppBar.vue';
 import { logDebug } from '../../src/utils/loghelpers'
 import Textfield from './stories/Textfield.vue';
 import Textarea from './stories/Textarea.vue';
+import Select from './stories/Select.vue';
 
 const layout = ref('bookLayout')
 
@@ -60,6 +61,7 @@ onMounted(() => {
     </div>
     <main id="layout" :class="layout"> 
       <Intro />
+      <Select />
       <Textarea />
       <Textfield />
       <Atomics />
