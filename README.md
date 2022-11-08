@@ -33,6 +33,7 @@ A shared element library for Pelilauta,  Charna, and so.
 
 ### Content tags
 - `<cyan-heading [level=1|2|3|4] label="[heading text]></cyan-heading>` is a 24px ot 48px high heading, which automatically resizes to fit the content and slot.
+- `<cyan-bubble [reply]>` for a speech bubble (left or right depending on the reply attribute)
 
 #### Microinteractions available
 - `<cyan-hamburger-button aria-label="[string]"" aria-controls="[string]" [active]>`
