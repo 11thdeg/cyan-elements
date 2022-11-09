@@ -1,3 +1,4 @@
+export * from './theme.sass'
 import { html, css, LitElement } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import { buttonStyles } from '../../styles/componentStyles'

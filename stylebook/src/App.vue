@@ -7,7 +7,7 @@ import Menu from './stories/Menu.vue';
 import Chroma from './stories/Chroma.vue';
 import Atomics from './stories/Atomics.vue';
 import Typography from './stories/Typography.vue';
-import Buttons from './stories/Buttons.vue';
+import Button from './stories/Button.vue';
 import { onMounted, ref } from 'vue';
 import Toolbars from './stories/Toolbars.vue';
 import AssetSelect from './stories/AssetSelect.vue';
@@ -62,6 +62,7 @@ onMounted(() => {
     </div>
     <main id="layout" :class="layout"> 
       <Intro />
+      <Button />
       <NavButton />
       <Textarea />
       <Bubble />
@@ -75,7 +76,7 @@ onMounted(() => {
       <Inputs /> 
       
       <Iconography />
-      <Buttons />
+      
       <Fabs />
       <Interactions />      
       <Theming />
