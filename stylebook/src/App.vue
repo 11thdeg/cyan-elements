@@ -15,7 +15,7 @@ import Markdown from './stories/Markdown.vue';
 import Theming from './stories/Theming.vue';
 import Editor from './stories/Editor.vue';
 import Fabs from './stories/Fabs.vue';
-import NavButtons from './stories/NavButtons.vue';
+import NavButton from './stories/NavButton.vue';
 import Hamburger from './stories/Hamburger.vue';
 import Headings from './stories/Headings.vue';
 import AppBar from './components/AppBar.vue';
@@ -62,6 +62,7 @@ onMounted(() => {
     </div>
     <main id="layout" :class="layout"> 
       <Intro />
+      <NavButton />
       <Textarea />
       <Bubble />
       <Select />
@@ -72,7 +73,7 @@ onMounted(() => {
       <Typography />
       <Editor />
       <Inputs /> 
-      <NavButtons />
+      
       <Iconography />
       <Buttons />
       <Fabs />

@@ -9,11 +9,13 @@ export class CyanNavSection extends CyanThemedElement {
     ${cyanUIComponentStyles}
   :host div.sectionHeader {
     display: flex;
-    height: 48px;
+    height: 47px;
     align-items: center;
     gap: 8px;
     border-bottom: 1px solid var(--cyan-divider-color);
     color: var(--cyan-nav-header-color);
+    margin: 0 12px;
+    padding: 0;
   }
   :host div.sectionBody {
     transform: scaleY(1);
@@ -37,7 +39,7 @@ export class CyanNavSection extends CyanThemedElement {
     return html`<section>
         <div class="sectionHeader">
           ${this.noun ? html`<cyan-icon small noun="${this.noun}"></cyan-icon>` : html``}
-          <div class="oneLiner">${this.label}</div>
+          <div class="oneLiner title">${this.label}</div>
           ${this.folds ? html`<cyan-spacer></cyan-spacer>
             <cyan-button
               @click=${() => this.open = !this.open}

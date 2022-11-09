@@ -4,7 +4,7 @@ function alert () {
 }
 </script>
 <template>
-  <article class="Column card rise-a">
+  <article class="Column rise-a">
     <a href="http://skaldbase.web.app">
       <cyan-nav-button noun="outlink">Outlink example here</cyan-nav-button>
     </a>

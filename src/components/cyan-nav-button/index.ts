@@ -1,3 +1,4 @@
+export * from './theme.sass'
 import { html, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { CyanThemedElement } from '../../cyan-themed-element';
@@ -12,7 +13,10 @@ export class CyanNavButton extends CyanThemedElement {
       align-items: center;  
       gap: 8px;
       height: 48px;
-      padding-left: 8px;
+      padding: 0;
+      padding-left: 12px;
+      margin: 0;
+      margin-right: 12px;
       border-radius: 0 16px 16px 0;
       transition: all 0.3s ease;
       color: var(--cyan-ui-color)
@@ -20,14 +24,19 @@ export class CyanNavButton extends CyanThemedElement {
     :host([compact]) {
       height: 32px;
       border-radius: 0 12px 12px 0;
+      font-size: var(--cyan-font-size-ui-small);
+      line-height: 32px;
+    }
+    :host([compact]) cyan-icon {
+      margin-top: -4px;
     }
     :host(:hover) {
-        color: var(--cyan-ui-color-hover);
-      background-color: var(--cyan-nav-button-hover-background-color);
+      color: var(--cyan-ui-color-hover);
+      background: var(--cyan-background-nav-button-hover);
     }
     :host(:active) {
       color: var(--cyan-ui-color-active);
-      background-color: var(--cyan-nav-button-active-background-color);
+      background: var(--cyan-background-nav-button-active);
     }
     :host div.oneLiner {
       pointer-events: none;
