@@ -1,0 +1,29 @@
+.cyan--mode--light
+  // Primary colors
+  --cyan-background-button: var(--chroma-primary-c)
+  --cyan-background-button-hover: var(--chroma-primary-d)
+  --cyan-background-button-active: var(--chroma-primary-a)
+  --cyan-background-button-disabled: var(--chroma-secondary-i)
+  // Text buttons
+  --cyan-background-button-text: var(--chroma-secondary-i)
+  --cyan-background-button-text-hover: var(--chroma-secondary-h)
+
+.cyan--mode--dark, .chroma-box-a
+  // Primary colors
+  --cyan-background-button: linear-gradient(79deg, var(--chroma-primary-d), var(--chroma-primary-c))
+  --cyan-background-button-hover: linear-gradient(79deg, var(--chroma-primary-f), var(--chroma-primary-d))
+  --cyan-background-button-active: linear-gradient(79deg, var(--chroma-primary-c), var(--chroma-primary-a))
+  --cyan-background-button-disabled: var(--cyan-background-overlay-light)
+  // Secondary colors
+  --cyan-color-button-secondary: var(--chroma-secondary-h)
+  --cyan-background-button-secondary: linear-gradient(137deg, var(--chroma-primary-a), var(--chroma-secondary-c))
+  --cyan-background-button-secondary-hover: linear-gradient(137deg, var(--chroma-primary-b), var(--chroma-secondary-d))
+  --cyan-background-button-secondary-active: linear-gradient(137deg, var(--chroma-primary-a), var(--chroma-secondary-b))
+  .rise-a, .rise-b
+    --cyan-background-button-secondary: linear-gradient(137deg, var(--chroma-primary-b), var(--chroma-secondary-d))
+    --cyan-background-button-secondary-hover: linear-gradient(137deg, var(--chroma-primary-c), var(--chroma-secondary-e))
+    --cyan-background-button-secondary-active: linear-gradient(137deg, var(--chroma-primary-d), var(--chroma-secondary-c))
+  // Text buttons
+  --cyan-button-text-color: var(--chroma-secondary-i)
+  --cyan-background-button-text: var(--cyan-background-overlay-light)
+  --cyan-background-button-text-hover: var(--cyan-background-overlay-dark)

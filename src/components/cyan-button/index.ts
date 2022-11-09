@@ -19,6 +19,10 @@ export class CyanButton extends LitElement {
       padding: 0;
       border-radius: 19px;
       display: block;
+      overflow: hidden;
+      max-width: 100%;
+      line-height: 38px;
+      transition: all 0.2s ease-in-out;
     }
     :host(:first-child) button{
       margin-left: 0;
@@ -30,14 +34,14 @@ export class CyanButton extends LitElement {
       opacity: 0.48;
     }
     :host([secondary]) button {
-      color: var(--cyan-button-secondary-color);
-      background-color: var(--cyan-button-secondary-background-color);
+      color: var(--cyan-color-button-secondary);
+      background: var(--cyan-background-button-secondary);
     }
     :host([secondary]) button:hover {
-      background-color: var(--cyan-button-secondary-background-color-hover);
+      background: var(--cyan-background-button-secondary-hover);
     }
     :host([secondary]) button:active {
-      background-color: var(--cyan-button-secondary-background-color-active);
+      background: var(--cyan-background-button-secondary-active);
     }
     :host button cyan-icon {
       position: absolute;
@@ -46,8 +50,16 @@ export class CyanButton extends LitElement {
     }
     :host button span {
       padding: 0px 16px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      display: block;
     }
     :host button cyan-icon + span {
+      padding-left: 38px;
+    }
+    :host button cyan-icon + span slot:empty {
+      display: none;
       padding-left: 38px;
     }
   `
@@ -76,10 +88,10 @@ export class CyanButton extends LitElement {
     const darkIcon = this.dark ||
       !this.text && !this.disabled
     const icon = this.noun ? html`<cyan-icon small noun=${this.noun} ?dark="${darkIcon}"></cyan-icon>` : ''
-    let label = this.noun ? 
-      this.label ? html`<span class="hideOnMobile">${this.label}</span>` : '' :
+    const label = this.noun ? 
+      this.label ? html`<span>${this.label}</span>` : '' :
       this.label ? html`<span>${this.label}</span>` : ''
-    if (!this.label && !this.noun) label = html`<slot></slot>`
+    // if (!this.label) label = html`<span><slot></slot></span>`
   
     return html`
         <button ?disabled=${this.disabled}>
