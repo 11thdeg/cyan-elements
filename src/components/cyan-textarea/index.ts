@@ -2,7 +2,7 @@ import { html, css } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import { fieldStyles } from './fieldStyles'
 import { logDebug } from '../../utils/loghelpers'
-import { CyanFieldElement } from '../input/cyan-field-element'
+import { CyanFieldElement } from '../cyan-field-element'
 
 @customElement('cyan-textarea')
 export class CyanTextarea extends CyanFieldElement {
@@ -143,7 +143,9 @@ export class CyanTextarea extends CyanFieldElement {
           placeholder="${this.placeholder}" 
           @input="${this.onChange}"
           @change="${this.onChange}"
-          @blur="${this.onBlur}">${this.value}</textarea>
+          @blur="${this.onBlur}"
+         .value=${this.value}
+          ></textarea>
         ${ this.label ? html`<span class="cyan-field-label">${this.hasAttribute('error') ? this.getAttribute('error') : this.label}</span>` : '' }
       </label>
     `

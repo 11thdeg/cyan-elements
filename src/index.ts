@@ -32,7 +32,7 @@ export * from './components/interactions/cyan-loader'
 // Inputs
 // export * from './components/input/cyan-textfield'
 export * from './components/cyan-textarea'
-export * from './components/input/cyan-markdown-area'
+
 export * from './components/input/cyan-button'
 export * from './components/fab/cyan-fab'
 export * from './components/input/cyan-toolbar'
@@ -41,6 +41,7 @@ export * from './components/input/cyan-asset-option'
 export * from './components/cyan-select'
 export * from './components/input/cyan-tag'
 export * from './components/cyan-textfield'
+export * from './components/cyan-markdown-area'
 
 // Toolbars
 export * from './components/toolbar/cyan-toolbar-heading'

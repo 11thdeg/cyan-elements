@@ -73,7 +73,8 @@ export class CyanMarkdownArea extends CyanTextarea {
           placeholder="${this.placeholder}" 
           @input="${this.onChange}"
           @change="${this.onChange}"
-          @blur="${this.onBlur}">${this.value}</textarea>
+          .value="${this.value}"
+          @blur="${this.onBlur}"></textarea>
         ${ this.label ? html`<span class="cyan-field-label">${this.hasAttribute('error') ? this.getAttribute('error') : this.label}</span>` : '' }
       </label>
     `

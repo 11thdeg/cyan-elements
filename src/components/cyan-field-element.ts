@@ -1,4 +1,4 @@
-import { CyanThemedElement } from "../../cyan-themed-element"
+import { CyanThemedElement } from "../cyan-themed-element"
 
 export class CyanFieldElement extends CyanThemedElement {
   connectedCallback(): void {

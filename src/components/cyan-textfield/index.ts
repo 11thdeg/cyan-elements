@@ -1,6 +1,6 @@
 import { html, css } from 'lit'
 import { customElement, property } from "lit/decorators.js"
-import { CyanFieldElement } from "../input/cyan-field-element"
+import { CyanFieldElement } from "../cyan-field-element"
 
 @customElement('cyan-textfield')
 export class CyanTextfield extends CyanFieldElement {

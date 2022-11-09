@@ -62,9 +62,9 @@ onMounted(() => {
     </div>
     <main id="layout" :class="layout"> 
       <Intro />
+      <Textarea />
       <Bubble />
       <Select />
-      <Textarea />
       <Textfield />
       <Atomics />
       <Headings />
