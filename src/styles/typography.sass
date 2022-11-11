@@ -1,6 +1,10 @@
 @import 'typography/TypeHeadline.sass'
+@import 'typography/TypeHeadline2.sass'
+@import 'typography/TypeBody2.sass'
+@import 'typography/TypeCaption.sass'
 @import 'atomics/dontBreakOut.sass'
 @import 'typography/toolbar.sass'
+@import 'typography/table.sass'
 
 // UI Elements
 :root
@@ -64,39 +68,18 @@
   line-height: 24px
   letter-spacing: 0.5px
 
-@mixin TypeBody2()
-  font-family: var(--cyan-text-font-family)
-  font-weight: 400
-  font-size: 15px
-  line-height: 24px
-  letter-spacing: 0.25px
 
-@mixin TypeCaption()
-  font-family: var(--cyan-text-font-family)
-  font-size: 13px
-  font-weight: normal
-  letter-spacing: 0.4px
-  line-height: 16px
-  margin: 0
-  padding: 0
-
-.TypeCaption
-  @include TypeCaption
 
 p, .TypeBody1
   @include TypeBody1
   color: var(--cyan-text-color)
 
-.TypeBody2
-  @include TypeBody2
+
 
 h1
-  color: var(--cyan-heading-color-a)
+  color: var(--cyan-color-heading-1)
   @include TypeHeadline3()
 
-h2
-  color: var(--cyan-heading-color-a)
-  @include TypeHeadline4()
 
 h3
   color: var(--cyan-heading-color-b)

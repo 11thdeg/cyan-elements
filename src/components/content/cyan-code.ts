@@ -13,7 +13,8 @@ export class CyanCode extends LitElement {
       color: var(--cyan-code-color);
       background-color: var( --cyan-code-background-color);
       padding: 0 4px;
-      border-radius: 4px
+      border-radius: 4px;
+      word-break: keep-all;
     }
   `
   render () {

@@ -1,0 +1,27 @@
+/*
+ * Headline 2
+ * Font: Lato
+ * Weight: Light
+ * Size: 63px
+ * Letter spacing: -0.5px
+ * Line height: 72px
+ */
+:root
+  --cyan-font-family-headline-2: 'Lato', sans-serif
+  --cyan-font-size-headline-2: 63px
+  --cyan-font-weight-headline-2: 300
+  --cyan-line-height-headline-2: 72px
+  --cyan-letter-spacing-headline-2: -0.5px
+
+@mixin TypeHeadline2()
+  font-family: var(--cyan-font-family-headline-2)
+  font-weight: var(--cyan-font-weight-headline-2)
+  font-size: var(--cyan-font-size-headline-2)
+  line-height: var(--cyan-line-height-headline-2)
+  letter-spacing: var(--cyan-letter-spacing-headline-2)
+  margin-bottom: 24px
+  color: var(--cyan-color-heading-1)
+
+.TypeHeadline2, h2
+  @include TypeHeadline2
+

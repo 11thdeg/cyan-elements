@@ -1,0 +1,18 @@
+:root
+  --cyan-font-family-caption: var(--cyan-text-font-family)
+  --cyan-font-size-caption: 13px
+  --cyan-font-weight-caption: normal
+  --cyan-line-height-caption: 24px
+  --cyan-letter-spacing-caption: 0.4px
+  
+@mixin TypeCaption()
+  font-family: var(--cyan-text-font-family)
+  font-size: var(--cyan-font-size-caption)
+  font-weight: var(--cyan-font-weight-caption)
+  letter-spacing: var(--cyan-letter-spacing-caption)
+  line-height: var(--cyan-line-height-caption)
+  margin: 0
+  padding: 0
+
+.TypeCaption
+  @include TypeCaption

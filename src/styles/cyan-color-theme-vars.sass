@@ -5,6 +5,7 @@
 @import theming/button.sass
 @import theming/card.sass
 @import theming/field.sass
+@import theming/heading.sass
 
 // Complete solution based on the ideas presented in
 // https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/ 
@@ -29,6 +30,7 @@
   
   .cyan--mode--light
     --cyan-background-color: #fff
+    --cyan-border-color-th: var(--chroma-primary-g)
 
     // Bubbles
     --cyan-bubble-background-color-a: rgba(155, 221, 77, 0.4)
@@ -148,6 +150,7 @@
   .cyan--mode--dark
     --cyan-background-color: #002337
     --cyan-divider-color: var(--chroma-secondary-c)
+    --cyan-border-color-th: var(--chroma-secondary-g)
 
     // Button, Hamburger
     --cyan-hamburger-color: var(--chroma-secondary-g)

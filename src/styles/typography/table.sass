@@ -1,0 +1,20 @@
+@import ./TypeBody2
+@import ./TypeCaption
+
+table
+  border-collapse: collapse
+  margin: 12px 0
+  thead
+    tr
+      th, td
+        @include TypeBody2()
+        text-align: center
+        border-bottom: 1px solid var(--cyan-border-color-th)
+        padding: 3px 6px
+        vertical-align: top
+  tbody
+    tr
+      th, td
+        @include TypeCaption() 
+        vertical-align: top
+        padding: 3px 6px
