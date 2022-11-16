@@ -1,5 +1,7 @@
 @import atomics/dontBreakOut.sass
 @import layout/layout-vars.sass
+@import layout/Layout.sass
+@import layout/Column.sass
 
 // A long treatise on main viewport layouts
 @mixin LayoutBase()
@@ -7,15 +9,9 @@
   flex-direction: row
   flex-wrap: wrap
   gap: var(--cyan-row-gap) var(--cyan-column-gap)
-  margin: var(--cyan-row-gap) var(--cyan-column-gap)
-  padding: 0
+  margin: 0 auto
+  padding: var(--cyan-gap-layout)
   box-sizing: border-box
-
-// We expect the containers inside a layout to be ".Columns"
-.Column, .column
-  @include dontBreakOut()
-  img
-    max-width: 100%
 
 // *** singleColumnLayout ************************************************
 .singleColumnLayout
@@ -54,10 +50,6 @@
     width: 100%
     max-width: 100%
 
-// *** emptyLayout ****************************************************
-.emptyLayout
-  @include LayoutBase()
-
 @media screen and (min-width: 600px)
   .emptyLayout
     display: flex
@@ -80,10 +72,6 @@
       width: 360px
       flex-shrink: 0
       flex-grow: 0
-    .double
-      // width: min(calc(100vw - (72px + 256px)), 720px)
-      width: 720px
-      flex-shrink: 0
     .double-cut
       //width: min(calc(100vw - (72px + 256px)), 445px)
       width: 445px

@@ -4,4 +4,6 @@
   --cyan-row-gap: calc(6 * var(--cyan-page-grid-base));
   /* Column gap = 3 */
   --cyan-column-gap: calc(3 * var(--cyan-page-grid-base));
+
+  --cyan-gap-layout: 16px;
 }

@@ -1,0 +1,32 @@
+@import ./layout-vars.sass
+@import ../atomics/dontBreakOut.sass
+
+// We expect the containers inside a layout to be ".Columns"
+.Column
+  @include dontBreakOut()
+  img
+    max-width: 100%
+
+.Column *:first-child
+  margin-top: 0 !important
+
+.BookLayout, .bookLayout
+  .full,
+  .double
+    &.Column
+      width: 720px
+      flex-shrink: 0
+
+@media screen and (max-width: $mobile-breakpoint)
+  .Column
+    width: calc(100vw - 2 * var(--cyan-gap-layout))
+
+@media screen and (max-width: $tablet-breakpoint)
+  .Column
+    width: min(100vw - 2 * var(--cyan-gap-layout), 600px - 2 * var(--cyan-gap-layout))
+  
+  .bookLayout
+    .full,
+    .double // Bug fix
+      &.Column
+        width: min(100vw - 2 * var(--cyan-gap-layout), 600px - 2 * var(--cyan-gap-layout))
