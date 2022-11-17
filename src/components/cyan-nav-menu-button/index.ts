@@ -1,9 +1,9 @@
 export * from './theme.sass'
-import { html, css } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
-import { CyanThemedElement } from '../../cyan-themed-element';
-import { logDebug } from '../../utils/loghelpers';
-import { resolveNounURI } from '../../utils/resolveNounURI';
+import { html, css } from 'lit'
+import { customElement, property } from 'lit/decorators.js'
+import { CyanThemedElement } from '../../cyan-themed-element'
+import { logDebug } from '../../utils/loghelpers'
+import { resolveNounURI } from '../../utils/resolveNounURI'
 
 @customElement('cyan-nav-menu-button')
 export class CyanNavMenuButton extends CyanThemedElement {
@@ -39,6 +39,9 @@ export class CyanNavMenuButton extends CyanThemedElement {
     :host .state-box:active {
       background-color: var(--cyan-color-nav-menu-button-background-active);
     }
+    :host([open]) .state-box {
+      background: var(--cyan-background-nav-menu-button-open);
+    }
     :host .state-indicator {
       display: block;
       position: absolute;
@@ -65,9 +68,11 @@ export class CyanNavMenuButton extends CyanThemedElement {
     }
     :host([open]) .state-indicator::before  {
       transform: translate3d(0, 5px, 0) rotate(45deg);
+      background: var(--cyan-background-nav-menu-button-open-indicator);
     }
     :host([open]) .state-indicator::after {
       transform: translate3d(0, -5px, 0) rotate(-45deg);
+      background: var(--cyan-background-nav-menu-button-open-indicator);
     }
     :host button:focus {
       outline: none;
@@ -78,7 +83,11 @@ export class CyanNavMenuButton extends CyanThemedElement {
       position: absolute;
       top: -2px;
       left: -2px;
-      opacity: 0.5;
+      opacity: 0.17;
+      z-index: 3;
+    }
+    :host([open]) img {
+      opacity: 0.22;
     }
   `
 
@@ -101,7 +110,8 @@ export class CyanNavMenuButton extends CyanThemedElement {
   }
 
   render () {
-    const iconPath = resolveNounURI(this.noun, this.dark)
+    const dark = this.light ? true : this.open
+    const iconPath = resolveNounURI(this.noun, !dark)
     return html`<img src="${iconPath}" alt="${this.noun}" aria-disabled="true" />
     <button type="button" aria-label="${this.ariaLabel}" aria-controls=${this.ariaControls} @click="${this.toggleOpen}">
       <span class="state-box">
