@@ -110,8 +110,8 @@ export class CyanNavMenuButton extends CyanThemedElement {
   }
 
   render () {
-    const dark = this.light ? true : this.open
-    const iconPath = resolveNounURI(this.noun, !dark)
+    const dark = this.mode === 'dark' ? !this.open : false
+    const iconPath = resolveNounURI(this.noun, dark)
     return html`<img src="${iconPath}" alt="${this.noun}" aria-disabled="true" />
     <button type="button" aria-label="${this.ariaLabel}" aria-controls=${this.ariaControls} @click="${this.toggleOpen}">
       <span class="state-box">

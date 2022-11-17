@@ -21,8 +21,8 @@ export class CyanThemedElement extends LitElement {
                 mutation.attributeName === 'class'
         ) {
           this.mode = (mutation.target as HTMLElement).classList.contains('cyan--mode--dark') ? 'dark' : 'light'
-          this.dark = this.mode === 'dark'
-          this.light = this.mode === 'light'
+          // this.dark = this.mode === 'dark'
+          // this.light = this.mode === 'light'
         }
       });
     });
