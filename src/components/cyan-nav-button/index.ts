@@ -13,17 +13,16 @@ export class CyanNavButton extends CyanThemedElement {
       align-items: center;  
       gap: 8px;
       height: 48px;
-      padding: 0;
-      padding-left: 12px;
+      line-height: 48px;
+      padding: 0 16px;
       margin: 0;
-      margin-right: 12px;
-      border-radius: 0 16px 16px 0;
+      border-radius: 24px;
       transition: all 0.3s ease;
       color: var(--cyan-ui-color)
     }
     :host([compact]) {
       height: 32px;
-      border-radius: 0 12px 12px 0;
+      border-radius: 16px;
       font-size: var(--cyan-font-size-ui-small);
       line-height: 32px;
     }
@@ -40,6 +39,9 @@ export class CyanNavButton extends CyanThemedElement {
     }
     :host div.oneLiner {
       pointer-events: none;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }`
 
 
