@@ -59,7 +59,7 @@ export class CyanMenuItem extends LitElement {
 
   render () {
     const content = this.noun ? html`<cyan-icon noun="${this.noun}" small class="prepend"></cyan-icon><slot></slot>` : html`<slot></slot>`
-    return html`<li @click="${this.handleClick}">
+    return html`<li @click="${this.handleClick}" @keydown="${this.handleClick}">
       ${ this.route ? html`<a href="${this.route}">${content}</a>` : html`<span class="clickable">${content}</span>` }
   </li>`
   }

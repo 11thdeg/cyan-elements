@@ -62,7 +62,7 @@ export class CyanLoader extends CyanThemedElement {
     const animation = this.inline ? 'loader-small' : 'loader'
     return html`
       <img src="/proprietary/animated/${lightmode}/${animation}.svg" alt="Loading...">
-      ${ this.large ? html`<img class="logo" src="/proprietary/icons/${lightmode}/fox.svg">` : ''}`
+      ${ this.large ? html`<img class="logo" src="/proprietary/icons/${lightmode}/fox.svg" alt="...">` : ''}`
   }
 }
 
