@@ -24,6 +24,7 @@ export class CyanLoader extends CyanThemedElement {
       border-radius: 50%;
       // background: linear-gradient(-42deg,var(--chroma-secondary-g),var(--chroma-primary-i));
       opacity: 0.5;
+      aspect-ratio: 1/1;
     }
     :host([large]) img {
       display: block;
@@ -39,7 +40,7 @@ export class CyanLoader extends CyanThemedElement {
       height: 24px;
     }
     :host([inline]) img {
-      height: 24px;
+      height: 11px;
       margin: 0;
       padding: 0;
     }

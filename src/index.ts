@@ -27,7 +27,7 @@ export * from './components/cyan-bubble'
 export * from './components/interactions/cyan-save-interaction'
 export * from './components/cyan-love-button'
 export * from './components/interactions/cyan-watch-button'
-export * from './components/interactions/cyan-loader'
+export * from './components/cyan-loader'
 
 // Inputs
 // export * from './components/input/cyan-textfield'
