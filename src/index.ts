@@ -55,4 +55,5 @@ export * from './components/hamburger/cyan-hamburger-button'
 export * from './components/cyan-nav-menu-button'
 export * from './components/cyan-top-app-bar'
 export * from './components/cyan-navigation-rail'
+export * from './components/cyan-navigation-button'
 
