@@ -6,6 +6,7 @@
 @import 'atomics/dontBreakOut.sass'
 @import 'typography/toolbar.sass'
 @import 'typography/table.sass'
+@import 'typography/list.sass'
 
 // UI Elements
 :root
@@ -73,7 +74,11 @@
 
 p, .TypeBody1
   @include TypeBody1
-  color: var(--cyan-text-color)
+  color: var(--cyan-color-high)
+p.lowEmphasis
+  color: var(--cyan-color-medium)
+p[disabled]
+  color: var(--cyan-color-disabled)
 
 
 
