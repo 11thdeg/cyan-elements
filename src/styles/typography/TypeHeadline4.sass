@@ -1,0 +1,27 @@
+/*
+ * Headline 4
+ * Font: Lato
+ * Weight: Normal
+ * Size: 36px
+ * Letter spacing: 0.25px
+ * Line height: 48px
+ */
+:root
+  --cyan-font-family-headline-4: 'Lato', sans-serif
+  --cyan-font-size-headline-4: 36px
+  --cyan-font-weight-headline-4: 400
+  --cyan-line-height-headline-4: 48px
+  --cyan-letter-spacing-headline-4: 0.25px
+
+@mixin TypeHeadline4()
+  font-family: var(--cyan-font-family-headline-4)
+  font-weight: var(--cyan-font-weight-headline-4)
+  font-size: var(--cyan-font-size-headline-4)
+  line-height: var(--cyan-line-height-headline-4)
+  letter-spacing: var(--cyan-letter-spacing-headline-4)
+  margin-bottom: 24px
+  color: var(--cyan-color-heading-1)
+
+.TypeHeadline4, h4
+  @include TypeHeadline4
+
