@@ -23,6 +23,7 @@ export class CyanTopAppBar extends CyanThemedElement {
       top: 0;
       transition: all 0.2s ease-in-out;
       background: var(--cyan-background-top-app-bar-sticky);
+      z-index: 90000;
     }
     :host([overlay]) header{
       transition: all 0.6s ease-in-out;
@@ -53,7 +54,7 @@ export class CyanTopAppBar extends CyanThemedElement {
 
   scrollListener: EventListener = (e: Event) => {
     const top = window.pageYOffset || (e.target as HTMLElement).scrollTop || 0
-    if (this.sticky) this.overlay = top > 2
+    if (this.sticky || this.modal) this.overlay = top > 2
   }
 
   connectedCallback () {
