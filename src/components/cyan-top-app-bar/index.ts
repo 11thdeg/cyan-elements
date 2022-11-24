@@ -11,7 +11,7 @@ export class CyanTopAppBar extends CyanThemedElement {
       display: flex;
       flex-direction: row;
       margin: 0;
-      padding: 0 16px;
+      padding: 0 8px;
       height: 64px;
       margin-bottom: 8px; // 64+8 = 72 = 3 * 24 (grid)
       background: var(--cyan-background-top-app-bar);
@@ -28,7 +28,7 @@ export class CyanTopAppBar extends CyanThemedElement {
       transition: all 0.6s ease-in-out;
       box-shadow: var(--cyan-box-shadow-top-app-bar-overlay);
     }
-    :host .pageTitle {
+    ::slotted(h2) {
       display: var(--cyan-top-app-bar-title-display, block);
       font-family: var(--cyan-font-family-headline-4);
       font-weight: 300; // var(--cyan-font-weight-headline-4);
@@ -36,17 +36,20 @@ export class CyanTopAppBar extends CyanThemedElement {
       line-height: var(--cyan-line-height-headline-4);
       letter-spacing: var(--cyan-letter-spacing-headline-4);
       color: var(--cyan-color-top-app-bar);
+      height: var(--cyan-line-height-headline-4);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }`
 
-  @property({ type: String }) title = 'Cyan Top App Bar'
 
   @property({ type: Boolean, reflect: true }) sticky = false
 
-  @property({ type: Boolean }) modal = false
-
-  @property({ type: Boolean, reflect: true }) menu = false
+  @property({ type: Boolean, reflect: true }) modal = false
 
   @property({ type: Boolean, reflect: true }) overlay = false
+
+  @property({ type: String, reflect: true }) role = 'banner'
 
   scrollListener: EventListener = (e: Event) => {
     const top = window.pageYOffset || (e.target as HTMLElement).scrollTop || 0
@@ -56,7 +59,7 @@ export class CyanTopAppBar extends CyanThemedElement {
   connectedCallback () {
     super.connectedCallback()
     if (this.modal) {
-      this.menu = false
+      this.sticky = true
     }
     document.addEventListener('scroll', this.scrollListener)
   }
@@ -72,10 +75,7 @@ export class CyanTopAppBar extends CyanThemedElement {
 
   render () {
     return html`<header>
-      ${this.menu && !this.modal ? html`<cyan-nav-menu-button></cyan-nav-menu-button>` : ''}
       ${this.modal ? html`<cyan-button noun="back" text @click=${this.dispatchBack}></cyan-button>` : ''}
-      <div class="pageTitle">${this.title}</div>
-      <cyan-spacer></cyan-spacer>
       <slot></slot>
     </header>`
   }

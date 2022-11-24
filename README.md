@@ -8,7 +8,7 @@ A shared element library for Pelilauta,  Charna, and so.
 
 # 0.22.0+
 
-#### Components available
+## Components available
 
 `<tag-name [boolean attribute] another=[typed attribute] (boolean property) (yet-another=[typed property])>`
 
@@ -30,6 +30,9 @@ A shared element library for Pelilauta,  Charna, and so.
 - `<cyan-loader [large|inline]>`
 - `<cyan-fab noun=[noun] [secondary] [small]>[slot]</cyan-fab>`
 - `<cyan-nav-button [compact] [light|dark]>` and `<cyan-nav-section [folds] [open] label=[string] [light|dark]>`
+
+## App structure
+- `<cyan-top-app-bar [sticky] [modal]>` provides a basic layout element for an app-bar. 
 
 ### Content tags
 - `<cyan-heading [level=1|2|3|4] label="[heading text]></cyan-heading>` is a 24px ot 48px high heading, which automatically resizes to fit the content and slot.
