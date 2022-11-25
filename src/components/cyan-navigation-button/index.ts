@@ -9,29 +9,42 @@ export class CyanNavigationButton extends CyanThemedElement {
 
   static styles = css`
   :host button {
+    margin: 0;
+    padding: 0;
     height: 56px;
     width: 56px;
-    background: none;
+    
     border: none;
     font-family: var(--cyan-text-font-family);
     font-size: var(--cyan-font-size-caption);
     font-weight: var(--cyan-font-weight-caption);
     letter-spacing: var(--cyan-letter-spacing-caption);
-    line-height: var(--cyan-line-height-caption);
     overflow: visible;
-    margin: 0;
-    padding: 0;
+
+    // background: hsla(37, 100%, 50%, 0.4);
+    background: none;
   }
   :host button .iconContainer {
     display: block;
-    background: var(--cyan-background-navigation-button-icon);
-    height: 32px;
-    width: 56px;
-    border-radius: 16px;
+    
+    height: 36px;
+    width: 36px;
+    margin: 0 10px;
+    line-height: 24px;
+
+    border-radius: 50%;
     transition: background-color 0.2s ease-in-out;
+
+    background: var(--cyan-background-navigation-button-icon);
+    // background: hsla(37, 100%, 50%, 0.4);
+  }
+  :host button .iconContainer.withoutLabel {
+    width: 48px;
+    height: 48px;
+    margin: 4px;
   }
   :host button .iconContainer cyan-icon {
-    margin-top: -2px;
+    margin-top: 0px;
   }
   :host(:hover) button .iconContainer {
     background: var(--cyan-background-navigation-button-icon-hover);
@@ -51,6 +64,7 @@ export class CyanNavigationButton extends CyanThemedElement {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    line-height: 16px;
   }
   `
 
@@ -61,11 +75,18 @@ export class CyanNavigationButton extends CyanThemedElement {
   @property({ type: String, reflect: true }) label = '' 
 
   render () {
+    if (this.label) {
+      return html`<button>
+        <span class="iconContainer">
+          <cyan-icon small noun="${this.noun}"></cyan-icon>
+        </span>
+        <span class="labelContainer">${this.label}</span>
+      </button>`
+    }
     return html`<button>
-      <span class="iconContainer">
-        <cyan-icon small noun="${this.noun}"></cyan-icon>
-      </span>
-      <span class="labelContainer">${this.label}</span>
+      <span class="iconContainer withoutLabel">
+          <cyan-icon noun="${this.noun}"></cyan-icon>
+        </span>
     </button>`
   }
 }
