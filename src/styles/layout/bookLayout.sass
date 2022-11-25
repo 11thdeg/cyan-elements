@@ -1,0 +1,54 @@
+// breakpoints
+$x-large: 1488px
+$large:   1268px
+$medium:  840px
+$small:   601px
+
+// layout
+.bookLayout
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  padding: 0 16px
+  margin: 0
+  gap: 16px
+  justify-content: center
+  align-items: flex-start
+  box-sizing: border-box
+  .Column
+    width: calc(100vw - 32px)
+    flex-grow: 0
+    flex-shrink: 1
+@media screen and (min-width: $small)
+  .bookLayout
+    margin: 0 auto
+    max-width: 760px
+    .Column
+      width: 440px
+      &.small
+        width: 272px
+      &.medium
+        width: 440px
+      &.large, &.full
+        width: 100%
+@media screen and (min-width: $medium)
+  .bookLayout
+    max-width: calc(16px * 3 + 440px + 272px)
+    .Column
+      width: 440px
+      &.small
+        width: 272px
+      &.medium
+        width: 440px
+      &.large
+        width: 700px
+      &.full
+        width: 100%
+
+@media screen and (min-width: $large)
+  .bookLayout
+    max-width: calc(16px * 3 + 700px + 440px)
+
+@media screen and (min-width: $x-large)
+  .bookLayout
+    max-width: calc(16px * 4 + 700px + 440px + 272px)

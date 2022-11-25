@@ -7,7 +7,7 @@ export class CyanNavigationRail extends CyanThemedElement {
   
   static styles = css`
     :host nav {
-      width: 88px;
+      width: 80px;
       height: 100vh;
       height: 100dvh;
       position: fixed;
