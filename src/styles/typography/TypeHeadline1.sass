@@ -1,0 +1,44 @@
+/*
+ * Headline 1
+ *
+ * Font: Lato
+ * Weight: Light
+ * Size: 101px
+ * Letter spacing: -1.5px
+ * Line height: 120px
+ *
+ * Downscaled
+ * size: 50px
+ * letter-spacing: 0
+ * line-height: 72px
+ */
+:root
+  --cyan-font-family-headline-1: 'Lato', sans-serif
+  --cyan-font-size-headline-1: 101px
+  --cyan-font-weight-headline-1: 300
+  --cyan-line-height-headline-1: 120px
+  --cyan-letter-spacing-headline-1: -1.5px
+
+.downscaled
+  --cyan-font-size-headline-1: 50px
+  --cyan-letter-spacing-headline-1: 0
+  --cyan-line-height-headline-1: 72px
+
+@media screen and (max-width: 600px)
+  :root
+    --cyan-font-size-headline-1: 50px
+    --cyan-line-height-headline-1: 72px
+    --cyan-letter-spacing-headline-1: 0
+
+@mixin TypeHeadline1()
+  font-family: var(--cyan-font-family-headline-1)
+  font-weight: var(--cyan-font-weight-headline-1)
+  font-size: var(--cyan-font-size-headline-1)
+  line-height: var(--cyan-line-height-headline-1)
+  letter-spacing: var(--cyan-letter-spacing-headline-1)
+  margin-bottom: 24px
+  color: var(--cyan-color-heading-1)
+
+.TypeHeadline1, main h1
+  @include TypeHeadline1
+
