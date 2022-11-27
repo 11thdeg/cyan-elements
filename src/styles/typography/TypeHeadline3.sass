@@ -1,0 +1,58 @@
+/*
+ * Headline 3
+ * Font: Lato
+ * Weight: normal
+ * Size: 50px
+ * Letter spacing: 0px
+ * Line height: 72px
+ *
+ * Downscaled (headline 5)
+ * size: 25px
+ * letter-spacing: 0
+ * line-height: 48px
+ *
+ * Card variant
+ * size: 36px
+ * letter-spacing: 0.25
+ * line-height: 48px
+ */
+:root
+  --cyan-font-family-headline-3: 'Lato', sans-serif
+  --cyan-font-size-headline-3: 50px
+  --cyan-font-weight-headline-3: 400
+  --cyan-line-height-headline-3: 72px
+  --cyan-letter-spacing-headline-3: 0px
+
+.downscaled
+  --cyan-font-size-headline-3: 25px
+  --cyan-letter-spacing-headline-3: 0
+  --cyan-line-height-headline-3: 48px
+
+.card
+  --cyan-font-size-headline-3: 36px
+  --cyan-letter-spacing-headline-3: 0.25
+  --cyan-line-height-headline-3: 48px
+
+@media screen and (max-width: 600px)
+  :root
+    --cyan-font-size-headline-3: 25px
+    --cyan-letter-spacing-headline-3: 0
+    --cyan-line-height-headline-3: 48px
+  .card
+    --cyan-font-size-headline-3: 25px
+    --cyan-letter-spacing-headline-3: 0
+    --cyan-line-height-headline-3: 48px
+
+@mixin TypeHeadline3()
+  font-family: var(--cyan-font-family-headline-3)
+  font-weight: var(--cyan-font-weight-headline-3)
+  font-size: var(--cyan-font-size-headline-3)
+  line-height: var(--cyan-line-height-headline-3)
+  letter-spacing: var(--cyan-letter-spacing-headline-3)
+  margin: 0
+  margin-bottom: 24px
+  color: var(--cyan-color-heading-1)
+
+.TypeHeadline3, main h3
+  @include TypeHeadline3
+

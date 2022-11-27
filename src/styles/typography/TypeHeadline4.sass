@@ -5,6 +5,16 @@
  * Size: 36px
  * Letter spacing: 0.25px
  * Line height: 48px
+ *
+ * Downscaled (headline 6)
+ * size: 21px
+ * letter-spacing: 0.15px
+ * line-height: 24px
+ *
+ * Card variant (headline 5 if not downscaled)
+ * size: 25px
+ * letter-spacing: 0
+ * line-height: 48px
  */
 :root
   --cyan-font-family-headline-4: 'Lato', sans-serif
@@ -12,6 +22,26 @@
   --cyan-font-weight-headline-4: 400
   --cyan-line-height-headline-4: 48px
   --cyan-letter-spacing-headline-4: 0.25px
+
+.downscaled
+  --cyan-font-size-headline-4: 21px
+  --cyan-letter-spacing-headline-4: 0.15px
+  --cyan-line-height-headline-4: 24px
+
+.card
+  --cyan-font-size-headline-4: 25px
+  --cyan-letter-spacing-headline-4: 0
+  --cyan-line-height-headline-4: 48px
+
+@media screen and (max-width: 600px)
+  :root
+    --cyan-font-size-headline-4: 21px
+    --cyan-letter-spacing-headline-4: 0.15px
+    --cyan-line-height-headline-4: 24px
+  .card
+    --cyan-font-size-headline-4: 21px
+    --cyan-letter-spacing-headline-4: 0.15px
+    --cyan-line-height-headline-4: 24px
 
 @mixin TypeHeadline4()
   font-family: var(--cyan-font-family-headline-4)
