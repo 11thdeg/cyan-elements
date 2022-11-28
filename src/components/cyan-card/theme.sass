@@ -1,0 +1,56 @@
+.cyan--mode--light
+  --cyan-color-headline-1: var(--chroma-secondary-a)
+  --cyan-border-card-elevation-0: solid 1px hsla(var(--chroma-secondary-f-hsl), 0.33)
+  --cyan-box-shadow-card-elevation-1: 0px 0px 7px -2px var(--chroma-secondary-e)
+
+.cyan--mode--dark
+  --cyan-color-headline-1: white
+  --cyan-border-card-elevation-0: solid 1px hsla(var(--chroma-secondary-i-hsl), 0.22)
+  --cyan-background-card-elevation-1: var(--chroma-secondary-b)
+
+// Light DOM overrides, colors
+
+cyan-card h1
+  color: var(--chroma-alert)
+
+cyan-card h2, cyan-card h3
+  color: var(--cyan-color-headline-1)
+
+cyan-card h4
+  color: var(--cyan-color-headline-2)
+
+// Light DOM overrides, typography
+
+cyan-card h3
+  --cyan-font-size-headline-3: 36px
+  --cyan-letter-spacing-headline-3: 0.25
+  --cyan-line-height-headline-3: 48px
+  margin: 0
+  padding: 0
+
+cyan-card h4
+  --cyan-font-size-headline-4: 25px
+  --cyan-letter-spacing-headline-4: 0
+  --cyan-line-height-headline-4: 48px
+  margin: 0
+  padding: 0
+
+cyan-card h3.downscaled
+  --cyan-font-size-headline-3: 25px
+  --cyan-letter-spacing-headline-3: 0
+  --cyan-line-height-headline-3: 48px
+
+cyan-card h4.downscaled
+  --cyan-font-size-headline-4: 21px
+  --cyan-letter-spacing-headline-4: 0.15px
+  --cyan-line-height-headline-4: 24px
+
+@media screen and (max-width: 840px)
+  cyan-card h3
+    --cyan-font-size-headline-3: 25px
+    --cyan-letter-spacing-headline-3: 0
+    --cyan-line-height-headline-3: 48px
+  cyan-card h4
+    --cyan-font-size-headline-4: 21px
+    --cyan-letter-spacing-headline-4: 0.15px
+    --cyan-line-height-headline-4: 24px

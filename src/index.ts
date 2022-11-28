@@ -22,6 +22,7 @@ export * from './components/content/cyan-markdown-section'
 export * from './components/content/cyan-code'
 export * from './components/heading/cyan-heading'
 export * from './components/cyan-bubble'
+export * from './components/cyan-card'
 
 // Interactions
 export * from './components/interactions/cyan-save-interaction'
