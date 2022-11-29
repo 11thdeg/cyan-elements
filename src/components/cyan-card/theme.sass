@@ -1,12 +1,24 @@
 .cyan--mode--light
   --cyan-color-headline-1: var(--chroma-secondary-a)
+  --cyan-color-headline-2: var(--chroma-secondary-e)
   --cyan-border-card-elevation-0: solid 1px hsla(var(--chroma-secondary-f-hsl), 0.33)
   --cyan-box-shadow-card-elevation-1: 0px 0px 7px -2px var(--chroma-secondary-e)
+  --cyan-box-shadow-card-elevation-2: 1px 1px 10px -1px var(--chroma-secondary-e)
+  --cyan-box-shadow-card-elevation-3: 2px 2px 13px -1px var(--chroma-secondary-e)
+  --cyan-background-cardheader-title: linear-gradient(0deg, var(--chroma-secondary-b), hsla(var(--chroma-secondary-i-hsl), 0))
+
+.cyan--mode--light cyan-card[cover]
+  --cyan-color-headline-1: white
+  --cyan-color-headline-2: var(--chroma-secondary-h)
 
 .cyan--mode--dark
   --cyan-color-headline-1: white
+  --cyan-color-headline-2: var(--chroma-secondary-h)
   --cyan-border-card-elevation-0: solid 1px hsla(var(--chroma-secondary-i-hsl), 0.22)
   --cyan-background-card-elevation-1: var(--chroma-secondary-b)
+  --cyan-background-card-elevation-2: var(--chroma-secondary-c)
+  --cyan-background-card-elevation-3: var(--chroma-secondary-d)
+  --cyan-background-cardheader-title: linear-gradient(0deg, var(--chroma-secondary-a), hsla(var(--chroma-secondary-i-hsl), 0))
 
 // Light DOM overrides, colors
 
