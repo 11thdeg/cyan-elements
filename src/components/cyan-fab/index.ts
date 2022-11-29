@@ -1,13 +1,12 @@
+export * from './theme.sass'
 import { html, css, LitElement } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
-import { buttonStyles } from '../../styles/componentStyles'
 import { resolveNounURI } from '../../utils/resolveNounURI'
 
 @customElement('cyan-fab')
 export class CyanFab extends LitElement {
 
   static styles = css`
-    ${buttonStyles}
     :host {
       display: block;
     }
@@ -17,14 +16,26 @@ export class CyanFab extends LitElement {
       min-width: 56px;
       box-sizing: border-box;
       margin: 0;
+      border: none;
       border-radius: 16px;
       line-height: 56px;
       padding: 0;
       position: relative;
-      color: var(--cyan-fab-color);
+      color: var(--cyan-color-fab);
       background: var(--cyan-background-fab);
       text-decoration: none;
       transition: all 0.2s ease-in-out;
+      font-family: var(--cyan-ui-font-family);
+      font-size: var(--cyan-ui-font-size);
+      letter-spacing: var(--cyan-ui-letter-spacing);
+      line-height: var(--cyan-ui-line-height);
+      font-weight: var(--cyan-ui-font-weight);
+    }
+    :host button:hover {
+      background: var(--cyan-background-fab-hover);
+    }
+    :host button:active {
+      background: var(--cyan-background-fab-active);
     }
     :host([secondary]) button {
       color: var(--cyan-fab-color-secondary);
@@ -64,6 +75,7 @@ export class CyanFab extends LitElement {
       margin-left: 0px;
     }
     img.noun {
+      margin-top:-2px;
       height: 24px;
       width: 24px;
       vertical-align: middle;
@@ -76,6 +88,10 @@ export class CyanFab extends LitElement {
       }
       img.noun, :host([small]) img.noun {
         margin-left: 0px;
+      }
+      img.noun {
+        height: 32px;
+        width: 32px;
       }
     }
   `

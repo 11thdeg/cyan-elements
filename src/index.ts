@@ -35,7 +35,7 @@ export * from './components/cyan-loader'
 export * from './components/cyan-textarea'
 
 export * from './components/cyan-button'
-export * from './components/fab/cyan-fab'
+export * from './components/cyan-fab'
 export * from './components/input/cyan-toolbar'
 export * from './components/input/cyan-asset-select'
 export * from './components/input/cyan-asset-option'
