@@ -33,6 +33,18 @@ export class CyanButton extends LitElement {
     :host([disabled]) cyan-icon {
       opacity: 0.48;
     }
+    :host([text]) button:hover {
+      box-shadow: none;
+      background: var(--cyan-background-button-text-hover);
+    }
+    :host([text]) button:active {
+      box-shadow: none;
+      background: var(--cyan-background-button-text-active);
+    }
+    :host([text]) button:disabled {
+      color: var(--cyan-color-disabled);
+      background: var(--yan-background-button-text-disabled);
+    }
     :host([secondary]) button {
       color: var(--cyan-color-button-secondary);
       background: var(--cyan-background-button-secondary);

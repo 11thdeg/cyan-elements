@@ -25,6 +25,11 @@ export class CyanTopAppBar extends CyanThemedElement {
       background: var(--cyan-background-top-app-bar-sticky);
       z-index: 90000;
     }
+    @media screen and (min-width: 600px) {
+      :host([sticky]) header{
+        border-radius: 0 0 0 16px;
+      }
+    }
     :host([overlay]) header{
       transition: all 0.6s ease-in-out;
       box-shadow: var(--cyan-box-shadow-top-app-bar-overlay);
