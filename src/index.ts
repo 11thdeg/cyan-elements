@@ -20,7 +20,6 @@ export * from './components/content/cyan-markdown-section'
 
 // Content
 export * from './components/content/cyan-code'
-export * from './components/heading/cyan-heading'
 export * from './components/cyan-bubble'
 export * from './components/cyan-card'
 

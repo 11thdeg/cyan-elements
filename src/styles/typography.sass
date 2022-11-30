@@ -5,6 +5,7 @@
 @import 'typography/TypeHeadline4.sass'
 @import 'typography/TypeBody2.sass'
 @import 'typography/TypeCaption.sass'
+@import 'typography/TypeQuote.sass'
 @import 'atomics/dontBreakOut.sass'
 @import 'typography/toolbar.sass'
 @import 'typography/table.sass'
@@ -13,12 +14,9 @@
 // UI Elements
 :root
   // Font families
-  --cyan-font-family-heading: 'Overpass', 'Cabin', sans-serif
-  --cyan-heading-font-family: 'Overpass', sans-serif
   --cyan-monospace-font-family: 'Roboto Mono', monospace
   --cyan-text-font-family: 'Cabin',sans-serif
   --cyan-ui-font-family: 'Cabin', 'Roboto', sans-serif
-
   --cyan-font-size-ui-small: 14px
   
   // Cleaned up to here ^
@@ -79,16 +77,6 @@ p.lowEmphasis
   color: var(--cyan-color-medium)
 p[disabled]
   color: var(--cyan-color-disabled)
-
-// cyan-toolbar h1, cyan-toolbar h2, cyan-toolbar h3, cyan-toolbar h4,
-// cyan-toolbar h1.TypeHeadline5
-//   line-height: 48px
-//   margin: 0
-//   padding: 0
-//   height: 48px
-//   white-space: nowrap
-//   overflow: hidden
-//   text-overflow: ellipsis
 
 a
   text-decoration: none

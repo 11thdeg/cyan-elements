@@ -15,7 +15,7 @@ export class CyanToolbarHeading extends LitElement {
     h1, h2, h3, h4 {
       margin: 0;
       padding: 0;
-      font-family: var(--cyan-font-family-heading);
+      font-family: var(--cyan-font-family-headline-3);
       font-size: var(--cyan-font-size-toolbar-heading);
       font-weight: var(--cyan-font-weight-toolbar-heading);
       letter-spacing: var(--cyan-letter-spacing-toolbar-heading);
