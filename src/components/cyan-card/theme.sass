@@ -33,10 +33,18 @@ cyan-card h4
 
 // Light DOM overrides, typography
 
+cyan-card h2
+  --cyan-font-size-headline-2: 50px
+  --cyan-letter-spacing-headline-2: 0
+  --cyan-line-height-headline-2: 72px
+  margin: 0
+  padding: 0
+
 cyan-card h3
   --cyan-font-size-headline-3: 36px
   --cyan-letter-spacing-headline-3: 0.25
   --cyan-line-height-headline-3: 48px
+  --cyan-font-weight-headline-3: 400
   margin: 0
   padding: 0
 
@@ -58,6 +66,10 @@ cyan-card h4.downscaled
   --cyan-line-height-headline-4: 24px
 
 @media screen and (max-width: 840px)
+  cyan-card h2
+    --cyan-font-size-headline-2: 36px
+    --cyan-letter-spacing-headline-2: 0
+    --cyan-line-height-headline-2: 48px
   cyan-card h3
     --cyan-font-size-headline-3: 25px
     --cyan-letter-spacing-headline-3: 0

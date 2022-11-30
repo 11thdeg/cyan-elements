@@ -3,7 +3,6 @@ import { html, css } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import { CyanThemedElement } from '../../cyan-themed-element'
 
-
 @customElement('cyan-navigation-button')
 export class CyanNavigationButton extends CyanThemedElement {
 
@@ -23,6 +22,14 @@ export class CyanNavigationButton extends CyanThemedElement {
 
     // background: hsla(37, 100%, 50%, 0.4);
     background: none;
+
+    color: var(--cyan-color-navigation-button);
+  }
+  :host button:hover {
+    color: var(--cyan-color-navigation-button-hover);
+  }
+  :host button:active {
+    color: var(--cyan-color-navigation-button-active);
   }
   :host button .iconContainer {
     display: block;

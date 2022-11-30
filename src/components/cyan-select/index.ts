@@ -1,3 +1,4 @@
+export * from './theme.sass'
 import { html, css, LitElement } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import { fieldStyles } from '../cyan-textarea/fieldStyles'
@@ -30,7 +31,7 @@ export class CyanSelect extends LitElement {
       height: 100%;
       background: none;
       border: none;
-      color: var(--chroma-ui-color);
+      color: var(--cyan-color-field, black);
       font-size: var(--chroma-ui-font-size);
       box-sizing: border-box;
       padding: 0 4px;
