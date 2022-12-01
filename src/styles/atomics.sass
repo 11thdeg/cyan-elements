@@ -6,6 +6,7 @@
 @import atomics/oneLiner.sass
 @import atomics/hideOnMobile.sass
 @import atomics/onlyOnMobile.sass
+@import atomics/fieldset.sass
 
 .lowEmphasis
   color: var(--cyan-low-emphasis-color)
@@ -13,20 +14,3 @@
 .highEmphasis
   color: var(--cyan-high-emphasis-color)
 
-@media screen and (max-width: 599px)
-  .Column
-    width: 100%
-    flex-shrink: 0
-    flex-grow: 0
-
-.cyan--mode--dark cyan-icon img.onDark
-  display: block
-
-.cyan--mode--dark cyan-icon img.onLight
-  display: none
-
-.cyan--mode--light cyan-icon img.onLight
-  display: block
-
-.cyan--mode--light cyan-icon img.onDark
-  display: none
