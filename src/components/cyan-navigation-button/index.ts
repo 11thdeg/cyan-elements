@@ -8,6 +8,7 @@ export class CyanNavigationButton extends CyanThemedElement {
 
   static styles = css`
   :host button {
+    position: relative;
     margin: 0;
     padding: 0;
     height: 56px;
@@ -73,27 +74,56 @@ export class CyanNavigationButton extends CyanThemedElement {
     white-space: nowrap;
     line-height: 16px;
   }
+  :host([notification]) button .notification {
+    position: absolute;
+    bottom: 6px;
+    right: 8px;
+    height: 16px;
+    max-width: 48px;
+    min-width: 8px;
+    padding: 0 6px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    text-align: center;
+
+    color: var(--cyan-color-navigation-button-notification);
+    background: var(--cyan-background-navigation-button-notification);
+
+    border-radius: 8px;
+    // opacity: 0.88;
+  }
+  :host([label]) button .notification {
+    bottom: 17px
+  }
   `
 
   @property({ type: Boolean, reflect: true }) active = false 
 
   @property({ type: String, reflect: true }) noun = 'fox' 
 
-  @property({ type: String, reflect: true }) label = '' 
+  @property({ type: String, reflect: true }) label = ''
+
+  @property({ type: String, reflect: true }) notification = ''
 
   render () {
+    const ntf = this.notification ? html`<span class="notification">${this.notification}</span>` : html``
+
     if (this.label) {
       return html`<button>
         <span class="iconContainer">
           <cyan-icon small noun="${this.noun}"></cyan-icon>
         </span>
         <span class="labelContainer">${this.label}</span>
+        ${ntf}
       </button>`
     }
     return html`<button>
       <span class="iconContainer withoutLabel">
           <cyan-icon noun="${this.noun}"></cyan-icon>
         </span>
+        ${ntf}
     </button>`
   }
 }
