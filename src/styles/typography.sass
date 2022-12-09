@@ -3,6 +3,7 @@
 @import 'typography/TypeHeadline2.sass'
 @import 'typography/TypeHeadline3.sass'
 @import 'typography/TypeHeadline4.sass'
+@import 'typography/TypeBody1.sass'
 @import 'typography/TypeBody2.sass'
 @import 'typography/TypeCaption.sass'
 @import 'typography/TypeQuote.sass'
@@ -63,15 +64,7 @@
   --cyan-row-gap: 24px
   --cyan-col-gap: 12px
 
-@mixin TypeBody1()
-  font-family: var(--cyan-text-font-family)
-  font-weight: normal
-  font-size: 17px
-  line-height: 24px
-  letter-spacing: 0.5px
-
 p, .TypeBody1
-  @include TypeBody1
   color: var(--cyan-color-high)
 p.lowEmphasis
   color: var(--cyan-color-medium)
