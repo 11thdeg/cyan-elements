@@ -5,13 +5,11 @@ export * from './chroma/chroma-color-variables.css'
 export * from './styles/style.sass'
 
 // Layout CSS
-export * from './styles/layout/layout-vars.css'
 export * from './styles/layout/layout-vars.sass'
 // ...
 export * from './styles/atomics.sass'
 export * from './styles/cyan-color-theme-vars.sass'
 export * from './styles/typography.sass'
-export * from './styles/cyan-layout-vars.sass'
 export * from './styles/cyan-themed.sass'
 export * from './styles/cyan-view-layout.sass'
 

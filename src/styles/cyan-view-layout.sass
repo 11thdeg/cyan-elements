@@ -10,9 +10,9 @@
   display: flex
   flex-direction: row
   flex-wrap: wrap
-  gap: var(--cyan-row-gap) var(--cyan-column-gap)
+  gap: var(--cn-gap-row) var(--cn-gap-column)
   margin: 0 auto
-  padding: var(--cyan-gap-layout)
+  padding: var(--cn-padding)
   box-sizing: border-box
 
 // *** singleColumnLayout ************************************************
@@ -41,11 +41,11 @@
   @include LayoutBase()
 
 .dashboardLayout > .Column, .dashboardLayout > .column
-  width: calc(100% / 3 - (2 * var(--cyan-column-gap)) - 2px)
+  width: calc(100% / 3 - (2 * var(--cn-gap-column)) - 2px)
 
 @media screen and (max-width: $wide-breakpoint)
   .dashboardLayout > .Column, .dashboardLayout > .column
-    width: calc(100% / 2 - var(--cyan-column-gap) - 2px)
+    width: calc(100% / 2 - var(--cn-gap-column) - 2px)
 
 @media screen and (max-width: $mobile-breakpoint)
   .dashboardLayout > .Column, .dashboardLayout > .column
@@ -59,22 +59,3 @@
     box-sizing: border-box
     div.column
       width: 100%
-
-// *** bookLayout *****************************************************
-// .bookLayout
-//   @include LayoutBase()
-
-// @media screen and (min-width: 600px)
-//   .bookLayout
-//     flex-direction: row
-//     flex-wrap: wrap
-//     justify-content: center
-//     align-items: flex-start
-//     .Column
-//       width: 360px
-//       flex-shrink: 0
-//       flex-grow: 0
-//     .double-cut
-//       //width: min(calc(100vw - (72px + 256px)), 445px)
-//       width: 445px
-//       flex-shrink: 0

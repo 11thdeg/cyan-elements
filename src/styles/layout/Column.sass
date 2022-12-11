@@ -28,14 +28,14 @@
 
 @media screen and (max-width: $mobile-breakpoint)
   .Column
-    width: calc(100vw - 2 * var(--cyan-gap-layout))
+    width: calc(100vw - 2 * var(--cn-gap-column))
 
 @media screen and (max-width: $tablet-breakpoint)
   .Column
-    width: min(100vw - 2 * var(--cyan-gap-layout), 600px - 2 * var(--cyan-gap-layout))
+    width: min(100vw - 2 * var(---cn-gap-column), 600px - 2 * var(--cn-gap-column))
   
   .bookLayout
     .full,
     .double // Bug fix
       &.Column
-        width: min(100vw - 2 * var(--cyan-gap-layout), 600px - 2 * var(--cyan-gap-layout))
+        width: min(100vw - 2 * var(--cn-gap-column), 600px - 2 * var(--cn-gap-column))

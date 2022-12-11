@@ -8,16 +8,12 @@ export class CyanAppBar extends LitElement {
     :host nav{
       display: flex;
       flex-direction: row;
-      gap: var(--cyan-bar-gap);
+      gap: 24px;
       margin: 0;
       padding: 0 var(--cn-padding);
       height: 47px;
       border-bottom: solid 1px #acc;
       align-items: center;
-    }
-    ::slotted(h1) {
-      font-size: var(--cyan-font-size-button);
-      line-height: var(--cyan-line-height-button);
     }
   `
   render () {
