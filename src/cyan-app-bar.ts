@@ -10,9 +10,7 @@ export class CyanAppBar extends LitElement {
       flex-direction: row;
       gap: var(--cyan-bar-gap);
       margin: 0;
-      padding: 0;
-      padding-left: var(--cyan-margin);
-      padding-right: var(--cyan-margin);
+      padding: 0 var(--cn-padding);
       height: 47px;
       border-bottom: solid 1px #acc;
       align-items: center;

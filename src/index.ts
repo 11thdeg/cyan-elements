@@ -1,5 +1,9 @@
-// CSS styles and variables
+// Chroma is a set of color variables, and a color theme – from a subrepo
 export * from './chroma/chroma-color-variables.css'
+
+// All CSS should be imported through this file
+export * from './styles/style.sass'
+
 // Layout CSS
 export * from './styles/layout/layout-vars.css'
 export * from './styles/layout/layout-vars.sass'
@@ -57,4 +61,5 @@ export * from './components/cyan-top-app-bar'
 export * from './components/cyan-navigation-rail'
 export * from './components/cyan-navigation-button'
 export * from './components/cyan-dialog'
+export * from './components/cyan-navigation-tray'
 
