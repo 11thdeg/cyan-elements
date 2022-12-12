@@ -7,7 +7,6 @@ export * from './styles/style.sass'
 // Layout CSS
 export * from './styles/layout/layout-vars.sass'
 // ...
-export * from './styles/atomics.sass'
 export * from './styles/cyan-color-theme-vars.sass'
 export * from './styles/typography.sass'
 export * from './styles/cyan-themed.sass'
