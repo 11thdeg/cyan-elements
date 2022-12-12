@@ -1,30 +1,28 @@
 import { html, css, LitElement } from 'lit'
 import { customElement } from 'lit/decorators.js'
-import { cyanComponentStyle } from '../../styles/cyan-component-style'
 
 @customElement('cyan-toolbar')
 export class CyanToolbar extends LitElement {
   
   static styles = css`
-    ${css`${cyanComponentStyle}`}
     :host {
       display: flex;
       flex-direction: row;
       align-items: center;
-      height: 48px;
-      padding: 4px 0;
+      box-sizing: border-box;
+      height: calc(2 * var(--cn-page-grid));
+      padding: 0;
+      margin: 0;
       justify-content: flex-start;
-      gap: var(--cyan-col-gap);
+      gap: var(--cn-gap-toolbar);
       max-width: 100%;
     }
     :host([small]) {
-      height: 24px;
-      padding: 4px 0;
-      margin: 0;
-      gap: calc(var(--cyan-col-gap) / 2);
+      height: var(--cn-page-grid)
     }
     ::slotted(cyan-icon) {
       margin: 0;
+      margin-top: -4px;
       padding: 0;
       width: 36px;
       height: 36px;
@@ -32,7 +30,7 @@ export class CyanToolbar extends LitElement {
     ::slotted(cyan-icon[small]) {
       width: 24px;
       height: 24px;
-      padding: 12px;
+      padding: 12px 0;
     }
     ::slotted(cyan-icon[xsmall]) {
       width: 16px;
@@ -43,7 +41,7 @@ export class CyanToolbar extends LitElement {
     }
     :host([small]) ::slotted(cyan-icon[small]) {
       padding: 0;
-    })`
+    }`
 
 
   render () {
