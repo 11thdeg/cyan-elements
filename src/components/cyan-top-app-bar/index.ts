@@ -23,7 +23,7 @@ export class CyanTopAppBar extends CyanThemedElement {
       top: 0;
       transition: all 0.2s ease-in-out;
       background: var(--cyan-background-top-app-bar-sticky);
-      z-index: 90000;
+      z-index: var(--cyan-z-index-navigation, 9000)
     }
     @media screen and (min-width: 600px) {
       :host([sticky]) header{

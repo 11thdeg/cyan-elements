@@ -18,7 +18,7 @@ export class CyanDialog extends CyanThemedElement {
       height: 100vh;
       background: var(--cyan-background-dialog-backdrop, rgba(0, 0, 0, 0.1));
       // backdrop-filter: blur(3px);
-      z-index: 100;
+      z-index: var(--cyan-z-index-dialog, 10000)
     }
     .dialog {
       position: absolute;
