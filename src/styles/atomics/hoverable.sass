@@ -1,0 +1,14 @@
+.hoverable
+  border-radius: 4px
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out
+  &:hover
+    box-shadow: var(--cn-box-shadow-hoverable, 0 0 0 2px var(--chroma-primary-a))
+    background: var(--cn-background-hoverable, var(--chroma-primary-b))
+    
+.cyan--mode--light, light
+  --cn-box-shadow-hoverable: 0 0 6px 0px hsla(var(--chroma-primary-c-hsl), 0.5)
+  --cn-background-hoverable: hsla(var(--chroma-primary-c-hsl), 0.15)
+
+.cyan--mode--dark, dark
+  --cn-box-shadow-hoverable: none
+  --cn-background-hoverable: hsla(var(--chroma-secondary-i-hsl), 0.075)
