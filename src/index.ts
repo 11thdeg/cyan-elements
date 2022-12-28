@@ -37,12 +37,13 @@ export * from './components/cyan-textarea'
 export * from './components/cyan-button'
 export * from './components/cyan-fab'
 export * from './components/cyan-toolbar'
-export * from './components/input/cyan-asset-select'
-export * from './components/input/cyan-asset-option'
 export * from './components/cyan-select'
 export * from './components/input/cyan-tag'
 export * from './components/cyan-textfield'
 export * from './components/cyan-markdown-area'
+
+export * from './components/cn-asset-select'
+export * from './components/cn-asset-select/cn-asset-option'
 
 // Toolbars
 export * from './components/toolbar/cyan-toolbar-heading'
