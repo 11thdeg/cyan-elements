@@ -1,7 +1,7 @@
 export * from './theme.sass'
 import { html, LitElement, css } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
-import { logDebug, logError } from '../../utils/loghelpers'
+import { logError } from '../../utils/loghelpers'
 
 @customElement('cn-asset-option')
 export class CyanAssetOption extends LitElement {
@@ -67,7 +67,6 @@ export class CyanAssetOption extends LitElement {
     super.connectedCallback()
     this.setAttribute('role', 'option')
     this.onclick = () => {
-      logDebug('selecting', this.value)
       this.dispatchEvent(new CustomEvent('select', { detail: this.value, bubbles: true, composed: true }))
     }
   }

@@ -1,7 +1,6 @@
 import { html, css } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import { fieldStyles } from './fieldStyles'
-import { logDebug } from '../../utils/loghelpers'
 import { CyanFieldElement } from '../cyan-field-element'
 
 @customElement('cyan-textarea')
@@ -93,8 +92,6 @@ export class CyanTextarea extends CyanFieldElement {
     const after = textarea.value.substring(textarea.selectionEnd, textarea.value.length)
  
     textarea.value = before + this._inject + after
- 
-    logDebug('cyan-markdown-area','Injected', this._inject)
   }
 
 

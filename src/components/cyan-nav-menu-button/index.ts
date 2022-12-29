@@ -2,7 +2,6 @@ export * from './theme.sass'
 import { html, css } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import { CyanThemedElement } from '../../cyan-themed-element'
-import { logDebug } from '../../utils/loghelpers'
 import { resolveNounURI } from '../../utils/resolveNounURI'
 
 @customElement('cyan-nav-menu-button')
@@ -104,7 +103,6 @@ export class CyanNavMenuButton extends CyanThemedElement {
     ariaControls = ''
 
   toggleOpen () {
-    logDebug('cyan-nav-menu-button', 'toggleOpen', this.open)
     this.open = !this.open
     this.dispatchEvent(new CustomEvent('change', { detail: this.open }))
   }

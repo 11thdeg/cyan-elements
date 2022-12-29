@@ -2,7 +2,6 @@ export * from './theme.sass'
 import { html, css } from 'lit'
 import { customElement, property, query } from 'lit/decorators.js'
 import { CyanThemedElement } from '../../cyan-themed-element'
-import { logDebug } from '../../utils/loghelpers'
 
 @customElement('cn-tabs')
 export class CyanTabs extends CyanThemedElement {
@@ -57,7 +56,6 @@ export class CyanTabs extends CyanThemedElement {
     return this._active
   }
   set active (value) {
-    logDebug('set active', value)
     if (this._activeTab) {
       this._activeTab.removeAttribute('active')
     }
@@ -93,7 +91,6 @@ export class CyanTabs extends CyanThemedElement {
   }
 
   render () {
-    logDebug(this.tabs)
     if (this.tabs && this.tabs.length > 0) {
       return html`${this.tabs.map((tab) => this.toTab(tab))}`
     }

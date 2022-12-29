@@ -11,7 +11,6 @@ export class CyanLightmodeToggle extends LitElement {
 
   connectedCallback () {
     super.connectedCallback()
-    // logDebug('cyan-lightmode-toggle', 'connectedCallback')
 
     // Nothing to do, if the lightmode is already set.
     if (document.body.classList.contains('cyan--mode--dark') || document.body.classList.contains('cyan--mode--light')) return

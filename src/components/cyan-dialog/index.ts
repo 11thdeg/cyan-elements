@@ -75,7 +75,6 @@ export class CyanDialog extends CyanThemedElement {
   }
 
   handleKeydown (e: KeyboardEvent) {
-    ///logDebug('cyan-dialog', 'handleKeydown', e)
     if (e.key === 'Escape') {
       this.onClose()
     }
