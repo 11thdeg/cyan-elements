@@ -65,7 +65,7 @@ export class CyanAssetOption extends LitElement {
 
   connectedCallback () {
     super.connectedCallback()
-    this.role = 'option'
+    this.setAttribute('role', 'option')
     this.onclick = () => {
       logDebug('selecting', this.value)
       this.dispatchEvent(new CustomEvent('select', { detail: this.value, bubbles: true, composed: true }))
