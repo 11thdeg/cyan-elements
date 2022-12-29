@@ -9,35 +9,12 @@
     <script type="module" src="/src/index.ts"></script>
     <script type="module" src="/src/stylebook/index.ts"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
-    <style type="text/css">
-      body {
-        background-color: var(--cyan-body-color);
-        margin: 0;
-        padding: 0;
-      }
-      html > h1, html > h2, html > h3, html > h4, html > h5, html > h6 {
-        font-family: "Overpass", sans-serif;
-      }
-      h1, h2, h3, h4, h5, h6 {
-        font-family: Overpass,sans-serif;
-        font-weight: normal;
-      }
-      </style>
   </head>
-  <body class="cyan--mode--light">
+  <body class="cyan cyan--themed light cyan--mode--light">
     <!-- Navigation rail, hidden with atomic style-->
-    <cyan-app-rail class="hide-on-mobile"></cyan-app-rail>
-
-    <cyan-app-bar>
-      <cyan-icon noun="stylebook" small></cyan-icon>
-      <h1>Cyan Elements Stylebook</h1>
-      <cyan-spacer></cyan-spacer>
-      <cyan-lightmode-toggle
-        label="Dark mode"
-        ></cyan-lightmode-toggle>
-    </cyan-app-bar>
-    
-    <stylebook-view></stylebook-view>
+    <cn-asset-select>
+      <cn-asset-option preview="https://via.placeholder.com/150/118899">a very long test text, providing almost no info</cn-asset-option>
+    </cn-asset-select>
 
   </body>
 </html>

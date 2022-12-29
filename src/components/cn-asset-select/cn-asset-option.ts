@@ -14,12 +14,23 @@ export class CyanAssetOption extends LitElement {
       padding: 4px;
       border-radius: 12px;
       transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      color: var(--cyan-color-field, #ffffff);
+      font-family: var(--cyan-font-family-ui, sans-serif);
+      font-size: var(--cyan-font-size-caption, 11px);
     }
     :host(:hover) {
       background: var(--cyan-background-field-hover, #005599);
     }
     :host([selected]) {
       background: var(--cyan-background-field-selected, #005599);
+    }
+    span.description {
+      display: block;
+      height: 1rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      padding: 0 8px;
     }
     img.preview {
       width: 92px;
@@ -68,7 +79,7 @@ export class CyanAssetOption extends LitElement {
           src="${this.preview}"
           alt=""
           class="preview" />` : '' }
-      <slot></slot>
+      <span class="description"><slot></slot></span>
     `
   }
 }
