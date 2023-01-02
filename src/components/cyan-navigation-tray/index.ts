@@ -24,6 +24,9 @@ export class CyanNavigationTray extends CyanThemedElement {
       transform: translateX(-100%);
       transition: transform 0.2s ease-in-out;
     }
+    :host nav::-webkit-scrollbar {
+      display: none;
+    }
     :host([open]) nav {
       transform: translateX(0);
     }
