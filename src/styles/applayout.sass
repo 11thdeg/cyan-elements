@@ -5,6 +5,20 @@
 @import layout/bookLayout.sass
 @import layout/gridLayout.sass
 
+:root
+  --cn-navigation-rail-width: 80px
+  --cn-navigation-bar-height: 64px
+
+// *** .AppLayout helper for fitting the nav-bar and nav-tray *****************
+.AppLayout
+  margin: 0
+  padding: 0
+  margin-left: var(--cn-navigation-rail-width)
+@media screen and (max-width: 600px)
+  .AppLayout
+    margin-left: 0
+    padding-bottom: var(--cn-navigation-bar-height)
+  
 // A long treatise on main viewport layouts
 @mixin LayoutBase()
   display: flex

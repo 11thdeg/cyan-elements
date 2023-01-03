@@ -10,7 +10,7 @@ export * from './styles/layout/layout-vars.sass'
 export * from './styles/cyan-color-theme-vars.sass'
 export * from './styles/typography.sass'
 export * from './styles/cyan-themed.sass'
-export * from './styles/cyan-view-layout.sass'
+export * from './styles/applayout.sass'
 
 export * from './components/cyan-icon'
 export * from './cyan-app-bar'
