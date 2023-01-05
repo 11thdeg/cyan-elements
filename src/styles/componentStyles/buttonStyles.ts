@@ -13,7 +13,8 @@ export const buttonStyles = css`
     font-weight: var(--cyan-ui-font-weight);
     transition: 0.2s all ease-in-out;
   }
-  :host button:disabled {
+  :host button:disabled,
+  :host([secondary]) button:disabled {
     color: var(--cyan-button-color-disabled);
     background: var(--cyan-background-button-disabled);
     box-shadow: none;

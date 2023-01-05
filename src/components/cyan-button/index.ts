@@ -55,6 +55,11 @@ export class CyanButton extends LitElement {
     :host([secondary]) button:active {
       background: var(--cyan-background-button-secondary-active);
     }
+    :host([secondary]) button:disabled {
+      color: var(--cyan-color-disabled);
+      background: var(--cyan-background-button-secondary-disabled);
+      pointer-events: none;
+    }
     :host button cyan-icon {
       position: absolute;
       top: 5px;
@@ -73,6 +78,17 @@ export class CyanButton extends LitElement {
     :host button cyan-icon + span slot:empty {
       display: none;
       padding-left: 38px;
+    }
+    :host([disabled]),
+    :host([disabled]) button,
+    :host([disabled]) cyan-icon,
+    :host([disabled]) span {
+      pointer-events: none;
+    }
+    :host([disabled]) button {
+      pointer-events: none;
+      color: var(--cyan-color-disabled);
+      background-color: var(--cyan-background-button-disabled);
     }
   `
   @property({ type: String, reflect: true })
