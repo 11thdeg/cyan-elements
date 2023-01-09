@@ -1,0 +1,79 @@
+.cyan--mode--light
+  // Primary colors
+  --cn-background-button: var(--chroma-primary-c)
+  --cn-background-button-hover: var(--chroma-primary-d)
+  --cn-background-button-active: var(--chroma-primary-a)
+  --cn-background-button-disabled: var(--chroma-secondary-i)
+  // Text buttons
+  --cn-background-button-text: var(--chroma-secondary-i)
+  --cn-background-button-text-hover: var(--chroma-secondary-h)
+  --cn-background-button-text-active: var(--chroma-secondary-g)
+  
+
+.cyan--mode--dark, .chroma-box-a
+  --cn-color-button-disabled: hsla(0, 0%, 100%, 0.3)
+  // Primary colors
+  --cn-background-button: linear-gradient(79deg, var(--chroma-primary-e), var(--chroma-primary-c))
+  --cn-background-button-hover: linear-gradient(79deg, var(--chroma-primary-f), var(--chroma-primary-d))
+  --cn-background-button-active: linear-gradient(79deg, var(--chroma-primary-c), var(--chroma-primary-a))
+  --cn-background-button-disabled: var(--cyan-background-overlay-light)
+  // Secondary colors
+  --cn-color-button-secondary: var(--chroma-secondary-h)
+  --cn-background-button-secondary: linear-gradient(137deg, var(--chroma-primary-a), var(--chroma-secondary-c))
+  --cn-background-button-secondary-hover: linear-gradient(137deg, var(--chroma-primary-b), var(--chroma-secondary-d))
+  --cn-background-button-secondary-active: linear-gradient(137deg, var(--chroma-primary-a), var(--chroma-secondary-b))
+  // Text colors
+  --cn-background-button-text: var(--cyan-background-overlay-light)
+
+.cyan
+  button
+    background: var(--cn-background-button)
+    
+    // Font and text
+    font-family: var(--cn-font-family-ui)
+    font-weight: var(--cn-font-weight-ui)
+    font-size: var(--cn-font-size-ui)
+    line-height: 38px
+    letter-spacing: var(--cn-letter-spacing-ui)
+    
+    border-radius: 19px
+    border: none
+    height: 38px
+    margin: 5px 0
+    padding: 0 16px
+    transition: all 0.3s ease-in-out
+    cyan-icon
+      margin-left: -9px
+      margin-top: -5px
+      margin-right: 6px
+    cyan-icon:last-child
+      margin-right: -9px
+  button:hover
+    background: var(--cn-background-button-hover)
+
+  button:active
+    background: var(--cn-background-button-active)
+
+  button:disabled
+    background: var(--cn-background-button-disabled)
+    cursor: not-allowed
+    cyan-icon
+      opacity: 0.3
+
+  button.secondary
+    background: var(--cn-background-button-secondary)
+    color: var(--cn-color-button-secondary)
+
+  button.secondary:hover
+    background: var(--cn-background-button-secondary-hover)
+
+  button.secondary:active
+    background: var(--cn-background-button-secondary-active)
+
+  button.secondary:disabled
+    background: var(--cn-background-button-disabled)
+    cursor: not-allowed
+    color: var(--cn-color-button-disabled)
+
+  button.text
+    background: var(--cn-background-button-text)

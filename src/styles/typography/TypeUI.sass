@@ -1,0 +1,20 @@
+:root
+  --cn-font-family-ui: 'Lato', sans-serif
+  --cn-font-size-ui: 15px
+  --cn-font-weight-ui: 500
+  --cn-line-height-ui: 24px
+  --cn-letter-spacing-ui: 1.25px
+  --cn-font-weight-ui-bold: 900
+    
+@mixin TypeUI()
+  font-family: var(--cn-font-family-ui)
+  font-weight: var(--cn-font-weight-ui)
+  font-size: var(--cn-font-size-ui)
+  line-height: var(--cn-line-height-ui)
+  letter-spacing: var(--cn-letter-spacing-ui)
+
+.TypeUI
+  @include TypeUI
+
+.TypeUI strong
+  font-weight: var(-cn-font-weight-ui-bold)
