@@ -52,6 +52,9 @@ export class CyanTextfield extends CyanFieldElement {
     :host input:focus {
       outline: none;
     }
+    :host input::placeholder {
+      color: var(--cyan-color-field-placeholder, gray);
+    }
     :host .cyan-field-label {
       position: absolute;
       top: 0;
