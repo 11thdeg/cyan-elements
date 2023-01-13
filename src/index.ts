@@ -58,7 +58,9 @@ export * from './components/cyan-nav-menu-button'
 export * from './components/cyan-top-app-bar'
 export * from './components/cyan-navigation-rail'
 export * from './components/cyan-navigation-button'
-export * from './components/cyan-dialog'
+// export * from './components/cyan-dialog'
 export * from './components/cyan-navigation-tray'
 export * from './components/cn-tabs'
 
+// Dialogs
+export * from './components/cn-dialog'
