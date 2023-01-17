@@ -35,7 +35,8 @@ export class CyanDialog extends LitElement {
       background-color: var(--cn-background-dialog, #002337);
       padding: var(--cn-padding);
       width: 100%;
-      height: 48px;
+      height: 72px;
+      box-sizing: border-box;
     }
     :host nav.header h3 {
       font-family: var(--cyan-font-family-headline-4);
@@ -47,9 +48,12 @@ export class CyanDialog extends LitElement {
       margin: 0;
       padding: 0;
       color: var(--cn-color-dialog-header, #fff);
+      height: 48px;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     :host .dialog-content {
-      margin-top: 48px;
+      margin-top: 72px;
       overflow-y: scroll;
     }`
 
