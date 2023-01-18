@@ -23,6 +23,7 @@ export * from './components/content/cyan-markdown-section'
 export * from './components/content/cyan-code'
 export * from './components/cyan-bubble'
 export * from './components/cyan-card'
+export * from './components/cn-asset-token'
 
 // Interactions
 export * from './components/interactions/cyan-save-interaction'
