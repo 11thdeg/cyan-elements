@@ -9,7 +9,7 @@ export class CyanAssetToken extends CyanThemedElement {
       position: relative;
       width: 122px;
       height: 122px;
-      background-color: var(--chroma-primary-c);
+      background-color: hsla(var(--chroma-primary-c-hsl), 0.44);
       border-radius: 12px;
     }
     :host img.preview {
@@ -20,10 +20,10 @@ export class CyanAssetToken extends CyanThemedElement {
     }
     :host .label {
       position: absolute;
-      top: 16px;
+      top: 12px;
       left: 8px;
       width: calc(100% - 16px);
-      background: hsla(var(--chroma-secondary-a-hsl), 0.77);
+      background: hsla(var(--chroma-secondary-a-hsl), 0.44);
       border-radius: 4px;
       line-height: 24px;
       height: 24px;
@@ -35,7 +35,7 @@ export class CyanAssetToken extends CyanThemedElement {
     }
     :host cyan-icon {
       position: absolute;
-      top: 32px;
+      top: 36px;
       left: 24px;
     }
     :host .preview+cyan-icon{
