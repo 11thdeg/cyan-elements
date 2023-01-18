@@ -1,3 +1,4 @@
+export * from './theme.sass'
 import { html, css } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import { CyanThemedElement } from '../../cyan-themed-element'
@@ -6,25 +7,32 @@ import { CyanThemedElement } from '../../cyan-themed-element'
 export class CyanAssetToken extends CyanThemedElement {
   static styles = css`
     :host {
+      display: block;
       position: relative;
-      width: 122px;
-      height: 122px;
-      background-color: hsla(var(--chroma-primary-c-hsl), 0.44);
+      width: 104px;
+      height: 104px;
+      background: var(--cn-background-asset-token);
       border-radius: 12px;
+      margin: 0;
+      padding: 0;
+    }
+    :host(:hover) {
+      box-shadow: 0 0 10px -2px var(--chroma-primary-c);
+      filter: brightness(1.1);
     }
     :host img.preview {
-        width: 122px;
-        height: 122px;
+        width: 100%;
+        height: 100%;
         object-fit: cover;
         border-radius: 12px;
     }
     :host .label {
       position: absolute;
-      top: 12px;
-      left: 8px;
-      width: calc(100% - 16px);
+      top: 6px;
+      left: 6px;
+      width: calc(100% - 12px);
       background: hsla(var(--chroma-secondary-a-hsl), 0.44);
-      border-radius: 4px;
+      border-radius: 10px;
       line-height: 24px;
       height: 24px;
       padding: 0 8px;
@@ -32,11 +40,16 @@ export class CyanAssetToken extends CyanThemedElement {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
+      font-family: var(--cyan-text-font-family);
+      font-size: var(--cyan-font-size-caption);
+      font-weight: var(--cyan-font-weight-caption);
+      letter-spacing: var(--cyan-letter-spacing-caption);
     }
     :host cyan-icon {
       position: absolute;
-      top: 36px;
-      left: 24px;
+      top: 28px;
+      left: 16px;
+      filter: drop-shadow(0 0 8px hsla(var(--chroma-secondary-a-hsl), 0.44));
     }
     :host .preview+cyan-icon{
       position: absolute;
