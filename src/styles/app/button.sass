@@ -1,27 +1,30 @@
-.cyan--mode--light
-  // Primary colors
-  --cn-background-button: var(--chroma-primary-c)
-  --cn-background-button-hover: var(--chroma-primary-d)
-  --cn-background-button-active: var(--chroma-primary-a)
-  --cn-background-button-disabled: var(--chroma-secondary-i)
-  // Text buttons
-  --cn-background-button-text: var(--chroma-secondary-i)
-  --cn-background-button-text-hover: var(--chroma-secondary-h)
-  --cn-background-button-text-active: var(--chroma-secondary-g)
-  
-
-.cyan--mode--dark, .chroma-box-a
+// Most of the button styles and vars are shared with the modes and themes – so we are defining them
+// only once here and only overriding those that need to be different for a theme
+.cyan
   --cn-color-button-disabled: hsla(0, 0%, 100%, 0.3)
+
   // Primary colors
   --cn-background-button: linear-gradient(79deg, var(--chroma-primary-e), var(--chroma-primary-c))
   --cn-background-button-hover: linear-gradient(79deg, var(--chroma-primary-f), var(--chroma-primary-d))
   --cn-background-button-active: linear-gradient(79deg, var(--chroma-primary-c), var(--chroma-primary-a))
   --cn-background-button-disabled: var(--cyan-background-overlay-light)
+
   // Secondary colors
   --cn-color-button-secondary: var(--chroma-secondary-h)
   --cn-background-button-secondary: linear-gradient(137deg, var(--chroma-primary-a), var(--chroma-secondary-c))
   --cn-background-button-secondary-hover: linear-gradient(137deg, var(--chroma-primary-b), var(--chroma-secondary-d))
   --cn-background-button-secondary-active: linear-gradient(137deg, var(--chroma-primary-a), var(--chroma-secondary-b))
+  
+
+.cyan--mode--light, .light
+  // Text buttons
+  --color-button-text: var(--chroma-secondary-b)
+  --cn-background-button-text: var(--chroma-secondary-i)
+  --cn-background-button-text-hover: var(--chroma-secondary-h)
+  --cn-background-button-text-active: var(--chroma-secondary-g)
+  
+
+.cyan--mode--dark, .chroma-box-a, dark
   // Text colors
   --cn-background-button-text: var(--cyan-background-overlay-light)
 
@@ -76,4 +79,24 @@
     color: var(--cn-color-button-disabled)
 
   button.text
+    color: var(--color-button-text)
     background: var(--cn-background-button-text)
+
+// Cyan icons in buttons
+.cyan
+  button
+    position: relative
+    min-width: 38px  
+    &:has(cyan-icon)
+      text-indent: 22px
+    cyan-icon
+      position: absolute
+      top: 4px
+      left: -12px
+      // display: inline-block
+      // vertical-align: bottom
+      // margin-bottom: 3px
+      // margin-left: -14px
+      // margin-bottom: 20px
+      // transform: translateY(-20px)
+      
