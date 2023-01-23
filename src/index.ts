@@ -62,6 +62,7 @@ export * from './components/cyan-navigation-button'
 // export * from './components/cyan-dialog'
 export * from './components/cyan-navigation-tray'
 export * from './components/cn-tabs'
+export * from './components/cn-tray-button'
 
 // Dialogs
 export * from './components/cn-dialog'
