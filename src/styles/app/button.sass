@@ -26,7 +26,9 @@
 
 .cyan--mode--dark, .chroma-box-a, dark
   // Text colors
-  --cn-background-button-text: var(--cyan-background-overlay-light)
+  --cn-background-button-text: hsla(var(--chroma-secondary-i-hsl), 0.055)
+  --cn-background-button-text-hover: hsla(var(--chroma-secondary-i-hsl), 0.11)
+  --cn-background-button-text-active: hsla(var(--chroma-secondary-i-hsl), 0.165)
 
 .cyan
   button
@@ -81,6 +83,10 @@
   button.text
     color: var(--color-button-text)
     background: var(--cn-background-button-text)
+  button.text:hover
+    background: var(--cn-background-button-text-hover)
+  button.text:active
+    background: var(--cn-background-button-text-active)
 
 // Cyan icons in buttons
 .cyan
@@ -93,10 +99,4 @@
       position: absolute
       top: 4px
       left: -12px
-      // display: inline-block
-      // vertical-align: bottom
-      // margin-bottom: 3px
-      // margin-left: -14px
-      // margin-bottom: 20px
-      // transform: translateY(-20px)
       
