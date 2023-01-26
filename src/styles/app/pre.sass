@@ -1,0 +1,14 @@
+.cyan
+  --cyan-color-code: hsla(var(--chroma-secondary-i-hsl), 0.77)
+  &.cyan--mode--light
+    --cyan-color-code: hsla(var(--chroma-primary-c-hsl), 0.77)
+  pre.code
+    font-family: var(--cn-font-family-code)
+    line-height: var(--cn-line-height-code)
+    color: var(--cyan-color-code)
+    background: var(--cyan-background-field)
+    padding: 12px
+    border-radius: 6px
+    word-wrap: normal
+    overflow-x: auto
+    white-space: pre
