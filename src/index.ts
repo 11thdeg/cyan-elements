@@ -30,6 +30,7 @@ export * from './components/interactions/cyan-save-interaction'
 export * from './components/cyan-love-button'
 export * from './components/interactions/cyan-watch-button'
 export * from './components/cyan-loader'
+export * from './components/cn-reaction-button'
 
 // Inputs
 // export * from './components/input/cyan-textfield'
