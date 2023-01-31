@@ -33,6 +33,10 @@ export class CyanReactionButton extends CyanThemedElement {
     :host(:active) button {
         background: var(--cn-bacground-reaction-button-active);
     }
+    :host([disabled]) button {
+      background: none;
+      border: 1px solid var(--cn-bacground-reaction-button);
+    }
     :host cyan-icon {
       position: absolute;
       top: 10px;
@@ -40,6 +44,11 @@ export class CyanReactionButton extends CyanThemedElement {
       opacity: 0.11;
       pointer-events: none;
       transition: opacity 0.2s ease-in-out;
+    }
+    :host([disabled]) cyan-icon {
+      top: 9px;
+      left: 9px;
+      opacity: 0.22;
     }
     :host([aria-pressed="true"]) cyan-icon {
       opacity: 1;
@@ -60,23 +69,17 @@ export class CyanReactionButton extends CyanThemedElement {
   @property({ type: String, reflect: true })
     ariaPressed = 'false'
 
+  @property({ type: Boolean, reflect: true })
+    disabled = false
+
+  @property({ type: Boolean, reflect: true })
+    on = false
+
   @property({ type: Number, reflect: true })
     count = -1
 
   @property({ type: String, reflect: true })
-    small = false
-
-  @property({ type: String, reflect: true })
-    offNoun = ''
-
-  @property({ type: String, reflect: true })
     noun = 'loves'
-
-  @property({ type: String, reflect: true })
-    label = ''
-
-  @property({ type: String, reflect: true })
-    onLabel = 'unlove'
 
   connectedCallback(): void {
     super.connectedCallback()
@@ -84,6 +87,7 @@ export class CyanReactionButton extends CyanThemedElement {
     this.setAttribute('tabindex', '0')
     this.addEventListener('click', this.handleCommand)
     this.addEventListener('keydown', this.handleCommand)
+    this.setAttribute('aria-pressed', this.on ? 'true' : 'false')
   }
 
   disconnectedCallback(): void {
@@ -93,6 +97,7 @@ export class CyanReactionButton extends CyanThemedElement {
   }
 
   handleCommand(event: Event) {
+    if (this.disabled) return
     // Handles both mouse clicks and keyboard
     // activate with Enter or Space
   
@@ -108,11 +113,14 @@ export class CyanReactionButton extends CyanThemedElement {
     if (this.getAttribute('aria-pressed') === 'true') {
       this.setAttribute('aria-pressed', 'false')
       if (this.count > -1) this.count--
+      this.on = false
     }
     else {
       this.setAttribute('aria-pressed', 'true')
       if (this.count > -1) this.count++
+      this.on = true
     }
+    this.dispatchEvent(new Event('change'))
   }
 
   render () {
