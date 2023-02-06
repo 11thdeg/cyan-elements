@@ -7,6 +7,9 @@ import { CyanThemedElement } from '../../cyan-themed-element'
 export class CyanNavigationButton extends CyanThemedElement {
 
   static styles = css`
+  :host {
+    display: block;
+  }
   :host button {
     position: relative;
     margin: 0;
