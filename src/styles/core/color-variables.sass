@@ -1,0 +1,15 @@
+:root
+  // Material inspired text-opacity
+  --text-high-opacity: 1
+  --text-medium-opacity: 0.87
+  --text-low-opacity: 0.60
+    
+.cyan--mode--light, light
+  --cn-color: rgba(0,0,0, var(--text-medium-opacity))
+  --cn-border-color: var(--chroma-primary-g)
+  --cn-background-level-1: hsla(var(--chroma-primary-c-hsl), 0.11)
+
+.cyan--mode--dark, dark
+  --cn-color: rgba(255,255,255, var(--text-medium-opacity))
+  --cn-border-color: var(--chroma-secondary-g)
+  --cn-background-level-1: hsla(var(--chroma-secondary-i-hsl), 0.11)
