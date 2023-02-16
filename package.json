@@ -1,6 +1,6 @@
 {
   "name": "@11thdeg/cyan",
-  "version": "0.33.1",
+  "version": "0.34.8",
   "type": "module",
   "main": "dist/cyan.js",
   "exports": {

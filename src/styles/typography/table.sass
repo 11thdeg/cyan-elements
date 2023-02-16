@@ -1,20 +1,29 @@
+@import ./TypeBody1
 @import ./TypeBody2
-@import ./TypeCaption
 
-table
+.cyan table
   border-collapse: collapse
-  margin: 12px 0
+  margin: calc(var(--cn-page-grid) / 2) 0
   thead
     tr
       th, td
-        @include TypeBody2()
+        @include TypeBody1()
         text-align: center
-        border-bottom: 1px solid var(--cyan-border-color-th)
+        border-bottom: 1px solid var(--cn-border-color)
         padding: 3px 6px
         vertical-align: top
+        color: var(--cn-color)
   tbody
     tr
       th, td
-        @include TypeCaption() 
+        @include TypeBody2() 
         vertical-align: top
         padding: 3px 6px
+        color: var(--cn-color)
+  &.cover
+    width: 100%
+  &.striped
+    tbody
+      tr:nth-child(odd)
+        background-color: var(--cn-background-level-1)
+  

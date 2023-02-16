@@ -6,6 +6,9 @@ import { CyanThemedElement } from '../../cyan-themed-element'
 export class CyanNavigationRail extends CyanThemedElement {
   
   static styles = css`
+    :host {
+      display: block;
+    }
     :host nav {
       width: 80px;
       height: 100vh;
@@ -19,7 +22,7 @@ export class CyanNavigationRail extends CyanThemedElement {
       flex-direction: column;
       gap: 16px;
       align-items: center;
-      padding-top: 8px;
+      padding-top: 4px;
       padding-bottom: 16px;
     }
     @media (max-width: 600px) {

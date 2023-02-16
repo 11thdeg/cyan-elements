@@ -1,4 +1,5 @@
 export * from './theme.sass'
+export * from './overrides.sass'
 import { html, css } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import { CyanThemedElement } from '../../cyan-themed-element'
@@ -8,6 +9,8 @@ export class CyanNavigationTray extends CyanThemedElement {
   
   static styles = css`
     :host nav {
+      box-sizing: border-box;
+      z-index: var(--cyan-z-index-tray);
       position: fixed;
       top: 8px;
       left: 0;
@@ -16,11 +19,9 @@ export class CyanNavigationTray extends CyanThemedElement {
       display: flex;
       flex-direction: column;
       overflow-y: scroll;
-      box-sizing: border-box;
       padding: 8px;
       background: var(--cyan-background-color-navigation-tray);
       border-radius: 0 24px 24px 0;
-      box-sizing: border-box;
       transform: translateX(-100%);
       transition: transform 0.2s ease-in-out;
     }
