@@ -47,6 +47,8 @@ export * from './components/cyan-markdown-area'
 export * from './components/cn-asset-select'
 export * from './components/cn-asset-select/cn-asset-option'
 
+export * from './components/cn-chip'
+
 // Toolbars
 export * from './components/toolbar/cyan-toolbar-heading'
 
