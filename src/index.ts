@@ -51,6 +51,7 @@ export * from './components/cn-chip'
 
 // Toolbars
 export * from './components/toolbar/cyan-toolbar-heading'
+export * from './components/cn-filter-panel'
 
 // Navigation
 export * from './components/menu/cyan-menu'
