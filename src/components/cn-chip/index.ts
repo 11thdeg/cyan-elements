@@ -34,6 +34,16 @@ export class CyanChip extends CyanThemedElement {
       vertical-align: middle;
       margin-right: 4px;
       margin-left: -4px;
+      position: relative;
+    }
+    :host([input]) img {
+      margin-left: 4px;
+      margin-right: -4px;
+      transition: background-color 0.2s ease-in-out;
+    }
+    :host([input]:hover) img {
+      background-color: var(--cn-background-level-2, #eee);
+      border-radius: 50%;
     }
     :host img.hide{
       opacity: 0.11;
@@ -54,6 +64,9 @@ export class CyanChip extends CyanThemedElement {
 
   @property({ type: Boolean, reflect: true })
     disabled = false
+
+  @property ({ type: Boolean, reflect: true })
+    input = false
 
   handleClick (e: Event) {
     e.stopPropagation()
@@ -77,7 +90,10 @@ export class CyanChip extends CyanThemedElement {
 
     const prepend = this.filter? html`<img src=${iconPath} alt=${this.noun} class=${this.checked ? "" : "hide"} />` : html``
 
-    return html`${prepend}    
-        <span><slot></slot></span>`
+    const postfix = this.input? html`<img src=${iconPath} alt=${this.noun} class="inputnoun" />` : html``
+
+    return html`${prepend}
+        <span><slot></slot></span>
+        ${postfix}`
   }
 }
