@@ -10,14 +10,14 @@ export class CyanTextfield extends CyanFieldElement {
       position: relative;
       margin: 0;
       padding: 0;
-      background: var(--cyan-background-field, red);
+      background: var(--cn-background-field, #ccc);
       height: 35px;
-      border-bottom: 1px solid var(--cyan-border-color-field, blue);
+      border-bottom: 1px solid var(--cn-border-color, #ddd);
       transition: all 0.3s ease;
       border-radius: 0 12px 0 0;
     }
     :host(:hover) {
-      background: var(--cyan-background-field-hover, red);
+      background: var(--cn-background-field-hover, red);
       border-bottom: 1px solid var(--cyan-border-color-field-hover, blue);
     }
     :host(:focus-within) {
@@ -25,7 +25,7 @@ export class CyanTextfield extends CyanFieldElement {
       border-bottom: 1px solid var(--cyan-border-color-field-active, blue);
     }
     :host([error]) {
-      background: var(--cyan-background-field-error, red);
+      background: var(--cn-background-field-error, red);
       border-bottom: 1px solid var(--cyan-border-color-field-error, blue);
     }
     :host([error]) .cyan-field-label {
@@ -53,7 +53,8 @@ export class CyanTextfield extends CyanFieldElement {
       outline: none;
     }
     :host input::placeholder {
-      color: var(--cyan-color-field-placeholder, gray);
+      color: var(--cn-color-placeholder, gray);
+      font-style: italic;
     }
     :host .cyan-field-label {
       position: absolute;

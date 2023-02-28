@@ -1,11 +1,20 @@
 .cyan--mode--light
   --cyan-color-field: var(--chroma-secondary-a)
+  --cn-color-placeholder: var(--chroma-secondary-g)
   // Background
   --cyan-background-field: var(--chroma-secondary-i)
   --cyan-background-field-hover: var(--chroma-secondary-h)
   --cyan-background-field-active: var(--chroma-secondary-i)
   --cyan-background-field-disabled: var(--chroma-secondary-i)
   --cyan-background-field-error: var(--chroma-alert-field-tint)
+
+  // Background - refactored
+  --cn-background-field: var(--chroma-secondary-i)
+  --cn-background-field-hover: var(--chroma-secondary-h)
+  --cn-background-field-active: var(--chroma-secondary-i)
+  --cn-background-field-disabled: var(--chroma-secondary-i)
+  --cn-background-field-error: var(--chroma-alert-field-tint)
+
   // Border
   --cyan-border-color-field: var(--chroma-secondary-e)
   --cyan-border-color-field-hover: var(--chroma-secondary-f)
@@ -15,6 +24,8 @@
 
 .cyan--mode--dark
   --cyan-color-field: var(--chroma-secondary-i)
+  --cn-color-placeholder: var(--chroma-secondary-d)
+
   --cyan-color-field-placeholder: hsla(var(--chroma-secondary-i-hsl), 0.55)
   // Background
   --cyan-background-field: hsla(var(--chroma-secondary-i-hsl), 0.11)
@@ -23,9 +34,12 @@
   --cyan-background-field-disabled: var(--chroma-secondary-i)
   --cyan-background-field-error: var(--chroma-alert-field-tint)
 
-  // Bacground - refactored
+  // Background - refactored
   --cn-background-field: hsla(var(--chroma-secondary-i-hsl), 0.11)
+  --cn-background-field-hover: hsla(var(--chroma-secondary-i-hsl), 0.22)
   --cn-background-field-active: hsla(var(--chroma-secondary-i-hsl), 0.055)
+  --cn-background-field-disabled: hsla(var(--chroma-secondary-i-hsl), 0.0.55)
+  --cn-background-field-error: var(--chroma-alert-field-tint)
 
 
   // Border
