@@ -1,0 +1,30 @@
+// breakpoints
+$x-large: 1488px
+$large:   1268px
+$medium:  840px
+$small:   601px
+
+// layout
+.cyan
+  .EditorLayout
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    padding: 0 16px
+    margin: 0
+    gap: 16px
+    justify-content: center
+    align-items: flex-start
+    box-sizing: border-box
+    .Pane
+      width: calc(100vw - 32px)
+      flex-grow: 0
+      flex-shrink: 1
+
+@media screen and (min-width: $medium)
+  .cyan
+    .EditorLayout
+      .Pane
+        width: 840px
+      .EditorPane
+        height: calc(100vh - var(--cn-height-navigation-bar) - 32px)
