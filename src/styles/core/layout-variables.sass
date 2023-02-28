@@ -6,8 +6,13 @@
   --cn-gap-column: 16px
   --cn-gap-toolbar: 8px
 
+  --cn-width-rail: 80px
+  --cn-width-tray: 210px
+
   // Z-index
   --cyan-z-index-base: 1000
   --cyan-z-index-navigation: calc( 10 *  var(--cyan-z-index-base) )
   --cyan-z-index-tray: calc( 20 *  var(--cyan-z-index-base) )
+  // Rail is on top of the tray, to enable tray to slide under the rail
+  --cyan-z-index-rail: calc( 30 *  var(--cyan-z-index-base) ) 
   --cyan-z-index-dialog: calc( 90 *  var(--cyan-z-index-base) ) 

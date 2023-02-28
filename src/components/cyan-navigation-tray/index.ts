@@ -43,9 +43,16 @@ export class CyanNavigationTray extends CyanThemedElement {
     @media screen and (min-width: 840px) {
       :host nav {
         top: 72px;
-        height: calc(100vh - 72px - 8px);
-        width: 272px;
-        transform: translateX(-260px);
+        height: calc(100vh - 72px);
+        width: calc(var(--cn-width-rail) + var(--cn-width-tray, 244px));
+        transform: translateX(
+          calc(
+            0px
+            - var(--cn-width-rail) 
+            - var(--cn-width-tray, 244px)
+            + 8px));
+        padding-left: 80px;
+        border-radius: 0 24px 0 0px;
       }
       :host([open]) .overlay {
         display: none;
