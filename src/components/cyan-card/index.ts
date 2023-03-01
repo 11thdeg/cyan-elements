@@ -38,15 +38,18 @@ export class CyanCard extends CyanThemedElement {
       left: 0px;
       height: 120px;
       object-fit: cover;
-      border-radius: 16px 16px 0px 0px;
+      border-radius: 16px;
     }
     :host .cardHeader {
       display: flex;
       flex-direction: row;
-      align-items: center;
+      align-items: flex-start;
       justify-content: left;
       gap: 8px;
       position: relative;
+    }
+    :host .cardHeader .avatar {
+      margin: 8px 0;
     }
     :host([cover]) .cardHeader {
       display: block;
@@ -57,6 +60,7 @@ export class CyanCard extends CyanThemedElement {
     :host([cover]) .cardHeader .avatar {
       position: absolute;
       bottom: -12px;
+      margin: 0;
       left: 12px;
       z-index: 1;
     }
@@ -69,7 +73,10 @@ export class CyanCard extends CyanThemedElement {
       width: 100%;
       box-sizing: border-box;
       padding-left: 72px;
-      text-align: right
+      text-align: right;
+      border-radius: 0 0 16px 16px;
+      max-height: 96px;
+      overflow: hidden;
     }`
 
   @property({ type: Number, reflect: true }) elevation = 0

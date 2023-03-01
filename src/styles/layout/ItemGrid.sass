@@ -1,0 +1,14 @@
+.ItemGrid
+  display: flex
+  flex-direction: column
+  gap: 16px
+
+@media screen and (min-width: 600px)
+  .ItemGrid
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+    cyan-card
+      width: calc(50% - 8px)
+      flex-grow: 0
+      align-self: flex-start
