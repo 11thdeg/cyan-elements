@@ -15,10 +15,18 @@
   margin: 0
   padding: 0
   margin-left: var(--cn-navigation-rail-width)
+  container-type: inline-size
+  // width: 100%
 @media screen and (max-width: 600px)
   .AppLayout
+    // container-type: none  // no container on mobile
     margin-left: 0
     padding-bottom: var(--cn-navigation-bar-height)
+
+@media screen and (min-width: 600px)
+  .AppLayout:has(cn-side-sheet)
+    .EditorLayout, bookLayout
+      padding-right: 424px
   
 // A long treatise on main viewport layouts
 @mixin LayoutBase()
