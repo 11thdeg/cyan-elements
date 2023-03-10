@@ -4,7 +4,7 @@ import { customElement, property } from 'lit/decorators.js'
 import { CyanThemedElement } from '../../cyan-themed-element'
 
 @customElement('cyan-card')
-export class CyanCard extends CyanThemedElement {
+export class CyanCardD extends CyanThemedElement {
 
   static styles = css`
     :host {
@@ -101,6 +101,6 @@ export class CyanCard extends CyanThemedElement {
 }
 declare global {
   interface HTMLElementTagNameMap {
-    'cyan-card': CyanCard
+    'cyan-card': CyanCardD
   }
 }
