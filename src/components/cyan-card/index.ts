@@ -36,7 +36,7 @@ export class CyanCardD extends CyanThemedElement {
       position: absolute;
       top: 0px;
       left: 0px;
-      height: 120px;
+      height: 192px /* 8 rows */;
       object-fit: cover;
       border-radius: 16px;
     }
@@ -55,7 +55,7 @@ export class CyanCardD extends CyanThemedElement {
       display: block;
       border-radius: 16px 16px 0 0;
       margin: -8px -12px 0 -12px;
-      height: 120px;
+      height: 192px;
     }
     :host([cover]) .cardHeader .avatar {
       position: absolute;
