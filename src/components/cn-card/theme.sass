@@ -1,5 +1,17 @@
 @import '../../styles/typography/TypeBody2'
 
+.cyan
+  --cyan-font-weight-headline-card: 400
+  --cyan-font-size-headline-card: 25px
+  --cyan-line-height-headline-card: 48px
+  --cyan-letter-spacing-headline-card: 0px
+
+@media screen and (max-width: 600px)
+  .cyan
+    --cyan-font-size-headline-card: 21px
+    --cyan-line-height-headline-card: 24px
+    --cyan-letter-spacing-headline-card: 0.15px
+
 cn-card
   img
     max-width: 100vw

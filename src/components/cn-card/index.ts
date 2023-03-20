@@ -29,23 +29,12 @@ export class CyanCard extends CyanThemedElement {
       position: relative;
       display: block;
     }
-    /*:host .cardContent::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(
-        -59deg, 
-        hsla(65deg, 0%, 0%, 0.23) 40%,
-        hsla(65deg, 100%, 63%, 0.23) 70%,
-        hsla(202deg, 100%, 63%, 0.23) 100%
-      );
-      pointer-events: none;
-      z-index: 1;
-    }*/
-    :host .cardContent + .cardNoun {
+    :host .cardNoun {
+      margin: 16px;
+      margin-right: 0;
+      padding: 0;
+    }
+    :host([cover]) .cardNoun {
       position: absolute;
       top: 12px;
       left: 12px;
@@ -53,15 +42,36 @@ export class CyanCard extends CyanThemedElement {
       padding: 0;
       z-index: 2;
     }
+    :host .cardHeader {
+      display: flex;
+    }
+    :host .tint {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: min(95cqw, 96px);
+      width: 100cqw;
+      background: linear-gradient(
+        0deg,
+        hsla(var(--chroma-key-10-hsl), 0.73) 0%,
+        hsla(var(--chroma-key-10-hsl), 0) 100%
+      );
+    }
     :host h4 {
       margin: 12px 16px;
       padding: 0;
-      font-family: var(--cyan-font-family-headline-4);
-      font-weight: var(--cyan-font-weight-headline-4);
-      font-size: var(--cyan-font-size-headline-4);
-      line-height: var(--cyan-line-height-headline-4);
-      letter-spacing: var(--cyan-letter-spacing-headline-4);
+      font-family: var(--cn-font-family-headings);
+      font-weight: var(--cyan-font-weight-headline-card);
+      font-size: var(--cyan-font-size-headline-card);
+      line-height: var(--cyan-line-height-headline-card);
+      letter-spacing: var(--cyan-letter-spacing-headline-card);
       color: var(--cn-color-heading-card);
+
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;  
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     :host .snippet {
       padding: 0;
@@ -73,7 +83,9 @@ export class CyanCard extends CyanThemedElement {
       letter-spacing: var(--cyan-letter-spacing-body-2);
       color: var(--cyan-color-medium);
     }
-    
+    :host .snippet a {
+      color: var(--cn-color-link, white);
+    }
     :host([elevation="1"]) {
       background-color: var(--cn-background-level-1, cyan);
     }
@@ -91,6 +103,9 @@ export class CyanCard extends CyanThemedElement {
       padding: 12px 16px;
       width: 100cqw;
     }
+    cyan-toolbar {
+      margin: 12px;
+    }
   `
 
   @property({ type: Number, reflect: true }) elevation = 1
@@ -99,28 +114,36 @@ export class CyanCard extends CyanThemedElement {
 
   @property({ type: String, reflect: true }) title = ''
 
-  @property({ type: String, reflect: true }) snippet = ''
+  @property({ type: String, reflect: true }) snippet = undefined
 
-  @property({ type: String, reflect: true }) cover = ''
+  @property({ type: String, reflect: true }) cover = undefined
 
   connectedCallback(): void {
     super.connectedCallback()
     this.setAttribute('role', 'card')
   }
 
+  get coverImageURL () {
+    return this.cover || ''
+  }
+
   render () {
     const snp = document.createElement('div');
-    snp.insertAdjacentHTML('beforeend', marked(this.snippet));
-    snp.classList.add('snippet');
+    if (this.snippet) {
+      snp.insertAdjacentHTML('beforeend', marked(this.snippet));
+      snp.classList.add('snippet');
+    }
     return html`
       ${this.cover ? html`<div class="cardContent">
-        <img src=${this.cover} alt="" aria-hidden="true" />
+        <img src=${this.coverImageURL} alt="" aria-hidden="true" />
+        <div aria-hidden="true" class="tint"></div>
       </div>` : html`
       <slot></slot>
-      `}   
-      ${this.noun ? html`<cyan-icon noun=${this.noun} class="cardNoun" large></cyan-icon>` : ''}
-
-      ${this.title ? html`<h4 class="downscaled">${this.title}</h4>` : ''}
+      `}
+      <div class="cardHeader">   
+        ${this.noun ? html`<cyan-icon noun=${this.noun} class="cardNoun" ?large=${!!this.cover}></cyan-icon>` : ''}
+        ${this.title ? html`<h4 class="downscaled">${this.title}</h4>` : ''}
+      </div>
       
       ${this.snippet ? html`${snp}` : ''}
       
