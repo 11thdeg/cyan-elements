@@ -18,10 +18,12 @@ export class CyanLightmodeToggle extends LitElement {
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       // set dark mode
       document.body.classList.toggle('cyan--mode--dark')
+      document.body.classList.toggle('dark')
       this.dark = true
     } else {
       // set light mode
       document.body.classList.toggle('cyan--mode--light')
+      document.body.classList.toggle('light')
     }
   }
 
@@ -31,6 +33,8 @@ export class CyanLightmodeToggle extends LitElement {
     this.dispatchEvent(new Event(eventName, { bubbles: true }))
     document.body.classList.toggle('cyan--mode--dark')
     document.body.classList.toggle('cyan--mode--light')
+    document.body.classList.toggle('dark')
+    document.body.classList.toggle('light')
   }
 
   render () {
