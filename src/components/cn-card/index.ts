@@ -56,6 +56,7 @@ export class CyanCard extends CyanThemedElement {
         hsla(var(--chroma-key-10-hsl), 0.73) 0%,
         hsla(var(--chroma-key-10-hsl), 0) 100%
       );
+      pointer-events: none;
     }
     :host h4 {
       margin: 12px 16px;
@@ -139,6 +140,7 @@ export class CyanCard extends CyanThemedElement {
 
     if (!this.link) return html`<div class="cardContent" aria-hidden="true">
         <img src=${coverUrl} alt="" />
+        <div class="tint"></div>
       </div>`
 
     const linkUrl:string = this.link || ''
@@ -146,6 +148,7 @@ export class CyanCard extends CyanThemedElement {
     return html`<div class="cardContent" aria-hidden="true">
       <a href=${linkUrl} class="cardContent">
         <img src=${coverUrl} alt="" />
+        <div class="tint"></div>
       </a>
     </div>`
   }
