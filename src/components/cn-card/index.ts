@@ -73,6 +73,13 @@ export class CyanCard extends CyanThemedElement {
       overflow: hidden;
       text-overflow: ellipsis;
     }
+    :host h4 a {
+      color: var(--cn-color-headings-link, white);
+      text-decoration: none;
+    }
+    :host h4 a:hover {
+      text-decoration: underline;
+    }
     :host .snippet {
       padding: 0;
       margin: 0 16px;
@@ -118,13 +125,39 @@ export class CyanCard extends CyanThemedElement {
 
   @property({ type: String, reflect: true }) cover = undefined
 
+  @property({ type: String, reflect: true }) link = undefined
+
   connectedCallback(): void {
     super.connectedCallback()
     this.setAttribute('role', 'card')
   }
 
-  get coverImageURL () {
-    return this.cover || ''
+  get coverSlot () {
+    if (!this.cover) return html``
+
+    const coverUrl:string = this.cover || ''
+
+    if (!this.link) return html`<div class="cardContent" aria-hidden="true">
+        <img src=${coverUrl} alt="" />
+      </div>`
+
+    const linkUrl:string = this.link || ''
+
+    return html`<div class="cardContent" aria-hidden="true">
+      <a href=${linkUrl} class="cardContent">
+        <img src=${coverUrl} alt="" />
+      </a>
+    </div>`
+  }
+
+  get titleSlot () {
+    if (!this.title) return html``
+
+    if (!this.link) return html`<h4>${this.title}</h4>`
+
+    const linkUrl:string = this.link || ''
+
+    return html`<h4><a href=${linkUrl}>${this.title}</a></h4>`
   }
 
   render () {
@@ -133,16 +166,16 @@ export class CyanCard extends CyanThemedElement {
       snp.insertAdjacentHTML('beforeend', marked(this.snippet));
       snp.classList.add('snippet');
     }
+
+    const coverSlot = this.coverSlot
+    const titleSlot = this.titleSlot
+
     return html`
-      ${this.cover ? html`<div class="cardContent">
-        <img src=${this.coverImageURL} alt="" aria-hidden="true" />
-        <div aria-hidden="true" class="tint"></div>
-      </div>` : html`
-      <slot></slot>
-      `}
+      ${coverSlot ? coverSlot : html`<slot></slot>`}
+
       <div class="cardHeader">   
         ${this.noun ? html`<cyan-icon noun=${this.noun} class="cardNoun" ?large=${!!this.cover}></cyan-icon>` : ''}
-        ${this.title ? html`<h4 class="downscaled">${this.title}</h4>` : ''}
+        ${titleSlot}
       </div>
       
       ${this.snippet ? html`${snp}` : ''}
