@@ -45,18 +45,21 @@ export class CyanCard extends CyanThemedElement {
     :host .cardHeader {
       display: flex;
     }
-    :host .tint {
+    :host div.tint {
       position: absolute;
       bottom: 0;
       left: 0;
       height: min(95cqw, 96px);
       width: 100cqw;
+      background: darkorchid;
+      z-index: 1;
       background: linear-gradient(
         0deg,
-        hsla(var(--chroma-key-10-hsl), 0.73) 0%,
-        hsla(var(--chroma-key-10-hsl), 0) 100%
+        hsla(var(--chroma-tint-1-hsl), 0.11), 
+        hsla(var(--chroma-tint-1-hsl), 0)
       );
       pointer-events: none;
+      border-radius: 0 0 16px 16px;
     }
     :host h4 {
       margin: 12px 16px;
@@ -66,7 +69,7 @@ export class CyanCard extends CyanThemedElement {
       font-size: var(--cyan-font-size-headline-card);
       line-height: var(--cyan-line-height-headline-card);
       letter-spacing: var(--cyan-letter-spacing-headline-card);
-      color: var(--cn-color-heading-card);
+      color: var(--cn-color-heading-card, cyan);
 
       display: -webkit-box;
       -webkit-line-clamp: 2;
@@ -95,16 +98,16 @@ export class CyanCard extends CyanThemedElement {
       color: var(--cn-color-link, white);
     }
     :host([elevation="1"]) {
-      background-color: var(--cn-background-level-1, cyan);
+      background-color: var(--chroma-elevation-1, cyan);
     }
     :host([elevation="2"]) {
-      background-color: var(--cn-background-level-1, cyan);
+      background-color: var(--chroma-elevation-2, cyan);
     }
     :host([elevation="3"]) {
-      background-color: var(--cn-background-level-1, cyan);
+      background-color: var(--chroma-elevation-3, cyan);
     }
     :host([elevation="4"]) {
-      background-color: var(--cn-background-level-1, cyan);
+      background-color: var(--chroma-elevation-4, cyan);
     }
     nav {
       box-sizing: border-box;
@@ -177,7 +180,7 @@ export class CyanCard extends CyanThemedElement {
       ${coverSlot ? coverSlot : html`<slot></slot>`}
 
       <div class="cardHeader">   
-        ${this.noun ? html`<cyan-icon noun=${this.noun} class="cardNoun" ?large=${!!this.cover}></cyan-icon>` : ''}
+        ${this.noun ? html`<cyan-icon noun=${this.noun} class="cardNoun" ?large=${!!this.cover} dark></cyan-icon>` : ''}
         ${titleSlot}
       </div>
       
