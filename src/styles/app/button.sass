@@ -53,13 +53,20 @@
       margin-right: 6px
     cyan-icon:last-child
       margin-right: -9px
+
+    &.compact
+      line-height: 22px
+      margin: 2px 0
+      height: 22px
+      padding: 0 8px
+
   button:hover
     background: var(--cn-background-button-hover)
 
   button:active
     background: var(--cn-background-button-active)
 
-  button:disabled
+  button:disabled, button[disabled], button[disabled]:hover, button[disabled]:active
     background: var(--cn-background-button-disabled)
     cursor: not-allowed
     cyan-icon
