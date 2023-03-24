@@ -78,7 +78,7 @@ export class CyanCard extends CyanThemedElement {
       text-overflow: ellipsis;
     }
     :host h4 a {
-      color: var(--cn-color-headings-link, white);
+      color: var(--cn-color-headings-link, yellow);
       text-decoration: none;
     }
     :host h4 a:hover {
@@ -95,7 +95,7 @@ export class CyanCard extends CyanThemedElement {
       color: var(--cyan-color-medium);
     }
     :host .snippet a {
-      color: var(--cn-color-link, white);
+      color: var(--cn-color-link, yellow);
     }
     :host([elevation="1"]) {
       background-color: var(--chroma-elevation-1, cyan);
@@ -117,6 +117,9 @@ export class CyanCard extends CyanThemedElement {
     cyan-toolbar {
       margin: 12px;
     }
+    .slottedContent {
+      margin: 12px 16px;
+    }
   `
 
   @property({ type: Number, reflect: true }) elevation = 1
@@ -137,7 +140,7 @@ export class CyanCard extends CyanThemedElement {
   }
 
   get coverSlot () {
-    if (!this.cover) return html``
+    if (!this.cover) return undefined
 
     const coverUrl:string = this.cover || ''
 
@@ -177,10 +180,10 @@ export class CyanCard extends CyanThemedElement {
     const titleSlot = this.titleSlot
 
     return html`
-      ${coverSlot ? coverSlot : html`<slot></slot>`}
+      ${coverSlot ? coverSlot : html`<div class="slottedContent"><slot></slot></div>`}
 
       <div class="cardHeader">   
-        ${this.noun ? html`<cyan-icon noun=${this.noun} class="cardNoun" ?large=${!!this.cover} dark></cyan-icon>` : ''}
+        ${this.noun ? html`<cyan-icon noun=${this.noun} class="cardNoun" ?large=${!!this.cover} ?dark=${!!this.cover}></cyan-icon>` : ''}
         ${titleSlot}
       </div>
       
