@@ -23,7 +23,7 @@ export class CyanCard extends CyanThemedElement {
     }
     :host .cardContent img {
       width: 100cqw;
-      height: 57cqw;
+      aspect-ratio: 16/9;
       object-fit: cover;
       border-radius: 16px;
       position: relative;
@@ -65,7 +65,7 @@ export class CyanCard extends CyanThemedElement {
       margin: 12px 16px;
       padding: 0;
       font-family: var(--cn-font-family-headings);
-      font-weight: var(--cyan-font-weight-headline-card);
+      font-weight: var(--cn-font-weight-headline-card);
       font-size: var(--cyan-font-size-headline-card);
       line-height: var(--cyan-line-height-headline-card);
       letter-spacing: var(--cyan-letter-spacing-headline-card);
@@ -179,8 +179,10 @@ export class CyanCard extends CyanThemedElement {
     const coverSlot = this.coverSlot
     const titleSlot = this.titleSlot
 
+    const showSlot = !!coverSlot || !!this.title || !!this.snippet || !!this.noun
+
     return html`
-      ${coverSlot ? coverSlot : html`<div class="slottedContent"><slot></slot></div>`}
+      ${showSlot ? coverSlot : html`<div class="slottedContent"><slot></slot></div>`}
 
       <div class="cardHeader">   
         ${this.noun ? html`<cyan-icon noun=${this.noun} class="cardNoun" ?large=${!!this.cover} ?dark=${!!this.cover}></cyan-icon>` : ''}
