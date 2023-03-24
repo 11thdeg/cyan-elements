@@ -12,6 +12,7 @@ export class CyanCard extends CyanThemedElement {
       border-radius: var(--cn-border-radius-card, 16px);
       container-type: inline-size;
       position: relative;
+      flex-grow: 1;
     }
     :host .cardContent {
       padding: 0;
