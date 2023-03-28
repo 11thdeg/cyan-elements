@@ -1,5 +1,24 @@
 .cyan
-  --cn-bacground-reaction-button: var(--cyan-background-field)
-  --cn-bacground-reaction-button-hover: var(--cyan-background-field-hover)
-  --cn-bacground-reaction-button-active: var(--cyan-background-field-active)
-  --cn-color-reaction-button: var(--chroma-secondary-i)
+  &.dark
+    --cn-color-reaction-button: var(--chroma-secondary-i)
+    // Icon Opacity
+    --cn-opacity-reaction-button: 0.33
+    // Border
+    --cn-border-reaction-button: solid 1px var(--chroma-primary-a)
+    --cn-border-reaction-button-active: none
+    // Background
+    --cn-background-reaction-button: none
+    --cn-background-reaction-button-hover: hsla(var(--chroma-primary-30-hsl), 0.22)
+    --cn-background-reaction-button-active: hsla(var(--chroma-primary-50-hsl), 0.22)
+  &.light
+    --cn-color-reaction-button: var(--chroma-primary-c)
+    // Icon Opacity
+    --cn-opacity-reaction-button: 0.55
+    // Border
+    --cn-border-reaction-button: solid 1px var(--chroma-primary-h)
+    --cn-border-reaction-button-hover: solid 1px var(--chroma-primary-g)
+    --cn-border-reaction-button-active: none
+    // Background
+    --cn-background-reaction-button: none
+    --cn-background-reaction-button-hover: var(--chroma-elevation-1)
+    --cn-background-reaction-button-active: var(--chroma-elevation-2)

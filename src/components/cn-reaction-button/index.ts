@@ -23,35 +23,37 @@ export class CyanReactionButton extends CyanThemedElement {
       width: 44px;  /* 44px is the minimum _clickable_ width for a wgag AA compliant button. */
       margin: 2px;
       border-radius: 22px;
-      background: var(--cn-bacground-reaction-button);
-      border: none;
+      background: var(--cn-background-reaction-button);
+      border: var(--cn-border-reaction-button);
       transition: background 0.2s ease-in-out;
     }
     :host(:hover) button {
-      background: var(--cn-bacground-reaction-button-hover);
+      background: var(--cn-background-reaction-button-hover);
     }
-    :host(:active) button {
-        background: var(--cn-bacground-reaction-button-active);
+    :host(:active) button, :host([aria-pressed="true"]) button {
+      background: var(--cn-background-reaction-button-active);
+      border: var(--cn-border-reaction-button-active);
     }
     :host([disabled]) button {
       background: none;
-      border: 1px solid var(--cn-bacground-reaction-button);
+      border: none;
     }
     :host cyan-icon {
       position: absolute;
-      top: 10px;
-      left: 10px;
-      opacity: 0.11;
+      top: 9px;
+      left: 9px;
+      opacity: var(--cn-opacity-reaction-button);
       pointer-events: none;
       transition: opacity 0.2s ease-in-out;
     }
     :host([disabled]) cyan-icon {
-      top: 9px;
-      left: 9px;
-      opacity: 0.22;
+      top: 10px;
+      left: 10px;
     }
-    :host([aria-pressed="true"]) cyan-icon {
+    :host(:active) cyan-icon, :host([aria-pressed="true"]) cyan-icon {
       opacity: 1;
+      top: 10px;
+      left: 10px;
     }
     :host .count {
       line-height: 48px;
