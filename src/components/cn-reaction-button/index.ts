@@ -60,7 +60,7 @@ export class CyanReactionButton extends CyanThemedElement {
       font-size: 16px;
       text-align: center;
       pointer-events: none;
-      font-family: var(--cyan-text-font-family);
+      font-family: var(--cn-font-family-ui);
       font-size: var(--cyan-font-size-caption);
       font-weight: 600;
       letter-spacing: var(--cyan-letter-spacing-caption);

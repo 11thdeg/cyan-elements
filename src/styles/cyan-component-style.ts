@@ -43,7 +43,7 @@ export const cyanComponentStyle = css`
     font-weight: var(--cyan-type-headline-6-font-weight);
   }
   :host p, ::slotted(p) {
-    font-family: var(--cyan-text-font-family);
+    font-family: var(--cn-font-family);
     font-size: var(--cyan-text-font-size);
     line-height: var(--cyan-text-line-height);
     font-weight: var(--cyan-text-font-weight);

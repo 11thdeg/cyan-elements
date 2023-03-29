@@ -7,22 +7,18 @@
 @import layout/editorLayout.sass
 @import layout/ItemGrid.sass
 
-:root
-  --cn-navigation-rail-width: 80px
-  --cn-navigation-bar-height: 64px
-
 // *** .AppLayout helper for fitting the nav-bar and nav-tray *****************
 .AppLayout
   margin: 0
   padding: 0
-  margin-left: var(--cn-navigation-rail-width)
+  margin-left: var(--cn-width-rail)
   container-type: inline-size
   // width: 100%
 @media screen and (max-width: 600px)
   .AppLayout
     // container-type: none  // no container on mobile
     margin-left: 0
-    padding-bottom: var(--cn-navigation-bar-height)
+    padding-bottom: var(--cn-height-navigation-bar)
 
 @media screen and (min-width: 600px)
   .AppLayout:has(cn-side-sheet)

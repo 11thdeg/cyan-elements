@@ -7,7 +7,7 @@ export class CyanCode extends LitElement {
   static styles = css`
     :host {
       display: inline-block;
-      font-family: var(--cyan-monospace-font-family);
+      font-family: var(--cn-font-family-code);
       font-size: var(--cyan-monospace-font-size);
       line-height: var(--cyan-monospace-line-height);
       color: var(--cyan-code-color);

@@ -15,11 +15,7 @@
 
 // UI Elements
 :root
-  --cn-font-family-headings: 'Lato', sans-serif
-
   // Font families
-  --cyan-monospace-font-family: 'Roboto Mono', monospace
-  --cyan-text-font-family: 'Cabin',sans-serif
   --cyan-ui-font-family: 'Cabin', 'Roboto', sans-serif
   --cyan-font-size-ui-small: 14px
   
@@ -33,7 +29,7 @@
   --cyan-font-size-field: 16px
 
 .cyan
-  --cn-font-family-code: var(--cyan-monospace-font-family)
+  --cn-font-family-code: var(--cn-font-family-code)
   --cn-line-height-code: 24px
 
 @mixin TypeUI
@@ -83,3 +79,12 @@ a:hover
 p a
   text-decoration: underline
   color: var(--cyan-link-color)
+
+.cyan
+  --cn-font-family: 'Open Sans', 'Lato', sans-serif
+  --cn-font-family-headings: 'Lato', sans-serif
+  --cn-font-family-ui: 'Cabin', 'Roboto', sans-serif
+  --cn-font-family-code: 'Roboto Mono', monospace
+
+.cyan // This class should be added to the root element, e.g. <body class="cyan">
+  font-family: var(--cn-font-family)

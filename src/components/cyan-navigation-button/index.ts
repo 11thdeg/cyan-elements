@@ -18,7 +18,7 @@ export class CyanNavigationButton extends CyanThemedElement {
     width: 56px;
     
     border: none;
-    font-family: var(--cyan-text-font-family);
+    font-family: var(--cn-font-family-ui);
     font-size: var(--cyan-font-size-caption);
     font-weight: var(--cyan-font-weight-caption);
     letter-spacing: var(--cyan-letter-spacing-caption);

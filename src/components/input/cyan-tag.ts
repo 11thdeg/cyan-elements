@@ -48,7 +48,7 @@ export class CyanTag extends LitElement {
       background-color: var(--cyan-tag-secondary-background-color);
     }
     .TypeCaption{
-      font-family: var(--cyan-text-font-family);
+      font-family: var(--cn-font-family-ui);
       font-size: 13px;
       font-weight: normal;
       letter-spacing: 0.4px;
