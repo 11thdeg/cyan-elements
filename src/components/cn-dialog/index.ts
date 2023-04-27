@@ -55,6 +55,11 @@ export class CyanDialog extends LitElement {
     :host .dialog-content {
       margin-top: 72px;
       overflow-y: scroll;
+      max-height: calc(100vh - 2 * 72px - 16px);
+    }
+    :host .actions {
+      margin-top: 8px;
+      margin-bottom: -8px;
     }`
 
   private dialogId = 'cn-dialog'
@@ -108,6 +113,9 @@ export class CyanDialog extends LitElement {
         </nav>
         <div class="dialog-content">
           <slot></slot>
+        </div>
+        <div class="actions">
+          <slot name="actions"></slot>
         </div>
       </dialog>
     `
