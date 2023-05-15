@@ -1,13 +1,29 @@
-ul
-  margin: 0
-  padding-top: 0
-  margin-bottom: 24px
-li
-  margin: 0
-  line-height: 24px
-  color: var(--cyan-color-high)
-  font-family: var(--cn-font-family)
-  font-weight: normal
-  font-size: 17px
-  line-height: 24px
-  letter-spacing: 0.5px
+@import TypeBody2
+@import TypeCaption
+
+.cyan
+  li
+    @include TypeBody2()
+
+  .downscaled li, li.downscaled
+    @include TypeCaption()
+  
+  ul
+    padding-left: var(--cn-page-grid, 24px)
+    list-style-type: disc
+    margin-bottom: var(--cn-page-grid, 24px)
+
+    ul
+      list-style-type: circle
+      margin-bottom: 0
+
+      ul
+        list-style-type: square
+
+  ol
+    padding-left: var(--cn-page-grid, 24px)
+    list-style-type: decimal
+    margin-bottom: var(--cn-page-grid, 24px)
+
+    ol
+      margin-bottom: 0
