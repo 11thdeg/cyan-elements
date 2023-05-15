@@ -121,7 +121,12 @@ export class CyanTrayButton extends CyanThemedElement {
   }
 }
 declare global {
-    interface HTMLElementTagNameMap {
-      'cn-tray-button': CyanTrayButton
+  interface HTMLElementTagNameMap {
+    'cn-tray-button': CyanTrayButton
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'cn-tray-button': { open?: boolean, noun?: string, ariaLabel?: string, ariaControls?: string, onToggleOpen?: () => void }
     }
   }
+}
