@@ -3,4 +3,6 @@
 @import app/pre.sass
 
 .cyan // The body should have this class
-  background: var(--cn-background-app, #002337)
+  // --chroma-surface is defined for .dark and .light by the Chroma color 
+  // scheme. Cyan tries to avoid setting colors directly
+  background: var(--chroma-surface, #002337) 
