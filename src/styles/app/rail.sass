@@ -1,0 +1,23 @@
+.cyan
+  nav.rail
+    display: none
+
+@media screen and (min-width: 600px)
+  .cyan
+    nav.rail
+      display: flex
+      flex-direction: column
+      position: fixed
+      top: 0
+      left: 0
+      height: 100vh
+      width: var(--cn-width-rail, 80px)
+      height: 100vh
+      height: 100dvh
+      margin: 0
+      padding: 0
+      gap: 16px
+      align-items: center
+      padding-top: 4px
+      padding-bottom: 16px
+      z-index: var(--cyan-z-index-rail, 1000)

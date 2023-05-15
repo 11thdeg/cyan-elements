@@ -99,7 +99,7 @@ export class CyanCard extends CyanThemedElement {
       color: var(--cn-color-link, yellow);
     }
     :host([elevation="1"]) {
-      background-color: var(--chroma-elevation-1, cyan);
+      background: var(--chroma-elevation-1, cyan);
     }
     :host([elevation="2"]) {
       background-color: var(--chroma-elevation-2, cyan);
