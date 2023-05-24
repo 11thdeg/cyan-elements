@@ -1,0 +1,25 @@
+@import ../typography/TypeUI
+
+input[type="radio"] 
+  @include TypeUI()
+  -webkit-appearance: none
+  appearance: none
+  background: none
+  margin: 0
+  font: inherit
+  color: currentColor
+  width: 18px
+  height: 18px
+  border: 2.2px solid currentColor
+  border-radius: 50%
+  transform: translateY(3px)
+  margin-right: 4px
+  transition: background 0.2s ease-in-out
+
+input[type="radio"]:checked
+  background: currentColor
+  border-color: currentColor
+
+label
+  @include TypeUI()
+  line-height: 22px
