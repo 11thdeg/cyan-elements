@@ -13,6 +13,7 @@ export class CyanCard extends CyanThemedElement {
       container-type: inline-size;
       position: relative;
       flex-grow: 1;
+      transition: background 0.27 ease-in-out;
     }
     :host .cardContent {
       padding: 0;
@@ -97,6 +98,11 @@ export class CyanCard extends CyanThemedElement {
     }
     :host .snippet a {
       color: var(--cn-color-link, yellow);
+    }
+    :host([elevation="0"]) {
+      background: none;
+      border: solid 1px var(--chroma-elevation-1, cyan);
+      margin: -1px;
     }
     :host([elevation="1"]) {
       background: var(--chroma-elevation-1, cyan);
