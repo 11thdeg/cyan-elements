@@ -20,6 +20,7 @@ input[type="radio"]:checked
   background: currentColor
   border-color: currentColor
 
-label
+label:has(input[type="radio"])
   @include TypeUI()
   line-height: 22px
+  color: var(--chroma-key)

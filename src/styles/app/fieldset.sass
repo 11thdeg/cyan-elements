@@ -1,4 +1,17 @@
 fieldset
   border: none
-  background: hsla(var(--chroma-tint-1-hsl), 0.11)
+  background: var(--chroma-tint-complement)
   border-radius: 8px
+  display: flex
+  flex-direction: column
+  gap: 12px
+
+  label
+    line-height: 24px
+    display: block
+    border-radius: 6px
+    padding: 0 2px
+    transition: background 0.27s ease-in-out
+
+  label:hover
+    background: var(--chroma-tint-complement)
