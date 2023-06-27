@@ -74,6 +74,9 @@ export class CyanAppBar extends CyanThemedElement {
   @property({ type: Boolean, reflect: true })
     overlay = false
 
+  @property({ type: String, reflect: true })
+    noun = ''
+
   dispatchBack () {
     this.dispatchEvent(new Event('back'))
   }
@@ -98,9 +101,17 @@ export class CyanAppBar extends CyanThemedElement {
    
 
   render () {
+    // render modal back button if modal
+    const modal = this.modal ? html`<cyan-button noun="back" text @click=${this.dispatchBack}></cyan-button>` : ''
+    // render icon if not modal and noun is set
+    const icon = !this.modal && this.noun ? html`<cyan-icon noun="${this.noun}"></cyan-icon>` : ''
+
     return html`<nav>
-      ${this.modal ? html`<cyan-button noun="back" text @click=${this.dispatchBack}></cyan-button>` : ''}
-      <h2 class="viewTitle">${this.title}</h2>
+      ${modal}
+      ${icon}
+      <h2 class="viewTitle">
+        ${this.title}
+      </h2>
       <slot></slot>
   </nav>`
   }
