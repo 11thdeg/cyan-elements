@@ -76,7 +76,7 @@ export class CyanTopAppBar extends CyanThemedElement {
   }
   
   dispatchBack () {
-    this.dispatchEvent(new CustomEvent('back'))
+    this.dispatchEvent(new Event('back'))
   }
 
   render () {
