@@ -21,4 +21,7 @@
   --cyan-z-index-tray: calc( 20 *  var(--cyan-z-index-base) )
   // Rail is on top of the tray, to enable tray to slide under the rail
   --cyan-z-index-rail: calc( 30 *  var(--cyan-z-index-base) ) 
-  --cyan-z-index-dialog: calc( 90 *  var(--cyan-z-index-base) ) 
+  // Dialog is on top of everything except snack
+  --cyan-z-index-dialog: calc( 90 *  var(--cyan-z-index-base) )
+  // Snack is on top of everything
+  --cyan-z-index-snack: calc( 100 *  var(--cyan-z-index-base) ) 

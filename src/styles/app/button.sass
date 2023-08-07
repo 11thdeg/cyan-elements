@@ -1,3 +1,5 @@
+@import ../atomics/dontBreakOut.sass
+
 // Most of the button styles and vars are shared with the modes and themes – so we are defining them
 // only once here and only overriding those that need to be different for a theme
 .cyan
@@ -32,21 +34,30 @@
 
 .cyan
   button
-    background: var(--cn-background-button)
+    // We want to treat buttons as "dontBreakOut" elements
+    @include dontBreakOut
+    
+    // This should happen at preflight
+    border: none
     
     // Font and text
     font-family: var(--cn-font-family-ui)
     font-weight: var(--cn-font-weight-ui)
     font-size: var(--cn-font-size-ui)
-    line-height: 38px
     letter-spacing: var(--cn-letter-spacing-ui)
-    
-    border-radius: 19px
-    border: none
+
+    // Height, width, margin, padding, border, border-radius, box-sizing
+    overflow: hidden
     height: 38px
     margin: 5px 0
     padding: 0 16px
+    line-height: 38px
+    border-radius: 19px
+    
+    // Colors, theming
+    background: var(--cn-background-button) 
     transition: all 0.3s ease-in-out
+
     cyan-icon
       margin-left: -9px
       margin-top: -5px
