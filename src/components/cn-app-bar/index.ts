@@ -60,6 +60,17 @@ export class CyanAppBar extends CyanThemedElement {
       margin-top: -4px;
       flex-grow: 1;
     }
+    .onlyOnMobile {
+      display: none;
+    }
+    @media screen and (max-width: 600px) {
+      :host {
+        border-radius: 0;
+      }
+      .onlyOnMobile {
+        display: block;
+      }
+    }
   `
 
   @property({ type: String, reflect: true }) 
@@ -77,8 +88,15 @@ export class CyanAppBar extends CyanThemedElement {
   @property({ type: String, reflect: true })
     noun = ''
 
+  @property({ type: Boolean, reflect: true })
+    menu = false
+
   dispatchBack () {
     this.dispatchEvent(new Event('back'))
+  }
+
+  dispatchMenu () {
+    this.dispatchEvent(new Event('menu'))
   }
 
   scrollListener: EventListener = (e: Event) => {
@@ -101,12 +119,15 @@ export class CyanAppBar extends CyanThemedElement {
    
 
   render () {
+    // render menu button if menu and mobile view
+    const menu = this.menu ? html`<cyan-button text noun="menu" class="onlyOnMobile" @click=${this.dispatchMenu}></cyan-button>` : ''
     // render modal back button if modal
     const modal = this.modal ? html`<cyan-button noun="back" text @click=${this.dispatchBack}></cyan-button>` : ''
     // render icon if not modal and noun is set
     const icon = !this.modal && this.noun ? html`<cyan-icon noun="${this.noun}"></cyan-icon>` : ''
 
     return html`<nav>
+      ${menu}
       ${modal}
       ${icon}
       <h2 class="viewTitle">
