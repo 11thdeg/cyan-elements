@@ -33,12 +33,14 @@
   --cn-background-button-text-active: hsla(var(--chroma-secondary-i-hsl), 0.165)
 
 .cyan
-  button
+  button,
+  a.button
     // We want to treat buttons as "dontBreakOut" elements
     @include dontBreakOut
     
     // This should happen at preflight
     border: none
+    display: block
     
     // Font and text
     font-family: var(--cn-font-family-ui)
@@ -57,6 +59,7 @@
     // Colors, theming
     background: var(--cn-background-button) 
     transition: all 0.3s ease-in-out
+    color: var(--cn-color-button)
 
     cyan-icon
       margin-left: -9px
@@ -71,10 +74,12 @@
       height: 22px
       padding: 0 8px
 
-  button:hover
+  button:hover,
+  a.button:hover
     background: var(--cn-background-button-hover)
 
-  button:active
+  button:active,
+  a.button:active
     background: var(--cn-background-button-active)
 
   button:disabled, button[disabled], button[disabled]:hover, button[disabled]:active
@@ -83,32 +88,40 @@
     cyan-icon
       opacity: 0.3
 
-  button.secondary
+  button.secondary,
+  a.button.secondary
     background: var(--cn-background-button-secondary)
     color: var(--cn-color-button-secondary)
 
-  button.secondary:hover
+  button.secondary:hover,
+  a.button.secondary:hover
     background: var(--cn-background-button-secondary-hover)
 
-  button.secondary:active
+  button.secondary:active,
+  a.button.secondary:active
     background: var(--cn-background-button-secondary-active)
 
-  button.secondary:disabled
+  button.secondary:disabled,
+  a.button.secondary:disabled
     background: var(--cn-background-button-disabled)
     cursor: not-allowed
     color: var(--cn-color-button-disabled)
 
-  button.text
+  button.text,
+  a.button.text
     color: var(--color-button-text)
     background: var(--cn-background-button-text)
-  button.text:hover
+  button.text:hover,
+  a.button.text:hover
     background: var(--cn-background-button-text-hover)
-  button.text:active
+  button.text:active,
+  a.button.text:active
     background: var(--cn-background-button-text-active)
 
 // Cyan icons in buttons
 .cyan
-  button
+  button,
+  a.button
     position: relative
     min-width: 38px  
     &:has(cyan-icon)
