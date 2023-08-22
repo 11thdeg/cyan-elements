@@ -1,0 +1,57 @@
+@import ../layout/layout-vars
+
+// Breakpoints
+$mobile-breakpoint: 844px
+$tablet-breakpoint: 1112px
+
+// Box Sizes
+$box-small: 272px
+$box-medium: 440px
+$box-large: 712px
+
+// Medium and a small is 
+$container-width-tablet: 724px
+// Medium, and two small is 1008px
+// Large and a small is 996px
+// Two mediums is  892px
+$container-width-desktop: 1008px
+
+//Container sizes for the Small screen
+.container
+  margin: calc(var(--cn-page-grid) / 2)
+  display: flex
+  flex-direction: column
+  flex-wrap: nowrap
+  padding: 0
+  position: relative
+  gap: var(--cn-page-grid)
+
+.container + .container
+  margin-top: var(--cn-page-grid)
+//Container sizes for the Medium screen
+@media screen and (min-width: $mobile-breakpoint)
+  .container
+    margin: 0 auto
+    width: $container-width-tablet
+    flex-direction: row
+    flex-wrap: nowrap
+    justify-content: start
+    align-items: flex-start
+    .column
+      width: $box-medium
+      flex-grow: 0
+      flex-shrink: 0
+    .column.small
+      width: $box-small
+    .column.large
+      width: $box-large
+    .column.full
+      width: 100%
+  
+     
+//Container sizes for the Large screen 
+@media screen and (min-width: $tablet-breakpoint)
+  .container
+    width: $container-width-desktop
+    .column.la-large
+      width: $box-large
