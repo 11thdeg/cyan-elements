@@ -15,7 +15,8 @@ $small:   601px
   justify-content: center
   align-items: flex-start
   box-sizing: border-box
-  .Column
+  .Column,
+  .column
     width: calc(100vw - 32px)
     flex-grow: 0
     flex-shrink: 1
@@ -23,7 +24,8 @@ $small:   601px
   .bookLayout
     margin: 0 auto
     max-width: 760px
-    .Column
+    .Column,
+    .column
       width: 440px
       &.small
         width: 272px
@@ -34,7 +36,8 @@ $small:   601px
 @media screen and (min-width: $medium)
   .bookLayout
     max-width: calc(16px * 3 + 440px + 272px)
-    .Column
+    .Column,
+    .column
       width: 440px
       &.small
         width: 272px
