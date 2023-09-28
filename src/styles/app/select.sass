@@ -2,7 +2,7 @@
 @import ../typography/TypeCaption
 
 .cyan
-  input[type=text]
+  select
     @include TypeUI
 
     border: 0
@@ -23,6 +23,11 @@
     border-bottom: 1px solid var(--cn-border-color, #ddd)
     
     border-radius: var(--cn-border-radius-input-field) // 0 calc(var(--cn-page-grid) / 2 ) 0 0
+
+    //Remobve the default arrow
+    appearance: none
+    -webkit-appearance: none
+    -moz-appearance: none
 
     // States
     &:hover
@@ -61,9 +66,23 @@
       margin: 0
       font-style: italic
 
-  label:has(input[type=text])
+  
+
+  label:has(select)
     @include TypeCaption
     display: block
     width: 100%
     color: var(--cn-border-color)
+    // Add a custom arrow
+    position: relative
+    &::after
+      content: ""
+      width: calc(var(--cn-page-grid) / 2)
+      height: calc(var(--cn-page-grid) / 3)
+      background-color: var(--cn-border-color)
+      clip-path: polygon(100% 0%, 0 0%, 50% 100%)
+      position: absolute
+      right: 8px
+      bottom: 12px
+      z-index: 1
       
