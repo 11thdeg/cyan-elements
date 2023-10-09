@@ -1,3 +1,4 @@
+@import core/layout-breakpoints
 @import atomics/dontBreakOut.sass
 @import layout/layout-vars.sass
 @import layout/Layout.sass
@@ -11,15 +12,14 @@
 .AppLayout
   margin: 0
   padding: 0
-  margin-left: var(--cn-width-rail)
-  container-type: inline-size
-  // width: 100%
-@media screen and (max-width: 600px)
+  padding-bottom: var(--cn-height-navigation-bar)
+@media screen and (min-width: $breakpoint-small)
   .AppLayout
-    // container-type: none  // no container on mobile
-    margin-left: 0
-    padding-bottom: var(--cn-height-navigation-bar)
-
+    margin-left: var(--cn-width-rail)
+    // We do not have a nav-bar on medium or large screens, no need to add padding
+    padding-bottom: 0
+    container-type: inline-size
+    
 @media screen and (min-width: 600px)
   .AppLayout:has(cn-side-sheet)
     .EditorLayout, .bookLayout

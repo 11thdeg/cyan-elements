@@ -6,6 +6,9 @@
   --cn-gap-column: 16px
   --cn-gap-toolbar: 8px
 
+  // Default gap: 16px
+  --cn-gap: calc(var(--cn-page-grid) * 3 / 4)
+
   // Navigation Rail
   --cn-width-rail: 80px
 
@@ -20,7 +23,7 @@
   --cyan-z-index-navigation: calc( 10 *  var(--cyan-z-index-base) )
   --cyan-z-index-tray: calc( 20 *  var(--cyan-z-index-base) )
   // Rail is on top of the tray, to enable tray to slide under the rail
-  --cyan-z-index-rail: calc( 30 *  var(--cyan-z-index-base) ) 
+  --cn-z-index-rail: calc( 30 *  var(--cyan-z-index-base) ) 
   // Dialog is on top of everything except snack
   --cyan-z-index-dialog: calc( 90 *  var(--cyan-z-index-base) )
   // Snack is on top of everything

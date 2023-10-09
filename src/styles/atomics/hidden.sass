@@ -1,0 +1,20 @@
+// This file contains atomics for hide-atomics: sm-display-none, md-display-none and wd-display-none
+@import ../core/layout-breakpoints
+
+// *** sm-display-none ************************************************
+// hides an element on small screens
+@media screen and (max-width: $breakpoint-small)
+  .sm-display-none
+    display: none
+
+// *** md-display-none ************************************************
+// hides an element on medium screens
+@media screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-medium)
+  .md-display-none
+    display: none
+
+// *** wd-display-none ************************************************
+// hides an element on wide screens
+@media screen and (min-width: $breakpoint-medium)
+  .wd-display-none
+    display: none
