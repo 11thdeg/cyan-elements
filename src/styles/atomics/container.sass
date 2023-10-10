@@ -1,7 +1,7 @@
+@import ../core/layout-breakpoints
 @import ../layout/layout-vars
 
 // Breakpoints
-$mobile-breakpoint: 844px
 $tablet-breakpoint: 1112px
 
 // Box Sizes
@@ -24,17 +24,23 @@ $container-width-desktop: 1008px
   flex-wrap: nowrap
   padding: 0
   position: relative
-  gap: var(--cn-page-grid)
+  gap: var(--cn-gap)
 
 .container + .container
   margin-top: var(--cn-page-grid)
+
+// Add default padding for columns
+.container
+  .column
+    padding: var(--cn-padding-content-box)
+
 //Container sizes for the Medium screen
-@media screen and (min-width: $mobile-breakpoint)
+@media screen and (min-width: $breakpoint-medium)
   .container
     margin: 0 auto
-    width: $container-width-tablet
+    width: min($container-width-desktop, calc(100vw - var( --cn-width-rail)))
     flex-direction: row
-    flex-wrap: nowrap
+    flex-wrap: wrap
     justify-content: center
     align-items: flex-start
     .column
@@ -47,11 +53,13 @@ $container-width-desktop: 1008px
       width: $box-large
     .column.full
       width: 100%
+      flex-grow: 1
   
      
 //Container sizes for the Large screen 
-@media screen and (min-width: $tablet-breakpoint)
+@media screen and (min-width: $breakpoint-wide)
   .container
     width: $container-width-desktop
-    .column.la-large
+    // This creates a "responsive" column that will downsize to a medium at the tablet breakpoint
+    .column.wd-large
       width: $box-large
