@@ -63,3 +63,44 @@ $container-width-desktop: 1008px
     // This creates a "responsive" column that will downsize to a medium at the tablet breakpoint
     .column.wd-large
       width: $box-large
+
+//Container sm- prefixed classes for the Small screen only
+@media screen and (max-width: $breakpoint-small)
+  .container
+    .column.sm-small
+      width: $box-small
+    .column.sm-medium
+      width: $box-medium
+    .column.sm-large
+      width: $box-large
+    .column.sm-auto
+      width: auto
+      flex-grow: 1
+
+//Container md- prefixed classes for the Medium screen only
+@media screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-medium)
+  .container
+    .column.md-small
+      width: $box-small
+    .column.md-medium
+      width: $box-medium
+    .column.md-large
+      width: $box-large
+    .column.md-auto
+      width: auto
+      flex-grow: 1
+
+//Container wd- prefixed classes for the Large screen only
+@media screen and (min-width: $breakpoint-medium)
+  .container
+    .column.wd-small
+      width: $box-small
+    .column.wd-medium
+      width: $box-medium
+    .column.wd-large
+      width: $box-large
+    .column.wd-auto
+      width: auto
+      flex-grow: 1
+
+
