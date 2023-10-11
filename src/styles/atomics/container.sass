@@ -51,18 +51,6 @@ $container-width-desktop: 1008px
       width: $box-small
     .column.large
       width: $box-large
-    .column.full
-      width: 100%
-      flex-grow: 1
-  
-     
-//Container sizes for the Large screen 
-@media screen and (min-width: $breakpoint-wide)
-  .container
-    width: $container-width-desktop
-    // This creates a "responsive" column that will downsize to a medium at the tablet breakpoint
-    .column.wd-large
-      width: $box-large
 
 //Container sm- prefixed classes for the Small screen only
 @media screen and (max-width: $breakpoint-small)
