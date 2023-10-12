@@ -6,7 +6,7 @@
 
 // The rail is hidden on small screens, if the screen is wider than
 // $breakpoint-small, the rail is displayed as a *fixed* column on the left
-@media screen and (min-width: $breakpoint-small)
+@include media-query-sm-and-up
   .cyan
     nav.rail
       display: flex
@@ -21,3 +21,4 @@
       align-items: center
       padding-bottom: var(--cn-gap, 16px) // Add extra "gap" at the bottom to make sure the last item is not cut off
       z-index: var(--cn-z-index-rail, 1000)
+      padding-top: 4px

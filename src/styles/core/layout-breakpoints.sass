@@ -1,4 +1,41 @@
-// breakpoints
-$breakpoint-wide:   1488px
-$breakpoint-medium:  841px
-$breakpoint-small:   621px
+// *** Breakpoints ****************************************************
+
+// wd- above this
+$breakpoint-wide:   1120px
+// md- between this and the next
+$breakpoint-medium: 960px
+// sm- between this and the next
+$breakpoint-small:   620px
+// xs- below this
+
+// *** Media queries **************************************************
+@mixin media-query-sm
+  @media screen and (min-width: $breakpoint-small + 1px) and (max-width: $breakpoint-medium)
+    @content
+
+@mixin media-query-sm-and-up
+  @media screen and (min-width: $breakpoint-small + 1px)
+    @content
+
+@mixin media-query-md
+  @media screen and (min-width: $breakpoint-medium + 1px) and (max-width: $breakpoint-wide)
+    @content
+
+@mixin media-query-md-and-up
+  @media screen and (min-width: $breakpoint-medium + 1px)
+    @content
+
+@mixin media-query-wd
+  @media screen and (min-width: $breakpoint-wide + 1px)
+    @content
+
+// $media-query-wd:  "screen and (min-width: #{ $breakpoint-wide  + 1px })"
+// $media-query-md:  "screen and (min-width: #{ $breakpoint-medium + 1px }) and (max-width: #{ $breakpoint-wide })"
+// $media-query-sm:  "screen and (min-width: #{ $breakpoint-small  + 1px }) and (max-width: #{ $breakpoint-medium })"
+// $media-query-xs:  "screen and (max-width: #{ $breakpoint-small })"
+
+// Media queries for "at least a certain size"
+// $media-query-wd-and-up: "screen and (min-width: #{ $breakpoint-wide  + 1px })"
+// $media-query-md-and-up: "screen and (min-width: #{ $breakpoint-medium + 1px })"
+// $media-query-sm-and-up: "screen and (min-width: #{ $breakpoint-small  + 1px })"
+

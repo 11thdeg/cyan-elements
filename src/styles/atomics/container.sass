@@ -1,24 +1,25 @@
 @import ../core/layout-breakpoints
 @import ../layout/layout-vars
 
-// Breakpoints
-$tablet-breakpoint: 1112px
-
 // Box Sizes
 $box-small: 272px
 $box-medium: 440px
 $box-large: 712px
 
 // Medium and a small is 
-$container-width-tablet: 724px
+$container-width-tablet: calc($box-medium + var(--cn-gap) + $box-small)
 // Medium, and two small is 1008px
 // Large and a small is 996px
 // Two mediums is  892px
-$container-width-desktop: 1008px
+$container-width-desktop: calc($box-medium + var(--cn-gap) + $box-small + var(--cn-gap) + $box-small)
+// 1008px
 
-//Container sizes for the Small screen
+
+/* 
+ * The default container, used for mobile and small screens
+ */
 .container
-  margin: calc(var(--cn-page-grid) / 2)
+  margin: calc(var(--cn-page-grid) / 2) // 12px
   display: flex
   flex-direction: column
   flex-wrap: nowrap
@@ -26,21 +27,49 @@ $container-width-desktop: 1008px
   position: relative
   gap: var(--cn-gap)
 
+// Consecutive containers should have a gap
 .container + .container
   margin-top: var(--cn-page-grid)
 
-// Add default padding for columns
+/*
+ * The default column, used for mobile and small screens
+ */
 .container
   .column
-    padding: var(--cn-padding-content-box)
+    display: block
+    flex-grow: 1
+    width: 100%
 
-//Container sizes for the Medium screen
-@media screen and (min-width: $breakpoint-medium)
+// Container has gap-sized horizontal margins for small screens
+@include media-query-sm
+  .container
+    margin: calc(var(--cn-page-grid) / 2) var(--cn-gap)
+
+// Container and columns for the medium screen
+@include media-query-md
+  .container
+    margin: calc(var(--cn-page-grid) / 2) var(--cn-gap)
+    flex-direction: row
+    
+    .column
+      width: $box-medium
+      flex-grow: 0
+      flex-shrink: 0
+    .column.small
+      width: $box-small
+    .column.large
+      width: $box-large
+    .column.auto
+      flex-grow: 1
+
+// Container behaves differently on md and wd screens
+@include media-query-wd
   .container
     margin: 0 auto
-    width: min($container-width-desktop, calc(100vw - var( --cn-width-rail)))
+    width: min($container-width-tablet, calc(100dvw - var(--cn-width-rail) - 2 * 16px))
     flex-direction: row
-    flex-wrap: wrap
+    flex-wrap: nowrap
+
     justify-content: center
     align-items: flex-start
     .column
@@ -52,21 +81,8 @@ $container-width-desktop: 1008px
     .column.large
       width: $box-large
 
-//Container sm- prefixed classes for the Small screen only
-@media screen and (max-width: $breakpoint-small)
-  .container
-    .column.sm-small
-      width: $box-small
-    .column.sm-medium
-      width: $box-medium
-    .column.sm-large
-      width: $box-large
-    .column.sm-auto
-      width: auto
-      flex-grow: 1
-
 //Container md- prefixed classes for the Medium screen only
-@media screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-medium)
+@include media-query-md
   .container
     .column.md-small
       width: $box-small
@@ -76,10 +92,9 @@ $container-width-desktop: 1008px
       width: $box-large
     .column.md-auto
       width: auto
-      flex-grow: 1
 
 //Container wd- prefixed classes for the Large screen only
-@media screen and (min-width: $breakpoint-medium)
+@include media-query-wd
   .container
     .column.wd-small
       width: $box-small
@@ -88,7 +103,6 @@ $container-width-desktop: 1008px
     .column.wd-large
       width: $box-large
     .column.wd-auto
-      width: auto
       flex-grow: 1
 
 
