@@ -2,7 +2,7 @@
 @import ../atomics/dontBreakOut.sass
 
 // We expect the containers inside a layout to be ".Columns"
-.Column
+.Column, column
   @include dontBreakOut()
   img
     max-width: 100%
@@ -12,7 +12,12 @@
 .Column h2:first-child,
 .Column h3:first-child,
 .Column h4:first-child,
-.Column p:first-child
+.Column p:first-child,
+.column h1:first-child,
+.column h2:first-child,
+.column h3:first-child,
+.column h4:first-child,
+.column p:first-child
   margin-top: 0 !important
 
 // .BookLayout, .bookLayout
