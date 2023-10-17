@@ -1,0 +1,46 @@
+/*
+ * Application Tray. 
+ *
+ * In mobile, small, and medium screens, the tray is hidden and it will appear as a fixed
+ * element on top of content when '.open' class is applied to the tray.
+ */
+@import ../core/layout-breakpoints
+
+.cn-tray
+  position: fixed
+  top: 0
+  left: 0
+  width: 100vw
+  height: 100vh
+  transform: translateX(-100vw)
+  transition: all 0.22s ease-in-out
+  z-index: var(--cn-z-index-tray, 1000)
+  background: var(--chroma-elevation-0, #002337)
+  padding: var(--cn-gap)
+
+  &.open
+    background: var(--chroma-elevation-3, #002337)
+    box-shadow: var(--chroma-box-shadow-elevation-3)
+    transform: translateX(0)
+
+@include media-query-sm-and-up
+.cn-tray
+  // Navigation Rail is visible, so we need to account for it
+  left: calc(var(--cn-width-rail) * -1)
+  width: min(var(--cn-width-tray), 70vw)
+  transform: translateX(calc(var(--cn-width-tray) * -1))
+  padding-left: calc(var(--cn-width-rail) + var(--cn-gap))
+
+@include media-query-wd
+  .cyan
+    --cn-width-tray: 230px
+  .cn-tray
+    transform: none
+    background: var(--chroma-elevation-0, #002337)
+  .cn-tray + main,
+  cn-app-bar:has(+ .cn-tray)
+    margin-left: var(--cn-width-tray)
+
+  
+
+  
