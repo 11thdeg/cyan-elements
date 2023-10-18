@@ -5,41 +5,77 @@
  * element on top of content when '.open' class is applied to the tray.
  */
 @import ../core/layout-breakpoints
+@import ../typography/TypeHeadline3
+@import ../typography/TypeHeadline4
+@import ../typography/TypeBody2
 
-.cn-tray
-  position: fixed
-  top: 0
-  left: 0
-  width: 100vw
-  height: 100vh
-  transform: translateX(-100vw)
-  transition: all 0.22s ease-in-out
-  z-index: var(--cn-z-index-tray, 1000)
-  background: var(--chroma-elevation-0, #002337)
-  padding: var(--cn-gap)
+.cyan
+  .cn-tray
+    position: fixed
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    transform: translateX(-100vw)
+    transition: all 0.22s ease-in-out
+    z-index: var(--cn-z-index-tray, 1000)
+    background: var(--chroma-elevation-0, #002337)
+    padding: var(--cn-gap)
 
-  &.open
-    background: var(--chroma-elevation-3, #002337)
-    box-shadow: var(--chroma-box-shadow-elevation-3)
-    transform: translateX(0)
+    &.open
+      background: var(--chroma-elevation-3, #002337)
+      box-shadow: var(--chroma-box-shadow-elevation-3)
+      transform: translateX(0)
+
+    // There is no reason why the tray should have a H1, thus we are omitting it
+    h2
+      @include TypeHeadline3()
+      color: var(--chroma-key, #00bcd4)
+      
+    h3, h4
+      @include TypeHeadline4()
+      color: var(--chroma-key, #00bcd4)
+
+    h2:first-child,
+    h3:first-child
+      margin-top: 0
+      font-weight: 300
+
+    ol, ul
+      margin: 0
+      padding: 0
+      list-style-type: none
+      display: flex
+      flex-direction: column
+      li
+        margin: 0
+        padding: 0
+        display: block
+
+    p
+      @include TypeBody2()
+      color: var(--chroma-key-low)
 
 @include media-query-sm-and-up
-.cn-tray
-  // Navigation Rail is visible, so we need to account for it
-  left: calc(var(--cn-width-rail) * -1)
-  width: min(var(--cn-width-tray), 70vw)
-  transform: translateX(calc(var(--cn-width-tray) * -1))
-  padding-left: calc(var(--cn-width-rail) + var(--cn-gap))
+.cyan
+  .cn-tray
+    // Navigation Rail is visible, so we need to account for it
+    left: calc(var(--cn-width-rail) * -1)
+    width: min(var(--cn-width-tray), 70vw)
+    transform: translateX(calc(var(--cn-width-tray) * -1))
+    padding-left: calc(var(--cn-width-rail) + var(--cn-gap))
 
 @include media-query-wd
   .cyan
-    --cn-width-tray: 230px
-  .cn-tray
-    transform: none
-    background: var(--chroma-elevation-0, #002337)
-  .cn-tray + main,
-  cn-app-bar:has(+ .cn-tray)
-    margin-left: var(--cn-width-tray)
+    --cn-width-tray: calc(230px + var(--cn-gap) * 2 + var(--cn-width-rail))
+    .cn-tray
+      transform: none
+      background: var(--chroma-elevation-0, #002337)
+      margin-top: 0
+      padding-top: 4px
+    .cn-tray + main,
+    cn-app-bar:has(+ .cn-tray)
+      margin-left: calc(var(--cn-width-tray) - var(--cn-width-rail))
 
   
 
