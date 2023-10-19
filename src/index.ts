@@ -57,7 +57,6 @@ export * from './components/cn-filter-panel'
 // Navigation
 export * from './components/menu/cyan-menu'
 export * from './components/menu/cyan-menu-item'
-export * from './components/cyan-nav-button'
 export * from './components/cyan-nav-section'
 export * from './components/hamburger/cyan-hamburger-button'
 export * from './components/cyan-nav-menu-button'

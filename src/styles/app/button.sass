@@ -20,10 +20,11 @@
 
 .cyan--mode--light, .light
   // Text buttons
-  --color-button-text: var(--chroma-secondary-b)
+  --color-button-text: var(--chroma-secondary-a)
   --cn-background-button-text: var(--chroma-secondary-i)
   --cn-background-button-text-hover: var(--chroma-secondary-h)
   --cn-background-button-text-active: var(--chroma-secondary-g)
+  --cn-color-button: var(--chroma-key)
   
 
 .cyan--mode--dark, .chroma-box-a, dark
@@ -133,3 +134,11 @@
       &[small]
         top: 10px
         left: -6px
+
+// Tray button theming
+.cyan
+  .tray-button
+    --cn-background-button: none
+    --cn-background-button-hover: var(--chroma-tint-1)
+    --cn-background-button-active: var(--chroma-tint-2)
+
